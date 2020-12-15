@@ -58,7 +58,7 @@ namespace SadWork
             cmd.Parameters.Add(new SqlParameter("@pwd", textBoxPwd.Text.Trim()));
 
             SqlDataReader dr = cmd.ExecuteReader();
-
+            
             if (dr.Read())
             {
                 dr.Close();
