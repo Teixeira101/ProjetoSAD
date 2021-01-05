@@ -38,10 +38,12 @@ namespace SadWork
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(580, 384);
+            this.pictureBox1.Size = new System.Drawing.Size(804, 510);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -52,7 +54,7 @@ namespace SadWork
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(141, 12);
+            this.label1.Location = new System.Drawing.Point(254, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(297, 63);
             this.label1.TabIndex = 4;
@@ -66,7 +68,7 @@ namespace SadWork
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(77, 320);
+            this.label2.Location = new System.Drawing.Point(189, 453);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(426, 48);
             this.label2.TabIndex = 5;
@@ -79,7 +81,7 @@ namespace SadWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 384);
+            this.ClientSize = new System.Drawing.Size(804, 510);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);

@@ -39,14 +39,14 @@ namespace SadWork
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.login_btn = new FontAwesome.Sharp.IconButton();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.btnMin = new FontAwesome.Sharp.IconPictureBox();
             this.btnExit = new FontAwesome.Sharp.IconPictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,7 +69,7 @@ namespace SadWork
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 450);
+            this.panel1.Size = new System.Drawing.Size(220, 576);
             this.panel1.TabIndex = 0;
             // 
             // iconButton5
@@ -211,7 +211,7 @@ namespace SadWork
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(30)))), ((int)(((byte)(48)))));
-            this.panel2.Controls.Add(this.login_btn);
+            this.panel2.Controls.Add(this.iconButton6);
             this.panel2.Controls.Add(this.btnMin);
             this.panel2.Controls.Add(this.btnExit);
             this.panel2.Controls.Add(this.label2);
@@ -219,31 +219,30 @@ namespace SadWork
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(220, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(580, 66);
+            this.panel2.Size = new System.Drawing.Size(804, 66);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
-            // login_btn
+            // iconButton6
             // 
-            this.login_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.login_btn.FlatAppearance.BorderSize = 0;
-            this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.login_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_btn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.login_btn.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
-            this.login_btn.IconColor = System.Drawing.Color.Gainsboro;
-            this.login_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.login_btn.IconSize = 25;
-            this.login_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.login_btn.Location = new System.Drawing.Point(496, 29);
-            this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(84, 36);
-            this.login_btn.TabIndex = 8;
-            this.login_btn.Text = "Login";
-            this.login_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.login_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.login_btn.UseVisualStyleBackColor = true;
-            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
+            this.iconButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton6.FlatAppearance.BorderSize = 0;
+            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.iconButton6.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.IconSize = 25;
+            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.Location = new System.Drawing.Point(720, 29);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Size = new System.Drawing.Size(84, 36);
+            this.iconButton6.TabIndex = 8;
+            this.iconButton6.Text = "Login";
+            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton6.UseVisualStyleBackColor = true;
             // 
             // btnMin
             // 
@@ -254,7 +253,7 @@ namespace SadWork
             this.btnMin.IconColor = System.Drawing.Color.DimGray;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMin.IconSize = 16;
-            this.btnMin.Location = new System.Drawing.Point(539, 0);
+            this.btnMin.Location = new System.Drawing.Point(763, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(16, 19);
             this.btnMin.TabIndex = 3;
@@ -270,7 +269,7 @@ namespace SadWork
             this.btnExit.IconColor = System.Drawing.Color.DimGray;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 16;
-            this.btnExit.Location = new System.Drawing.Point(561, 4);
+            this.btnExit.Location = new System.Drawing.Point(785, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(16, 19);
             this.btnExit.TabIndex = 2;
@@ -301,17 +300,20 @@ namespace SadWork
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
             // 
-            // panelDesktop
+            // label3
             // 
-            this.panelDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(47)))), ((int)(((byte)(77)))));
-            this.panelDesktop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDesktop.BackgroundImage")));
-            this.panelDesktop.Controls.Add(this.label4);
-            this.panelDesktop.Controls.Add(this.label3);
-            this.panelDesktop.Location = new System.Drawing.Point(220, 66);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(580, 384);
-            this.panelDesktop.TabIndex = 3;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(253, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(297, 63);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Hi! Welcome to our application.\r\nWe are more than greatfull to let you\r\nknow more" +
+    " on scientific parks.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -319,7 +321,7 @@ namespace SadWork
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(6, 293);
+            this.label4.Location = new System.Drawing.Point(7, 416);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(298, 85);
             this.label4.TabIndex = 4;
@@ -328,26 +330,25 @@ namespace SadWork
     "now \r\nabout your presence there.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // panelDesktop
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(141, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(297, 63);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Hi! Welcome to our application.\r\nWe are more than greatfull to let you\r\nknow more" +
-    " on scientific parks.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panelDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(47)))), ((int)(((byte)(77)))));
+            this.panelDesktop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDesktop.BackgroundImage")));
+            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktop.Controls.Add(this.label4);
+            this.panelDesktop.Controls.Add(this.label3);
+            this.panelDesktop.Location = new System.Drawing.Point(220, 66);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(0);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(804, 510);
+            this.panelDesktop.TabIndex = 3;
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1024, 576);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -382,11 +383,11 @@ namespace SadWork
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconPictureBox btnMin;
         private FontAwesome.Sharp.IconPictureBox btnExit;
-        private FontAwesome.Sharp.IconButton login_btn;
-        private System.Windows.Forms.Label label4;
+        private FontAwesome.Sharp.IconButton iconButton6;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panelDesktop;
     }
 }
