@@ -51,8 +51,7 @@ namespace SadWork
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
-                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                currentBtn.Font = new Font(currentBtn.Font, FontStyle.Bold);
 
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
@@ -74,6 +73,7 @@ namespace SadWork
                 currentBtn.IconColor = Color.Gainsboro;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+                currentBtn.Font = new Font(currentBtn.Font, FontStyle.Regular);
             }
         }
 
@@ -121,6 +121,7 @@ namespace SadWork
         private void iconButton5_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
+            OpenChildForm(new ShowSimulations());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -160,6 +161,13 @@ namespace SadWork
         private void btnMin_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void login_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginPage LP = new LoginPage();
+            LP.Show();
         }
     }
 }

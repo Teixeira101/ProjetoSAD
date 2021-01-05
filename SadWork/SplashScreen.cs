@@ -19,12 +19,12 @@ namespace SadWork
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            panel2.Width += 3;
+            panel2.Width += 5;
 
             if(panel2.Width >= 1024)
             {
                 timer1.Stop();
-                LoginPage LP = new LoginPage();
+                MainPage LP = new MainPage();
                 LP.Show();
                 this.Hide();
             }

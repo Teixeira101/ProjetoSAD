@@ -39,7 +39,7 @@ namespace SadWork
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.login_btn = new FontAwesome.Sharp.IconButton();
             this.btnMin = new FontAwesome.Sharp.IconPictureBox();
             this.btnExit = new FontAwesome.Sharp.IconPictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -211,7 +211,7 @@ namespace SadWork
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(30)))), ((int)(((byte)(48)))));
-            this.panel2.Controls.Add(this.iconButton6);
+            this.panel2.Controls.Add(this.login_btn);
             this.panel2.Controls.Add(this.btnMin);
             this.panel2.Controls.Add(this.btnExit);
             this.panel2.Controls.Add(this.label2);
@@ -223,26 +223,27 @@ namespace SadWork
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
-            // iconButton6
+            // login_btn
             // 
-            this.iconButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
-            this.iconButton6.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 25;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(496, 29);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(84, 36);
-            this.iconButton6.TabIndex = 8;
-            this.iconButton6.Text = "Login";
-            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = true;
+            this.login_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.login_btn.FlatAppearance.BorderSize = 0;
+            this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.login_btn.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.login_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.login_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.login_btn.IconSize = 25;
+            this.login_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.login_btn.Location = new System.Drawing.Point(496, 29);
+            this.login_btn.Name = "login_btn";
+            this.login_btn.Size = new System.Drawing.Size(84, 36);
+            this.login_btn.TabIndex = 8;
+            this.login_btn.Text = "Login";
+            this.login_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.login_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.login_btn.UseVisualStyleBackColor = true;
+            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // btnMin
             // 
@@ -279,10 +280,11 @@ namespace SadWork
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
             this.label2.Location = new System.Drawing.Point(48, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Home";
             // 
@@ -383,7 +385,7 @@ namespace SadWork
         private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconPictureBox btnMin;
         private FontAwesome.Sharp.IconPictureBox btnExit;
-        private FontAwesome.Sharp.IconButton iconButton6;
+        private FontAwesome.Sharp.IconButton login_btn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
     }

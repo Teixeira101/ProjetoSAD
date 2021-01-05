@@ -50,7 +50,7 @@ namespace SadWork
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=dbSAD;Integrated Security=True");
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
             sqlcon.Open();
 
             SqlCommand cmd = new SqlCommand(@"SELECT [email_empresa] ,[password] FROM [dbo].[Empresa] Where [email_empresa] = @emailEmpresa and password = @pwd", sqlcon);
@@ -114,9 +114,15 @@ namespace SadWork
             Black objBlack = new Black();
             objBlack.Show();
             objBlack.Opacity = .5;
+            objBlack.ShowInTaskbar = false;
             RecoverAccount objRecoverAccount = new RecoverAccount();
             objRecoverAccount.Show();
             objRecoverAccount.TopMost = true;
+        }
+
+        private void textBoxEmail_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

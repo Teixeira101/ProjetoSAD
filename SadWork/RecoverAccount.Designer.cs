@@ -32,7 +32,7 @@ namespace SadWork
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ResetButton = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.EmailBox = new System.Windows.Forms.TextBox();
             this.CodeBox = new System.Windows.Forms.TextBox();
             this.CodeLabel = new System.Windows.Forms.Label();
             this.SubmitButton = new FontAwesome.Sharp.IconButton();
@@ -50,7 +50,6 @@ namespace SadWork
             this.label1.TabIndex = 4;
             this.label1.Text = "RESET PASSWORD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -64,7 +63,6 @@ namespace SadWork
             this.label2.TabIndex = 5;
             this.label2.Text = "E-mail";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ResetButton
             // 
@@ -89,12 +87,12 @@ namespace SadWork
             this.ResetButton.UseVisualStyleBackColor = false;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
-            // textBox1
+            // EmailBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(71, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 1;
+            this.EmailBox.Location = new System.Drawing.Point(71, 114);
+            this.EmailBox.Name = "EmailBox";
+            this.EmailBox.Size = new System.Drawing.Size(163, 20);
+            this.EmailBox.TabIndex = 1;
             // 
             // CodeBox
             // 
@@ -148,7 +146,7 @@ namespace SadWork
             this.Controls.Add(this.CodeBox);
             this.Controls.Add(this.CodeLabel);
             this.Controls.Add(this.ResetButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.EmailBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -165,7 +163,7 @@ namespace SadWork
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton ResetButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox EmailBox;
         private System.Windows.Forms.TextBox CodeBox;
         private System.Windows.Forms.Label CodeLabel;
         private FontAwesome.Sharp.IconButton SubmitButton;

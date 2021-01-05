@@ -22,21 +22,13 @@ namespace SadWork
             CodeBox.Hide();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ResetButton_Click(object sender, EventArgs e)
         {
             SubmitButton.Show();
             CodeLabel.Show();
             CodeBox.Show();
+            ResetButton.Hide();
+            EmailBox.ReadOnly = true;
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
