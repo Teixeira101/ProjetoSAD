@@ -38,5 +38,10 @@ namespace SadWork
             currentChildForm = new NewSimulationlvl1();
             OpenChildForm(new NewSimulationResults(), currentChildForm);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
