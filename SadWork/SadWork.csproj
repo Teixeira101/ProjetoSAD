@@ -95,6 +95,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VerifyCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerifyCompany.Designer.cs">
+      <DependentUpon>VerifyCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     </Compile>
     <Compile Include="ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmPark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmPark.Designer.cs">
+      <DependentUpon>ConfirmPark.cs</DependentUpon>
     </Compile>
     <Compile Include="RecoverAccount.cs">
       <SubType>Form</SubType>
@@ -187,6 +199,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="VerifyCompany.resx">
+      <DependentUpon>VerifyCompany.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmPark.resx">
+      <DependentUpon>ConfirmPark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecoverAccount.resx">
       <DependentUpon>RecoverAccount.cs</DependentUpon>
