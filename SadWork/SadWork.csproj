@@ -95,6 +95,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VerifyCompanyS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerifyCompanyS.Designer.cs">
+      <DependentUpon>VerifyCompanyS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmParkS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmParkS.Designer.cs">
+      <DependentUpon>ConfirmParkS.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerifyCompany.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +211,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="VerifyCompanyS.resx">
+      <DependentUpon>VerifyCompanyS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmParkS.resx">
+      <DependentUpon>ConfirmParkS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerifyCompany.resx">
       <DependentUpon>VerifyCompany.cs</DependentUpon>
     </EmbeddedResource>
