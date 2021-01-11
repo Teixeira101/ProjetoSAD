@@ -31,11 +31,11 @@ namespace SadWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewSimulationResults));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,54 +67,10 @@ namespace SadWork
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(61, 27);
+            this.panel2.Location = new System.Drawing.Point(56, 70);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(461, 89);
             this.panel2.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(136, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Area do Park";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.label2.Location = new System.Drawing.Point(136, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nome do Park";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(137, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Localização:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(234, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "local";
             // 
             // iconButton6
             // 
@@ -137,10 +93,54 @@ namespace SadWork
             this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.iconButton6.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(234, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "local";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(137, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Localização:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.label2.Location = new System.Drawing.Point(136, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nome do Park";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(136, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Area do Park";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(75, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(70, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(103, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +150,7 @@ namespace SadWork
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(75, 141);
+            this.pictureBox2.Location = new System.Drawing.Point(70, 202);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(103, 106);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@ namespace SadWork
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(60, 159);
+            this.panel1.Location = new System.Drawing.Point(55, 220);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(461, 89);
             this.panel1.TabIndex = 4;
@@ -238,7 +238,7 @@ namespace SadWork
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(75, 269);
+            this.pictureBox3.Location = new System.Drawing.Point(70, 352);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(103, 106);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -253,7 +253,7 @@ namespace SadWork
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Location = new System.Drawing.Point(61, 287);
+            this.panel3.Location = new System.Drawing.Point(56, 370);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(461, 89);
             this.panel3.TabIndex = 6;
@@ -328,7 +328,7 @@ namespace SadWork
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(47)))), ((int)(((byte)(77)))));
-            this.ClientSize = new System.Drawing.Size(580, 384);
+            this.ClientSize = new System.Drawing.Size(804, 510);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox2);

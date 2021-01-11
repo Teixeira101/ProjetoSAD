@@ -95,6 +95,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ParkInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParkInfo.Designer.cs">
+      <DependentUpon>ParkInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerifyCompanyS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,12 +161,6 @@
     <Compile Include="NewSimulationlvl2.Designer.cs">
       <DependentUpon>NewSimulationlvl2.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewSimulationlvl3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewSimulationlvl3.Designer.cs">
-      <DependentUpon>NewSimulationlvl3.cs</DependentUpon>
-    </Compile>
     <Compile Include="NewSimulationResults.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +199,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ParkInfo.resx">
+      <DependentUpon>ParkInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerifyCompanyS.resx">
       <DependentUpon>VerifyCompanyS.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,9 +231,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewSimulationlvl2.resx">
       <DependentUpon>NewSimulationlvl2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewSimulationlvl3.resx">
-      <DependentUpon>NewSimulationlvl3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewSimulationResults.resx">
       <DependentUpon>NewSimulationResults.cs</DependentUpon>

@@ -30,45 +30,57 @@ namespace SadWork
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScientificParks));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.scientificPark_panel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.learnMore_btn = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.scientificPark_panel.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // scientificPark_panel
             // 
-            this.panel1.Controls.Add(this.iconButton6);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(59, 48);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(587, 106);
-            this.panel1.TabIndex = 0;
+            this.scientificPark_panel.Controls.Add(this.panel2);
+            this.scientificPark_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scientificPark_panel.Location = new System.Drawing.Point(0, 0);
+            this.scientificPark_panel.Name = "scientificPark_panel";
+            this.scientificPark_panel.Size = new System.Drawing.Size(804, 510);
+            this.scientificPark_panel.TabIndex = 0;
             // 
-            // iconButton6
+            // panel2
             // 
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleRight;
-            this.iconButton6.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 25;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(473, 68);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(114, 38);
-            this.iconButton6.TabIndex = 9;
-            this.iconButton6.Text = "Learn More";
-            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iconButton6.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.learnMore_btn);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(59, 48);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(587, 106);
+            this.panel2.TabIndex = 1;
+            // 
+            // learnMore_btn
+            // 
+            this.learnMore_btn.FlatAppearance.BorderSize = 0;
+            this.learnMore_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.learnMore_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.learnMore_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.learnMore_btn.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleRight;
+            this.learnMore_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.learnMore_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.learnMore_btn.IconSize = 25;
+            this.learnMore_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.learnMore_btn.Location = new System.Drawing.Point(473, 68);
+            this.learnMore_btn.Name = "learnMore_btn";
+            this.learnMore_btn.Size = new System.Drawing.Size(114, 38);
+            this.learnMore_btn.TabIndex = 9;
+            this.learnMore_btn.Text = "Learn More";
+            this.learnMore_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.learnMore_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.learnMore_btn.UseVisualStyleBackColor = true;
+            this.learnMore_btn.Click += new System.EventHandler(this.learnMore_btn_Click);
             // 
             // label2
             // 
@@ -76,12 +88,12 @@ namespace SadWork
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(128, 31);
+            this.label2.Location = new System.Drawing.Point(125, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(404, 28);
+            this.label2.Size = new System.Drawing.Size(458, 28);
             this.label2.TabIndex = 4;
-            this.label2.Text = "This science park in the Oost city district of Amsterdam  and has focus on\r\nphysi" +
-    "cs, mathematics, information technology and the life sciences.";
+            this.label2.Text = "This science park is located in the Oost city district of Amsterdam and has focus" +
+    " on\r\nphysics, mathematics, information technology and the life sciences.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
@@ -115,13 +127,14 @@ namespace SadWork
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(47)))), ((int)(((byte)(77)))));
             this.ClientSize = new System.Drawing.Size(804, 510);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.scientificPark_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ScientificParks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScientificParks";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.scientificPark_panel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -129,10 +142,11 @@ namespace SadWork
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel scientificPark_panel;
+        private System.Windows.Forms.Panel panel2;
+        private FontAwesome.Sharp.IconButton learnMore_btn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton iconButton6;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
