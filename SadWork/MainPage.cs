@@ -129,11 +129,13 @@ namespace SadWork
         private void iconButton7_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color7);
+            OpenChildForm(new ConfirmPark());
         }
 
         private void iconButton8_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color8);
+            OpenChildForm(new VerifyCompanyS());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

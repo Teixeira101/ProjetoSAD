@@ -126,7 +126,6 @@ namespace SadWork
             this.label7.TabIndex = 23;
             this.label7.Text = "Company#1";
             this.label7.Visible = false;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel1
             // 
@@ -139,7 +138,6 @@ namespace SadWork
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(688, 49);
             this.panel1.TabIndex = 28;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label10
             // 
@@ -196,10 +194,9 @@ namespace SadWork
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "VerifyCompanyS";
+            this.Name = "VerifyCompany";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "zzzzzzzzzzzzzzzzzzzzzz";
-            this.Load += new System.EventHandler(this.ConfirmParkS_Load);
+            this.Text = "VerifyCompany";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

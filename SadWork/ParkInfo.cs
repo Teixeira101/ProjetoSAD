@@ -7,17 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D;
 
 namespace SadWork
 {
-    public partial class VerifyCompany : Form
+    public partial class ParkInfo : Form
     {
-        public VerifyCompany()
+        public ParkInfo()
         {
             InitializeComponent();
-
-            
         }
     }
 }

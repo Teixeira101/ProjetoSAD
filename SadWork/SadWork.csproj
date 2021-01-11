@@ -101,17 +101,11 @@
     <Compile Include="VerifyCompanyS.Designer.cs">
       <DependentUpon>VerifyCompanyS.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfirmParkS.cs">
+    <Compile Include="ConfirmPark.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfirmParkS.Designer.cs">
-      <DependentUpon>ConfirmParkS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VerifyCompany.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VerifyCompany.Designer.cs">
-      <DependentUpon>VerifyCompany.cs</DependentUpon>
+    <Compile Include="ConfirmPark.Designer.cs">
+      <DependentUpon>ConfirmPark.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -136,12 +130,6 @@
     </Compile>
     <Compile Include="ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ConfirmPark.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConfirmPark.Designer.cs">
-      <DependentUpon>ConfirmPark.cs</DependentUpon>
     </Compile>
     <Compile Include="RecoverAccount.cs">
       <SubType>Form</SubType>
@@ -214,11 +202,8 @@
     <EmbeddedResource Include="VerifyCompanyS.resx">
       <DependentUpon>VerifyCompanyS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfirmParkS.resx">
-      <DependentUpon>ConfirmParkS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VerifyCompany.resx">
-      <DependentUpon>VerifyCompany.cs</DependentUpon>
+    <EmbeddedResource Include="ConfirmPark.resx">
+      <DependentUpon>ConfirmPark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -231,9 +216,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ConfirmPark.resx">
-      <DependentUpon>ConfirmPark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecoverAccount.resx">
       <DependentUpon>RecoverAccount.cs</DependentUpon>
