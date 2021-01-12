@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,20 +16,17 @@ namespace SadWork
         public ShowSimulations()
         {
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+            sqlcon.Open();
 
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+            SqlCommand cmd = new SqlCommand("SELECT [area],[data] FROM [dbo].[Resultado_Simulacao] Where [area]=@area and [data]=@data", sqlcon);
+            cmd.Parameters.AddWithValue("@area", labelArea.Text);
+            cmd.Parameters.AddWithValue("@data", labelData.Text);
 
-        }
+            sqlcon.Close();
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
 
         }
     }

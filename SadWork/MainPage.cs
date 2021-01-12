@@ -27,16 +27,18 @@ namespace SadWork
             if (LoginPage.admin)
             {
                 admin();
-            } else if (LoginPage.company)
+            } 
+            else if (LoginPage.company)
             {
                 company();
-            } else
+            } 
+            else
             {
                 skip();
             }
         }
 
-        private struct RGBColors
+        public struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
             public static Color color2 = Color.FromArgb(24, 161, 251);
@@ -48,7 +50,7 @@ namespace SadWork
             public static Color color8 = Color.FromArgb(146, 232, 32);
         }
 
-        private void ActivateButton(object senderbtn, Color color)
+        public void ActivateButton(object senderbtn, Color color)
         {
             if (senderbtn != null)
             {
@@ -84,7 +86,7 @@ namespace SadWork
             }
         }
 
-        private void OpenChildForm(Form childForm)
+        public void OpenChildForm(Form childForm)
         {
             if(currentChildForm != null)
             {
@@ -171,7 +173,7 @@ namespace SadWork
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private extern static void SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
@@ -221,11 +223,6 @@ namespace SadWork
             showSimulation_btn.Hide();
             confirmPark_btn.Hide();
             verifyCompany_btn.Hide();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

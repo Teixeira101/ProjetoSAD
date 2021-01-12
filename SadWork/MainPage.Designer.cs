@@ -49,8 +49,8 @@ namespace SadWork
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -398,17 +398,6 @@ namespace SadWork
             this.panelDesktop.Size = new System.Drawing.Size(804, 510);
             this.panelDesktop.TabIndex = 3;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(211, 134);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(68, 56);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -420,6 +409,17 @@ namespace SadWork
             this.label5.Size = new System.Drawing.Size(284, 25);
             this.label5.TabIndex = 6;
             this.label5.Text = "\"We Are Decisions Support\"!";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(211, 134);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(68, 56);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // MainPage
             // 
@@ -453,7 +453,6 @@ namespace SadWork
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton newSimulation_btn;
         private FontAwesome.Sharp.IconButton newPark_btn;
         private FontAwesome.Sharp.IconButton scientificParks_btn;
         private FontAwesome.Sharp.IconButton dashboard_btn;
@@ -471,5 +470,6 @@ namespace SadWork
         public FontAwesome.Sharp.IconButton showSimulation_btn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public FontAwesome.Sharp.IconButton newSimulation_btn;
     }
 }

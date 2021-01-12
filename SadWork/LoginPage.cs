@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using System.Runtime.InteropServices;
 
 namespace SadWork
 {
@@ -46,21 +47,47 @@ namespace SadWork
 
             Color backColor = buttonSignUp.BackColor;
             buttonSignUp.BackColor = Color.FromArgb(100, backColor.R, backColor.G, backColor.B);
+
+            btnMin.MouseEnter += OnMouseEnterButtonMin;
+            btnMin.MouseLeave += OnMouseLeaveButtonMin;
+
+            btnExit.MouseEnter += OnMouseEnterButtonExit;
+            btnExit.MouseLeave += OnMouseLeaveButtonExit;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void OnMouseEnterButtonMin(object sender, EventArgs e)
+        {
+            btnMin.BackColor = SystemColors.ControlLight;
+        }
+
+        private void OnMouseLeaveButtonMin(object sender, EventArgs e)
+        {
+            btnMin.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void OnMouseEnterButtonExit(object sender, EventArgs e)
+        {
+            btnExit.BackColor = SystemColors.ControlLight;
+        }
+
+        private void OnMouseLeaveButtonExit(object sender, EventArgs e)
+        {
+            btnExit.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            if (nullCamps()) 
+            if (nullCamps())
             {
                 textBoxEmail.Clear();
                 textBoxPwd.Clear();
                 MessageBox.Show("Empty Field(s)!");
-            } 
+            }
             else if (invalidEmailOrPassword())
             {
                 textBoxEmail.Clear();
@@ -76,7 +103,7 @@ namespace SadWork
                 cmd.Parameters.Add(new SqlParameter("@pwd", textBoxPwd.Text.Trim()));
 
                 SqlDataReader dr = cmd.ExecuteReader();
-            
+
                 if (dr.Read())
                 {
                     dr.Close();
@@ -93,7 +120,8 @@ namespace SadWork
                         {
                             admin = true;
                             company = false;
-                        } else
+                        }
+                        else
                         {
                             admin = false;
                             company = true;
@@ -102,13 +130,15 @@ namespace SadWork
                         this.Hide();
                         objMainPage.Show();
 
-                    } else
+                    }
+                    else
                     {
                         dr.Close();
                         sqlcon.Close();
                         MessageBox.Show("Your Company's Account Hasn't Been Yet Verified By Our Admins \nIf It's Been Too Long Since The Creation Of It, \nPlease Contact Us!");
                     }
-                } else
+                }
+                else
                 {
                     textBoxEmail.Clear();
                     textBoxPwd.Clear();
@@ -141,7 +171,7 @@ namespace SadWork
             objSignUp.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void buttonForgotPwd_Click(object sender, EventArgs e)
         {
             Black objBlack = new Black();
             objBlack.Show();
@@ -181,6 +211,33 @@ namespace SadWork
                 return true;
             }
             return false;
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panelLoginPage_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
