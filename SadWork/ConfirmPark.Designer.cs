@@ -126,7 +126,6 @@ namespace SadWork
             this.label7.Size = new System.Drawing.Size(50, 16);
             this.label7.TabIndex = 23;
             this.label7.Text = "Park#1";
-            this.label7.Visible = false;
             // 
             // label5
             // 
@@ -162,7 +161,6 @@ namespace SadWork
             this.label11.Size = new System.Drawing.Size(125, 16);
             this.label11.TabIndex = 26;
             this.label11.Text = "Location#1 Street#1";
-            this.label11.Visible = false;
             // 
             // label10
             // 
@@ -173,7 +171,6 @@ namespace SadWork
             this.label10.Size = new System.Drawing.Size(133, 16);
             this.label10.TabIndex = 25;
             this.label10.Text = "Email#1@Email.com";
-            this.label10.Visible = false;
             // 
             // label9
             // 
@@ -184,7 +181,6 @@ namespace SadWork
             this.label9.Size = new System.Drawing.Size(51, 16);
             this.label9.TabIndex = 24;
             this.label9.Text = "Area#1";
-            this.label9.Visible = false;
             // 
             // ConfirmPark
             // 

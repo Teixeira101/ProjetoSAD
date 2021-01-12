@@ -36,9 +36,9 @@ namespace SadWork
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,7 +125,6 @@ namespace SadWork
             this.label7.Size = new System.Drawing.Size(80, 16);
             this.label7.TabIndex = 23;
             this.label7.Text = "Company#1";
-            this.label7.Visible = false;
             // 
             // panel1
             // 
@@ -138,28 +137,6 @@ namespace SadWork
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(688, 49);
             this.panel1.TabIndex = 28;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(324, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(133, 16);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Email#1@Email.com";
-            this.label10.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(168, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 16);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Area#1";
-            this.label9.Visible = false;
             // 
             // iconButton2
             // 
@@ -183,6 +160,26 @@ namespace SadWork
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(324, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(133, 16);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Email#1@Email.com";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(168, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 16);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Area#1";
+            // 
             // VerifyCompanyS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,7 +191,7 @@ namespace SadWork
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "VerifyCompany";
+            this.Name = "VerifyCompanyS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VerifyCompany";
             this.panel1.ResumeLayout(false);
