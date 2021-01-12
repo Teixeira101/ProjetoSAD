@@ -24,7 +24,7 @@ namespace SadWork
             if(panel2.Width >= 1024)
             {
                 timer1.Stop();
-                MainPage LP = new MainPage();
+                LoginPage LP = new LoginPage();
                 LP.Show();
                 this.Hide();
             }

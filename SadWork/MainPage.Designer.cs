@@ -31,11 +31,13 @@ namespace SadWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.verifyCompany_btn = new FontAwesome.Sharp.IconButton();
+            this.confirmPark_btn = new FontAwesome.Sharp.IconButton();
+            this.showSimulation_btn = new FontAwesome.Sharp.IconButton();
+            this.newSimulation_btn = new FontAwesome.Sharp.IconButton();
+            this.newPark_btn = new FontAwesome.Sharp.IconButton();
+            this.scientificParks_btn = new FontAwesome.Sharp.IconButton();
+            this.dashboard_btn = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,8 +49,6 @@ namespace SadWork
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,13 +61,13 @@ namespace SadWork
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.panel1.Controls.Add(this.iconButton8);
-            this.panel1.Controls.Add(this.iconButton7);
-            this.panel1.Controls.Add(this.iconButton5);
-            this.panel1.Controls.Add(this.iconButton4);
-            this.panel1.Controls.Add(this.iconButton3);
-            this.panel1.Controls.Add(this.iconButton2);
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.verifyCompany_btn);
+            this.panel1.Controls.Add(this.confirmPark_btn);
+            this.panel1.Controls.Add(this.showSimulation_btn);
+            this.panel1.Controls.Add(this.newSimulation_btn);
+            this.panel1.Controls.Add(this.newPark_btn);
+            this.panel1.Controls.Add(this.scientificParks_btn);
+            this.panel1.Controls.Add(this.dashboard_btn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -76,115 +76,159 @@ namespace SadWork
             this.panel1.Size = new System.Drawing.Size(220, 576);
             this.panel1.TabIndex = 0;
             // 
-            // iconButton5
+            // verifyCompany_btn
             // 
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Copy;
-            this.iconButton5.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 32;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 322);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton5.Size = new System.Drawing.Size(220, 40);
-            this.iconButton5.TabIndex = 7;
-            this.iconButton5.Text = "Show Simulations";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = true;
-            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
+            this.verifyCompany_btn.FlatAppearance.BorderSize = 0;
+            this.verifyCompany_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.verifyCompany_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verifyCompany_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.verifyCompany_btn.IconChar = FontAwesome.Sharp.IconChar.Building;
+            this.verifyCompany_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.verifyCompany_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.verifyCompany_btn.IconSize = 32;
+            this.verifyCompany_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.verifyCompany_btn.Location = new System.Drawing.Point(0, 414);
+            this.verifyCompany_btn.Name = "verifyCompany_btn";
+            this.verifyCompany_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.verifyCompany_btn.Size = new System.Drawing.Size(220, 40);
+            this.verifyCompany_btn.TabIndex = 9;
+            this.verifyCompany_btn.Text = "Verify Company";
+            this.verifyCompany_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.verifyCompany_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.verifyCompany_btn.UseVisualStyleBackColor = true;
+            this.verifyCompany_btn.Click += new System.EventHandler(this.verifyCompany_btn_Click);
             // 
-            // iconButton4
+            // confirmPark_btn
             // 
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.CalendarPlus;
-            this.iconButton4.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 32;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 277);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton4.Size = new System.Drawing.Size(220, 40);
-            this.iconButton4.TabIndex = 6;
-            this.iconButton4.Text = "New SImulation";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            this.confirmPark_btn.FlatAppearance.BorderSize = 0;
+            this.confirmPark_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmPark_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPark_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.confirmPark_btn.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.confirmPark_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.confirmPark_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.confirmPark_btn.IconSize = 32;
+            this.confirmPark_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.confirmPark_btn.Location = new System.Drawing.Point(0, 368);
+            this.confirmPark_btn.Name = "confirmPark_btn";
+            this.confirmPark_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.confirmPark_btn.Size = new System.Drawing.Size(220, 40);
+            this.confirmPark_btn.TabIndex = 8;
+            this.confirmPark_btn.Text = "Confirm Park";
+            this.confirmPark_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.confirmPark_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.confirmPark_btn.UseVisualStyleBackColor = true;
+            this.confirmPark_btn.Click += new System.EventHandler(this.confirmPark_btn_Click);
             // 
-            // iconButton3
+            // showSimulation_btn
             // 
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Microscope;
-            this.iconButton3.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 32;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 232);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton3.Size = new System.Drawing.Size(220, 40);
-            this.iconButton3.TabIndex = 5;
-            this.iconButton3.Text = "New Park";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            this.showSimulation_btn.FlatAppearance.BorderSize = 0;
+            this.showSimulation_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showSimulation_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showSimulation_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.showSimulation_btn.IconChar = FontAwesome.Sharp.IconChar.Copy;
+            this.showSimulation_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.showSimulation_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.showSimulation_btn.IconSize = 32;
+            this.showSimulation_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.showSimulation_btn.Location = new System.Drawing.Point(0, 322);
+            this.showSimulation_btn.Name = "showSimulation_btn";
+            this.showSimulation_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.showSimulation_btn.Size = new System.Drawing.Size(220, 40);
+            this.showSimulation_btn.TabIndex = 7;
+            this.showSimulation_btn.Text = "Show Simulations";
+            this.showSimulation_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.showSimulation_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.showSimulation_btn.UseVisualStyleBackColor = true;
+            this.showSimulation_btn.Click += new System.EventHandler(this.showSimulation_btn_Click);
             // 
-            // iconButton2
+            // newSimulation_btn
             // 
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Atom;
-            this.iconButton2.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 32;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 187);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton2.Size = new System.Drawing.Size(220, 40);
-            this.iconButton2.TabIndex = 4;
-            this.iconButton2.Text = "Scientific Parks";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.newSimulation_btn.FlatAppearance.BorderSize = 0;
+            this.newSimulation_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newSimulation_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newSimulation_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.newSimulation_btn.IconChar = FontAwesome.Sharp.IconChar.CalendarPlus;
+            this.newSimulation_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.newSimulation_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.newSimulation_btn.IconSize = 32;
+            this.newSimulation_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.newSimulation_btn.Location = new System.Drawing.Point(0, 277);
+            this.newSimulation_btn.Name = "newSimulation_btn";
+            this.newSimulation_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.newSimulation_btn.Size = new System.Drawing.Size(220, 40);
+            this.newSimulation_btn.TabIndex = 6;
+            this.newSimulation_btn.Text = "New Simulation";
+            this.newSimulation_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.newSimulation_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.newSimulation_btn.UseVisualStyleBackColor = true;
+            this.newSimulation_btn.Click += new System.EventHandler(this.newSimulation_btn_Click);
             // 
-            // iconButton1
+            // newPark_btn
             // 
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
-            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 142);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton1.Size = new System.Drawing.Size(220, 40);
-            this.iconButton1.TabIndex = 3;
-            this.iconButton1.Text = "Dashboard";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.newPark_btn.FlatAppearance.BorderSize = 0;
+            this.newPark_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newPark_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newPark_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.newPark_btn.IconChar = FontAwesome.Sharp.IconChar.Microscope;
+            this.newPark_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.newPark_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.newPark_btn.IconSize = 32;
+            this.newPark_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.newPark_btn.Location = new System.Drawing.Point(0, 232);
+            this.newPark_btn.Name = "newPark_btn";
+            this.newPark_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.newPark_btn.Size = new System.Drawing.Size(220, 40);
+            this.newPark_btn.TabIndex = 5;
+            this.newPark_btn.Text = "New Park";
+            this.newPark_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.newPark_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.newPark_btn.UseVisualStyleBackColor = true;
+            this.newPark_btn.Click += new System.EventHandler(this.newPark_btn_Click);
+            // 
+            // scientificParks_btn
+            // 
+            this.scientificParks_btn.FlatAppearance.BorderSize = 0;
+            this.scientificParks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scientificParks_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scientificParks_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.scientificParks_btn.IconChar = FontAwesome.Sharp.IconChar.Atom;
+            this.scientificParks_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.scientificParks_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.scientificParks_btn.IconSize = 32;
+            this.scientificParks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.scientificParks_btn.Location = new System.Drawing.Point(0, 187);
+            this.scientificParks_btn.Name = "scientificParks_btn";
+            this.scientificParks_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.scientificParks_btn.Size = new System.Drawing.Size(220, 40);
+            this.scientificParks_btn.TabIndex = 4;
+            this.scientificParks_btn.Text = "Scientific Parks";
+            this.scientificParks_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.scientificParks_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.scientificParks_btn.UseVisualStyleBackColor = true;
+            this.scientificParks_btn.Click += new System.EventHandler(this.scientificParks_btn_Click);
+            // 
+            // dashboard_btn
+            // 
+            this.dashboard_btn.FlatAppearance.BorderSize = 0;
+            this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboard_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.dashboard_btn.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
+            this.dashboard_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.dashboard_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.dashboard_btn.IconSize = 32;
+            this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboard_btn.Location = new System.Drawing.Point(0, 142);
+            this.dashboard_btn.Name = "dashboard_btn";
+            this.dashboard_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.dashboard_btn.Size = new System.Drawing.Size(220, 40);
+            this.dashboard_btn.TabIndex = 3;
+            this.dashboard_btn.Text = "Dashboard";
+            this.dashboard_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboard_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.dashboard_btn.UseVisualStyleBackColor = true;
+            this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
             // 
             // label1
             // 
@@ -239,7 +283,7 @@ namespace SadWork
             this.login_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.login_btn.IconSize = 25;
             this.login_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.login_btn.Location = new System.Drawing.Point(720, 29);
+            this.login_btn.Location = new System.Drawing.Point(717, 27);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(84, 36);
             this.login_btn.TabIndex = 8;
@@ -274,7 +318,7 @@ namespace SadWork
             this.btnExit.IconColor = System.Drawing.Color.DimGray;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 16;
-            this.btnExit.Location = new System.Drawing.Point(785, 4);
+            this.btnExit.Location = new System.Drawing.Point(785, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(16, 19);
             this.btnExit.TabIndex = 2;
@@ -349,50 +393,6 @@ namespace SadWork
             this.panelDesktop.Size = new System.Drawing.Size(804, 510);
             this.panelDesktop.TabIndex = 3;
             // 
-            // iconButton7
-            // 
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.iconButton7.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.IconSize = 32;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(0, 368);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton7.Size = new System.Drawing.Size(220, 40);
-            this.iconButton7.TabIndex = 8;
-            this.iconButton7.Text = "Confirm Park";
-            this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = true;
-            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
-            // 
-            // iconButton8
-            // 
-            this.iconButton8.FlatAppearance.BorderSize = 0;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.Building;
-            this.iconButton8.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.IconSize = 32;
-            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(0, 414);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton8.Size = new System.Drawing.Size(220, 40);
-            this.iconButton8.TabIndex = 9;
-            this.iconButton8.Text = "Verify Company";
-            this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton8.UseVisualStyleBackColor = true;
-            this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,21 +424,21 @@ namespace SadWork
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton newSimulation_btn;
+        private FontAwesome.Sharp.IconButton newPark_btn;
+        private FontAwesome.Sharp.IconButton scientificParks_btn;
+        private FontAwesome.Sharp.IconButton dashboard_btn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox btnMin;
         private FontAwesome.Sharp.IconPictureBox btnExit;
-        private FontAwesome.Sharp.IconButton login_btn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelDesktop;
-        private FontAwesome.Sharp.IconButton iconButton8;
-        private FontAwesome.Sharp.IconButton iconButton7;
+        private FontAwesome.Sharp.IconButton verifyCompany_btn;
+        private FontAwesome.Sharp.IconButton confirmPark_btn;
+        public FontAwesome.Sharp.IconButton login_btn;
+        public FontAwesome.Sharp.IconButton showSimulation_btn;
     }
 }

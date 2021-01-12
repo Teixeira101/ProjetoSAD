@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace SadWork
 {
     public partial class LoginPage : Form
     {
+        public static string admin_email = "anfisaprata@gmail.com";
+        public static bool admin = false;
+        public static bool company = false;
+
         public LoginPage()
         {
             InitializeComponent();
@@ -50,53 +55,80 @@ namespace SadWork
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
-            sqlcon.Open();
-
-            SqlCommand cmd = new SqlCommand(@"SELECT [email_empresa] ,[password] FROM [dbo].[Empresa] Where [email_empresa] = @emailEmpresa and password = @pwd", sqlcon);
-            cmd.Parameters.Add(new SqlParameter("@emailEmpresa", textBoxEmail.Text.Trim()));
-            cmd.Parameters.Add(new SqlParameter("@pwd", textBoxPwd.Text.Trim()));
-
-            SqlDataReader dr = cmd.ExecuteReader();
-            
-            if (dr.Read())
-            {
-                dr.Close();
-                cmd = new SqlCommand(@"SELECT [verificado_empresa] FROM [dbo].[Empresa] Where [verificado_empresa] = @verificado_empresa", sqlcon);
-                cmd.Parameters.Add(new SqlParameter("@verificado_empresa", true));
-                dr = cmd.ExecuteReader();
-
-                if (dr.Read())
-                {
-                    dr.Close();
-                    sqlcon.Close();
-                    MainPage objMainPage = new MainPage();
-                    this.Hide();
-                    objMainPage.Show();
-                } else
-                {
-                    dr.Close();
-                    sqlcon.Close();
-                    MessageBox.Show("Your Company's Account Hasn't Been Yet Verified By Our Admins \nIf It's Been Too Long Since The Creation Of The Account, \nPlease Contact Us!");
-                }
-            } else
+            if (nullCamps()) 
             {
                 textBoxEmail.Clear();
                 textBoxPwd.Clear();
-                MessageBox.Show("Invalid Credentials");
+                MessageBox.Show("Empty Field(s)!");
+            } 
+            else if (invalidEmailOrPassword())
+            {
+                textBoxEmail.Clear();
+                textBoxPwd.Clear();
             }
+            else
+            {
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+                sqlcon.Open();
 
-            //Libertar Recursos
-            if (!dr.IsClosed)
-                dr.Close();
+                SqlCommand cmd = new SqlCommand(@"SELECT [email_empresa], [password] FROM [dbo].[Empresa] Where [email_empresa] = @emailEmpresa and password = @pwd", sqlcon);
+                cmd.Parameters.Add(new SqlParameter("@emailEmpresa", textBoxEmail.Text.Trim()));
+                cmd.Parameters.Add(new SqlParameter("@pwd", textBoxPwd.Text.Trim()));
 
-            if (sqlcon.State == System.Data.ConnectionState.Open)
-                sqlcon.Close();
-            sqlcon.Dispose();
+                SqlDataReader dr = cmd.ExecuteReader();
+            
+                if (dr.Read())
+                {
+                    dr.Close();
+                    cmd = new SqlCommand(@"SELECT [email_empresa], [verificado_empresa] FROM [dbo].[Empresa] Where [email_empresa] = @emailEmpresa and [verificado_empresa] = @verificado_empresa", sqlcon);
+                    cmd.Parameters.Add(new SqlParameter("@emailEmpresa", textBoxEmail.Text.Trim()));
+                    cmd.Parameters.Add(new SqlParameter("@verificado_empresa", true));
+                    dr = cmd.ExecuteReader();
+
+                    if (dr.Read())
+                    {
+                        dr.Close();
+                        sqlcon.Close();
+                        if (textBoxEmail.Text.Trim() == admin_email)
+                        {
+                            admin = true;
+                            company = false;
+                        } else
+                        {
+                            admin = false;
+                            company = true;
+                        }
+                        MainPage objMainPage = new MainPage();
+                        this.Hide();
+                        objMainPage.Show();
+
+                    } else
+                    {
+                        dr.Close();
+                        sqlcon.Close();
+                        MessageBox.Show("Your Company's Account Hasn't Been Yet Verified By Our Admins \nIf It's Been Too Long Since The Creation Of It, \nPlease Contact Us!");
+                    }
+                } else
+                {
+                    textBoxEmail.Clear();
+                    textBoxPwd.Clear();
+                    MessageBox.Show("Invalid Credentials");
+                }
+
+                //Libertar Recursos
+                if (!dr.IsClosed)
+                    dr.Close();
+
+                if (sqlcon.State == ConnectionState.Open)
+                    sqlcon.Close();
+                sqlcon.Dispose();
+            }
         }
 
         private void buttonSkip_Click(object sender, EventArgs e)
         {
+            admin = false;
+            company = false;
             MainPage objMainPage = new MainPage();
             this.Hide();
             objMainPage.Show();
@@ -120,9 +152,35 @@ namespace SadWork
             objRecoverAccount.TopMost = true;
         }
 
-        private void textBoxEmail_TextChanged(object sender, EventArgs e)
+        private bool nullCamps()
         {
+            if (textBoxEmail.Text == "" || textBoxPwd.Text == "")
+            {
+                return true;
+            }
+            return false;
+        }
 
+        private bool invalidEmailOrPassword()
+        {
+            bool isEmail = Regex.IsMatch(textBoxEmail.Text, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9]){2-3}?)\Z", RegexOptions.IgnoreCase);
+
+            if (!isEmail && textBoxPwd.TextLength < 8)
+            {
+                MessageBox.Show("Incorrect Email Formate and Password Length!");
+                return true;
+            }
+            else if (!isEmail)
+            {
+                MessageBox.Show("Incorrect Email Formate!");
+                return true;
+            }
+            else if (textBoxPwd.TextLength < 8)
+            {
+                MessageBox.Show("Incorrect Password Length!");
+                return true;
+            }
+            return false;
         }
     }
 }

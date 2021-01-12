@@ -103,21 +103,20 @@ namespace SadWork
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxEmail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.Location = new System.Drawing.Point(633, 192);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(270, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(270, 27);
             this.textBoxEmail.TabIndex = 5;
-            this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
             // textBoxPwd
             // 
-            this.textBoxPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPwd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPwd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPwd.Location = new System.Drawing.Point(633, 267);
+            this.textBoxPwd.Location = new System.Drawing.Point(633, 265);
             this.textBoxPwd.Name = "textBoxPwd";
-            this.textBoxPwd.Size = new System.Drawing.Size(270, 20);
+            this.textBoxPwd.Size = new System.Drawing.Size(270, 27);
             this.textBoxPwd.TabIndex = 6;
             this.textBoxPwd.UseSystemPasswordChar = true;
             // 
@@ -151,7 +150,7 @@ namespace SadWork
             this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
-            this.label6.Location = new System.Drawing.Point(635, 245);
+            this.label6.Location = new System.Drawing.Point(635, 243);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 19);
             this.label6.TabIndex = 9;

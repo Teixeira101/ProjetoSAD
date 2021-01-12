@@ -49,6 +49,7 @@ namespace SadWork
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxArea = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.backLogin_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -154,30 +155,30 @@ namespace SadWork
             // 
             // textBoxPwd
             // 
-            this.textBoxPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPwd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPwd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPwd.Location = new System.Drawing.Point(633, 296);
             this.textBoxPwd.Name = "textBoxPwd";
-            this.textBoxPwd.Size = new System.Drawing.Size(270, 20);
+            this.textBoxPwd.Size = new System.Drawing.Size(270, 27);
             this.textBoxPwd.TabIndex = 3;
             this.textBoxPwd.UseSystemPasswordChar = true;
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxEmail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.Location = new System.Drawing.Point(633, 222);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(270, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(270, 27);
             this.textBoxEmail.TabIndex = 2;
             // 
             // textBoxCompName
             // 
-            this.textBoxCompName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCompName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxCompName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCompName.Location = new System.Drawing.Point(633, 147);
             this.textBoxCompName.Name = "textBoxCompName";
-            this.textBoxCompName.Size = new System.Drawing.Size(270, 20);
+            this.textBoxCompName.Size = new System.Drawing.Size(270, 27);
             this.textBoxCompName.TabIndex = 1;
             // 
             // label3
@@ -238,9 +239,9 @@ namespace SadWork
             this.labelPDF.AutoSize = true;
             this.labelPDF.Location = new System.Drawing.Point(712, 437);
             this.labelPDF.Name = "labelPDF";
-            this.labelPDF.Size = new System.Drawing.Size(35, 13);
+            this.labelPDF.Size = new System.Drawing.Size(50, 13);
             this.labelPDF.TabIndex = 19;
-            this.labelPDF.Text = "label7";
+            this.labelPDF.Text = "labelPDF";
             this.labelPDF.Visible = false;
             // 
             // label8
@@ -282,11 +283,28 @@ namespace SadWork
             this.label10.TabIndex = 21;
             this.label10.Text = "Document Proof";
             // 
+            // backLogin_btn
+            // 
+            this.backLogin_btn.BackColor = System.Drawing.SystemColors.Control;
+            this.backLogin_btn.FlatAppearance.BorderSize = 0;
+            this.backLogin_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backLogin_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backLogin_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
+            this.backLogin_btn.Location = new System.Drawing.Point(723, 520);
+            this.backLogin_btn.Name = "backLogin_btn";
+            this.backLogin_btn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.backLogin_btn.Size = new System.Drawing.Size(90, 26);
+            this.backLogin_btn.TabIndex = 22;
+            this.backLogin_btn.Text = "Back to Login";
+            this.backLogin_btn.UseVisualStyleBackColor = false;
+            this.backLogin_btn.Click += new System.EventHandler(this.backLogin_btn_Click);
+            // 
             // SignUpPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 576);
+            this.Controls.Add(this.backLogin_btn);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBoxArea);
             this.Controls.Add(this.label8);
@@ -336,5 +354,6 @@ namespace SadWork
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBoxArea;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button backLogin_btn;
     }
 }

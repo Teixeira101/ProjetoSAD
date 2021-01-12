@@ -44,11 +44,11 @@ namespace SadWork
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(138, 222);
+            this.label1.Location = new System.Drawing.Point(135, 222);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(376, 66);
+            this.label1.Size = new System.Drawing.Size(666, 66);
             this.label1.TabIndex = 0;
-            this.label1.Text = "SPLASH SCREEN";
+            this.label1.Text = "WE ARE DECISIONS SUPPORT";
             // 
             // label2
             // 
@@ -56,11 +56,11 @@ namespace SadWork
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(143, 275);
+            this.label2.Location = new System.Drawing.Point(143, 278);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(449, 33);
+            this.label2.Size = new System.Drawing.Size(317, 33);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Trabalho de Sistemas de Apoio à decisão";
+            this.label2.Text = "Sistemas de Apoio à decisão";
             // 
             // panel1
             // 

@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 
@@ -29,6 +23,17 @@ namespace SadWork
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
+
+            if (LoginPage.admin)
+            {
+                admin();
+            } else if (LoginPage.company)
+            {
+                company();
+            } else
+            {
+                skip();
+            }
         }
 
         private struct RGBColors
@@ -96,46 +101,53 @@ namespace SadWork
             label2.Text = childForm.Text;
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void dashboard_btn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new Dashboard());
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void scientificParks_btn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new ScientificParks());
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
+        private void newPark_btn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
             OpenChildForm(new NewPark());
         }
 
-        private void iconButton4_Click(object sender, EventArgs e)
+        private void newSimulation_btn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new NewSimulationlvl1());
         }
 
-        private void iconButton5_Click(object sender, EventArgs e)
+        private void showSimulation_btn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
             OpenChildForm(new ShowSimulations());
         }
 
-        private void iconButton7_Click(object sender, EventArgs e)
+        private void confirmPark_btn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color7);
             OpenChildForm(new ConfirmPark());
         }
 
-        private void iconButton8_Click(object sender, EventArgs e)
+        private void verifyCompany_btn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color8);
             OpenChildForm(new VerifyCompanyS());
+        }
+
+        private void login_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginPage LP = new LoginPage();
+            LP.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -177,11 +189,38 @@ namespace SadWork
             WindowState = FormWindowState.Minimized;
         }
 
-        private void login_btn_Click(object sender, EventArgs e)
+        private void admin()
         {
-            this.Hide();
-            LoginPage LP = new LoginPage();
-            LP.Show();
+            login_btn.IconChar = IconChar.SignOutAlt;
+            login_btn.Text = "Log Out";
+            login_btn.TextImageRelation = TextImageRelation.TextBeforeImage;
+            login_btn.Width = (int)Size.Width;
+
+            confirmPark_btn.Location = newSimulation_btn.Location;
+            verifyCompany_btn.Location = showSimulation_btn.Location;
+
+            newSimulation_btn.Hide();
+            showSimulation_btn.Hide();
+        }
+
+        private void company()
+        {
+            login_btn.IconChar = IconChar.SignOutAlt;
+            login_btn.Text = "Log Out";
+            login_btn.TextImageRelation = TextImageRelation.TextBeforeImage;
+            login_btn.Width = (int)Size.Width;
+
+            confirmPark_btn.Hide();
+            verifyCompany_btn.Hide();
+        }
+
+        private void skip()
+        {
+            newPark_btn.Hide();
+            newSimulation_btn.Hide();
+            showSimulation_btn.Hide();
+            confirmPark_btn.Hide();
+            verifyCompany_btn.Hide();
         }
     }
 }
