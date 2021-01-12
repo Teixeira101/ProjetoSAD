@@ -31,6 +31,8 @@ namespace SadWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -47,8 +49,8 @@ namespace SadWork
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -56,6 +58,7 @@ namespace SadWork
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,11 +79,55 @@ namespace SadWork
             this.panel1.Size = new System.Drawing.Size(220, 576);
             this.panel1.TabIndex = 0;
             // 
+            // iconButton8
+            // 
+            this.iconButton8.FlatAppearance.BorderSize = 0;
+            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.Building;
+            this.iconButton8.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton8.IconSize = 32;
+            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton8.Location = new System.Drawing.Point(0, 414);
+            this.iconButton8.Name = "iconButton8";
+            this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButton8.Size = new System.Drawing.Size(220, 40);
+            this.iconButton8.TabIndex = 9;
+            this.iconButton8.Text = "Verify Company";
+            this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton8.UseVisualStyleBackColor = true;
+            this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
+            // 
+            // iconButton7
+            // 
+            this.iconButton7.FlatAppearance.BorderSize = 0;
+            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.iconButton7.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton7.IconSize = 32;
+            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton7.Location = new System.Drawing.Point(0, 368);
+            this.iconButton7.Name = "iconButton7";
+            this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.iconButton7.Size = new System.Drawing.Size(220, 40);
+            this.iconButton7.TabIndex = 8;
+            this.iconButton7.Text = "Confirm Park";
+            this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton7.UseVisualStyleBackColor = true;
+            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
+            // 
             // iconButton5
             // 
             this.iconButton5.FlatAppearance.BorderSize = 0;
             this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton5.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Copy;
             this.iconButton5.IconColor = System.Drawing.Color.Gainsboro;
@@ -102,7 +149,7 @@ namespace SadWork
             // 
             this.iconButton4.FlatAppearance.BorderSize = 0;
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton4.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.CalendarPlus;
             this.iconButton4.IconColor = System.Drawing.Color.Gainsboro;
@@ -124,7 +171,7 @@ namespace SadWork
             // 
             this.iconButton3.FlatAppearance.BorderSize = 0;
             this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton3.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Microscope;
             this.iconButton3.IconColor = System.Drawing.Color.Gainsboro;
@@ -146,7 +193,7 @@ namespace SadWork
             // 
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton2.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Atom;
             this.iconButton2.IconColor = System.Drawing.Color.Gainsboro;
@@ -168,7 +215,7 @@ namespace SadWork
             // 
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
             this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
@@ -190,11 +237,11 @@ namespace SadWork
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(25, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 44);
+            this.label1.Size = new System.Drawing.Size(163, 48);
             this.label1.TabIndex = 2;
             this.label1.Text = "We Are \r\nDecisions Support";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,7 +279,7 @@ namespace SadWork
             this.login_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.login_btn.FlatAppearance.BorderSize = 0;
             this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.login_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_btn.ForeColor = System.Drawing.Color.Gainsboro;
             this.login_btn.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
             this.login_btn.IconColor = System.Drawing.Color.Gainsboro;
@@ -310,25 +357,25 @@ namespace SadWork
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(253, 3);
+            this.label3.Location = new System.Drawing.Point(230, 228);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(297, 63);
+            this.label3.Size = new System.Drawing.Size(340, 88);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Hi! Welcome to our application.\r\nWe are more than greatfull to let you\r\nknow more" +
-    " on scientific parks.";
+            this.label3.Text = "An application to aid decision making \r\nusing the AHP method.\r\nUse it to run simu" +
+    "lations and get help \r\nselecting the best Park for your company!";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(7, 416);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(298, 85);
+            this.label4.Size = new System.Drawing.Size(275, 80);
             this.label4.TabIndex = 4;
             this.label4.Text = "If you care to visit some of the parks that\r\nwe present to you. You must Login or" +
     " Sign Up\r\nwith your Company\'s credentials.\r\nSo the minds behind the scenes can k" +
@@ -341,6 +388,8 @@ namespace SadWork
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(47)))), ((int)(((byte)(77)))));
             this.panelDesktop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDesktop.BackgroundImage")));
             this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktop.Controls.Add(this.pictureBox2);
+            this.panelDesktop.Controls.Add(this.label5);
             this.panelDesktop.Controls.Add(this.label4);
             this.panelDesktop.Controls.Add(this.label3);
             this.panelDesktop.Location = new System.Drawing.Point(220, 66);
@@ -349,49 +398,30 @@ namespace SadWork
             this.panelDesktop.Size = new System.Drawing.Size(804, 510);
             this.panelDesktop.TabIndex = 3;
             // 
-            // iconButton7
+            // pictureBox2
             // 
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.iconButton7.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.IconSize = 32;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(0, 368);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton7.Size = new System.Drawing.Size(220, 40);
-            this.iconButton7.TabIndex = 8;
-            this.iconButton7.Text = "Confirm Park";
-            this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = true;
-            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(211, 134);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(68, 56);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
-            // iconButton8
+            // label5
             // 
-            this.iconButton8.FlatAppearance.BorderSize = 0;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.Building;
-            this.iconButton8.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.IconSize = 32;
-            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(0, 414);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton8.Size = new System.Drawing.Size(220, 40);
-            this.iconButton8.TabIndex = 9;
-            this.iconButton8.Text = "Verify Company";
-            this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton8.UseVisualStyleBackColor = true;
-            this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(262, 132);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(323, 56);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "\"We Are Decisions Support\"!";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // MainPage
             // 
@@ -415,6 +445,7 @@ namespace SadWork
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -440,5 +471,7 @@ namespace SadWork
         private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconButton iconButton8;
         private FontAwesome.Sharp.IconButton iconButton7;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label5;
     }
 }
