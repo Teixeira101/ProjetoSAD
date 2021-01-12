@@ -104,7 +104,7 @@ namespace SadWork
 
         private bool invalidEmailOrPassword()
         {
-            bool isEmail = Regex.IsMatch(textBoxEmail.Text, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9]){2-3}?)\Z", RegexOptions.IgnoreCase);
+            bool isEmail = Regex.IsMatch(textBoxEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
 
             if (!isEmail && textBoxPwd.TextLength < 8)
             {
