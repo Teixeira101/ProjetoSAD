@@ -56,6 +56,7 @@ namespace SadWork
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -234,11 +235,11 @@ namespace SadWork
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(25, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 44);
+            this.label1.Size = new System.Drawing.Size(163, 48);
             this.label1.TabIndex = 2;
             this.label1.Text = "We Are \r\nDecisions Support";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -276,7 +277,7 @@ namespace SadWork
             this.login_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.login_btn.FlatAppearance.BorderSize = 0;
             this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.login_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_btn.ForeColor = System.Drawing.Color.Gainsboro;
             this.login_btn.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
             this.login_btn.IconColor = System.Drawing.Color.Gainsboro;
@@ -354,25 +355,25 @@ namespace SadWork
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(253, 3);
+            this.label3.Location = new System.Drawing.Point(230, 228);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(297, 63);
+            this.label3.Size = new System.Drawing.Size(340, 88);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Hi! Welcome to our application.\r\nWe are more than greatfull to let you\r\nknow more" +
-    " on scientific parks.";
+            this.label3.Text = "An application to aid decision making \r\nusing the AHP method.\r\nUse it to run simu" +
+    "lations and get help \r\nselecting the best Park for your company!";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(7, 416);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(298, 85);
+            this.label4.Size = new System.Drawing.Size(275, 80);
             this.label4.TabIndex = 4;
             this.label4.Text = "If you care to visit some of the parks that\r\nwe present to you. You must Login or" +
     " Sign Up\r\nwith your Company\'s credentials.\r\nSo the minds behind the scenes can k" +
@@ -385,6 +386,8 @@ namespace SadWork
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(47)))), ((int)(((byte)(77)))));
             this.panelDesktop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDesktop.BackgroundImage")));
             this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktop.Controls.Add(this.pictureBox2);
+            this.panelDesktop.Controls.Add(this.label5);
             this.panelDesktop.Controls.Add(this.label4);
             this.panelDesktop.Controls.Add(this.label3);
             this.panelDesktop.Location = new System.Drawing.Point(220, 66);
@@ -415,6 +418,7 @@ namespace SadWork
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

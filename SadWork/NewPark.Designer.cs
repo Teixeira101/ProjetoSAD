@@ -31,22 +31,22 @@ namespace SadWork
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxArea = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxBriefDesc = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.openFile = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBoxLocation = new System.Windows.Forms.TextBox();
+            this.checkBoxColab = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -75,13 +75,13 @@ namespace SadWork
             this.label2.Text = "Park\'s Area";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox1
+            // comboBoxArea
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(123, 124);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 21);
-            this.comboBox1.TabIndex = 6;
+            this.comboBoxArea.FormattingEnabled = true;
+            this.comboBoxArea.Location = new System.Drawing.Point(123, 124);
+            this.comboBoxArea.Name = "comboBoxArea";
+            this.comboBoxArea.Size = new System.Drawing.Size(191, 21);
+            this.comboBoxArea.TabIndex = 6;
             // 
             // label3
             // 
@@ -135,13 +135,13 @@ namespace SadWork
             this.label6.Text = "Park\'s Photo";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox4
+            // textBoxBriefDesc
             // 
-            this.textBox4.Location = new System.Drawing.Point(514, 201);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 77);
-            this.textBox4.TabIndex = 16;
+            this.textBoxBriefDesc.Location = new System.Drawing.Point(514, 201);
+            this.textBoxBriefDesc.Multiline = true;
+            this.textBoxBriefDesc.Name = "textBoxBriefDesc";
+            this.textBoxBriefDesc.Size = new System.Drawing.Size(200, 77);
+            this.textBoxBriefDesc.TabIndex = 16;
             // 
             // panel1
             // 
@@ -172,20 +172,21 @@ namespace SadWork
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 196);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 20);
-            this.textBox1.TabIndex = 19;
+            this.textBoxName.Location = new System.Drawing.Point(123, 196);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(191, 20);
+            this.textBoxName.TabIndex = 19;
             // 
-            // textBox2
+            // textBoxEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 267);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 20);
-            this.textBox2.TabIndex = 20;
+            this.textBoxEmail.Location = new System.Drawing.Point(123, 267);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(191, 20);
+            this.textBoxEmail.TabIndex = 20;
             // 
             // iconButton2
             // 
@@ -244,44 +245,44 @@ namespace SadWork
             this.label5.Text = "Park\'s Location";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox3
+            // textBoxLocation
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 341);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 20);
-            this.textBox3.TabIndex = 25;
+            this.textBoxLocation.Location = new System.Drawing.Point(123, 341);
+            this.textBoxLocation.Name = "textBoxLocation";
+            this.textBoxLocation.Size = new System.Drawing.Size(191, 20);
+            this.textBoxLocation.TabIndex = 25;
             // 
-            // checkBox1
+            // checkBoxColab
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(514, 309);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(128, 17);
-            this.checkBox1.TabIndex = 27;
-            this.checkBox1.Text = "Colleges Colaboration";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxColab.AutoSize = true;
+            this.checkBoxColab.Location = new System.Drawing.Point(514, 309);
+            this.checkBoxColab.Name = "checkBoxColab";
+            this.checkBoxColab.Size = new System.Drawing.Size(128, 17);
+            this.checkBoxColab.TabIndex = 27;
+            this.checkBoxColab.Text = "Colleges Colaboration";
+            this.checkBoxColab.UseVisualStyleBackColor = true;
             // 
             // NewPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 510);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.checkBoxColab);
+            this.Controls.Add(this.textBoxLocation);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.openFile);
             this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxBriefDesc);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxArea);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -297,21 +298,21 @@ namespace SadWork
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxArea;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxBriefDesc;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Button openFile;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox textBoxLocation;
+        private System.Windows.Forms.CheckBox checkBoxColab;
     }
 }

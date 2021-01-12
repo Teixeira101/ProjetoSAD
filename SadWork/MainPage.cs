@@ -222,5 +222,10 @@ namespace SadWork
             confirmPark_btn.Hide();
             verifyCompany_btn.Hide();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
