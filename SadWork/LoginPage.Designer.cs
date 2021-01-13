@@ -38,7 +38,7 @@ namespace SadWork
             this.buttonForgotPwd = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.buttonSkip = new System.Windows.Forms.Button();
-            this.buttonLogin = new System.Windows.Forms.Button();
+            this.login_btn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@ namespace SadWork
             this.panelLoginPage.Controls.Add(this.buttonForgotPwd);
             this.panelLoginPage.Controls.Add(this.label7);
             this.panelLoginPage.Controls.Add(this.buttonSkip);
-            this.panelLoginPage.Controls.Add(this.buttonLogin);
+            this.panelLoginPage.Controls.Add(this.login_btn);
             this.panelLoginPage.Controls.Add(this.label6);
             this.panelLoginPage.Controls.Add(this.label5);
             this.panelLoginPage.Controls.Add(this.label4);
@@ -147,7 +147,7 @@ namespace SadWork
             this.buttonForgotPwd.Location = new System.Drawing.Point(639, 309);
             this.buttonForgotPwd.Name = "buttonForgotPwd";
             this.buttonForgotPwd.Size = new System.Drawing.Size(126, 27);
-            this.buttonForgotPwd.TabIndex = 30;
+            this.buttonForgotPwd.TabIndex = 4;
             this.buttonForgotPwd.Text = "Forgot Password";
             this.buttonForgotPwd.UseVisualStyleBackColor = false;
             this.buttonForgotPwd.Click += new System.EventHandler(this.buttonForgotPwd_Click);
@@ -161,7 +161,7 @@ namespace SadWork
             this.label7.Location = new System.Drawing.Point(682, 494);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(137, 15);
-            this.label7.TabIndex = 29;
+            this.label7.TabIndex = 0;
             this.label7.Text = "Skip without registering";
             // 
             // buttonSkip
@@ -174,25 +174,25 @@ namespace SadWork
             this.buttonSkip.Location = new System.Drawing.Point(825, 486);
             this.buttonSkip.Name = "buttonSkip";
             this.buttonSkip.Size = new System.Drawing.Size(68, 32);
-            this.buttonSkip.TabIndex = 28;
+            this.buttonSkip.TabIndex = 6;
             this.buttonSkip.Text = "Skip";
             this.buttonSkip.UseVisualStyleBackColor = false;
             this.buttonSkip.Click += new System.EventHandler(this.buttonSkip_Click);
             // 
-            // buttonLogin
+            // login_btn
             // 
-            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
-            this.buttonLogin.FlatAppearance.BorderSize = 0;
-            this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.ForeColor = System.Drawing.Color.White;
-            this.buttonLogin.Location = new System.Drawing.Point(825, 309);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(84, 27);
-            this.buttonLogin.TabIndex = 26;
-            this.buttonLogin.Text = "Sign In";
-            this.buttonLogin.UseVisualStyleBackColor = false;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.login_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
+            this.login_btn.FlatAppearance.BorderSize = 0;
+            this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_btn.ForeColor = System.Drawing.Color.White;
+            this.login_btn.Location = new System.Drawing.Point(825, 309);
+            this.login_btn.Name = "login_btn";
+            this.login_btn.Size = new System.Drawing.Size(84, 27);
+            this.login_btn.TabIndex = 3;
+            this.login_btn.Text = "Sign In";
+            this.login_btn.UseVisualStyleBackColor = false;
+            this.login_btn.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // label6
             // 
@@ -200,7 +200,7 @@ namespace SadWork
             this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
-            this.label6.Location = new System.Drawing.Point(641, 243);
+            this.label6.Location = new System.Drawing.Point(642, 243);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 19);
             this.label6.TabIndex = 25;
@@ -212,7 +212,7 @@ namespace SadWork
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
-            this.label5.Location = new System.Drawing.Point(641, 170);
+            this.label5.Location = new System.Drawing.Point(642, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 19);
             this.label5.TabIndex = 24;
@@ -233,21 +233,23 @@ namespace SadWork
             // textBoxPwd
             // 
             this.textBoxPwd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxPwd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPwd.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPwd.Location = new System.Drawing.Point(639, 265);
             this.textBoxPwd.Name = "textBoxPwd";
-            this.textBoxPwd.Size = new System.Drawing.Size(270, 27);
-            this.textBoxPwd.TabIndex = 22;
+            this.textBoxPwd.Size = new System.Drawing.Size(270, 26);
+            this.textBoxPwd.TabIndex = 2;
             this.textBoxPwd.UseSystemPasswordChar = true;
+            this.textBoxPwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPwd_KeyDown);
             // 
             // textBoxEmail
             // 
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxEmail.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.Location = new System.Drawing.Point(639, 192);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(270, 27);
-            this.textBoxEmail.TabIndex = 21;
+            this.textBoxEmail.Size = new System.Drawing.Size(270, 26);
+            this.textBoxEmail.TabIndex = 1;
+            this.textBoxEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxEmail_KeyDown);
             // 
             // label3
             // 
@@ -258,7 +260,7 @@ namespace SadWork
             this.label3.Location = new System.Drawing.Point(153, 330);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 23);
-            this.label3.TabIndex = 20;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Don\'t have an Account?";
             // 
             // buttonSignUp
@@ -272,7 +274,7 @@ namespace SadWork
             this.buttonSignUp.Location = new System.Drawing.Point(351, 325);
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(103, 32);
-            this.buttonSignUp.TabIndex = 19;
+            this.buttonSignUp.TabIndex = 5;
             this.buttonSignUp.Text = "Register Now";
             this.buttonSignUp.UseVisualStyleBackColor = false;
             this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
@@ -334,7 +336,7 @@ namespace SadWork
         private System.Windows.Forms.Button buttonForgotPwd;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonSkip;
-        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

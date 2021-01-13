@@ -113,7 +113,7 @@ namespace SadWork
             this.iconButtonLearnMore3.Location = new System.Drawing.Point(344, 0);
             this.iconButtonLearnMore3.Name = "iconButtonLearnMore3";
             this.iconButtonLearnMore3.Size = new System.Drawing.Size(117, 89);
-            this.iconButtonLearnMore3.TabIndex = 10;
+            this.iconButtonLearnMore3.TabIndex = 3;
             this.iconButtonLearnMore3.Text = "Learn More";
             this.iconButtonLearnMore3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonLearnMore3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -202,7 +202,7 @@ namespace SadWork
             this.iconButtonLearnMore2.Location = new System.Drawing.Point(344, 0);
             this.iconButtonLearnMore2.Name = "iconButtonLearnMore2";
             this.iconButtonLearnMore2.Size = new System.Drawing.Size(117, 89);
-            this.iconButtonLearnMore2.TabIndex = 10;
+            this.iconButtonLearnMore2.TabIndex = 2;
             this.iconButtonLearnMore2.Text = "Learn More";
             this.iconButtonLearnMore2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonLearnMore2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -291,7 +291,7 @@ namespace SadWork
             this.iconButtonLearnMore1.Location = new System.Drawing.Point(344, 0);
             this.iconButtonLearnMore1.Name = "iconButtonLearnMore1";
             this.iconButtonLearnMore1.Size = new System.Drawing.Size(117, 89);
-            this.iconButtonLearnMore1.TabIndex = 10;
+            this.iconButtonLearnMore1.TabIndex = 1;
             this.iconButtonLearnMore1.Text = "Learn More";
             this.iconButtonLearnMore1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonLearnMore1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;

@@ -75,11 +75,6 @@ namespace SadWork
             btnExit.BackColor = SystemColors.ButtonFace;
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             if (nullCamps())
@@ -238,6 +233,26 @@ namespace SadWork
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textBoxEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            enterKeyPress(e);
+        }
+
+        private void textBoxPwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            enterKeyPress(e);
+        }
+
+        private void enterKeyPress(KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonSignUp.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
         }
     }
 }

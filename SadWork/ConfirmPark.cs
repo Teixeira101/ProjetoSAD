@@ -18,6 +18,7 @@ namespace SadWork
 
         private void loadUnVerPark_btn_Click(object sender, System.EventArgs e)
         {
+            seeUnVerPark_btn.Enabled = true;
             comboBoxId.Enabled = true;
             comboBoxId.Items.Clear();
             bool verificado_parque = false;
@@ -40,25 +41,29 @@ namespace SadWork
 
         private void seeUnVerPark_btn_Click(object sender, System.EventArgs e)
         {
-            comboBoxId.Enabled = false;
-            sqlcon.Open();
-            cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [nome_parque] = '" + comboBoxId.SelectedItem + "'", sqlcon);
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
+            if (comboBoxId.SelectedIndex != -1)
             {
-                delete_btn.Visible = true;
-                addMoreDetails_btn.Visible = true;
-                panelParkVal.Visible = true;
+                seeUnVerPark_btn.Enabled = false;
+                comboBoxId.Enabled = false;
+                sqlcon.Open();
+                cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [nome_parque] = '" + comboBoxId.SelectedItem + "'", sqlcon);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    delete_btn.Visible = true;
+                    addMoreDetails_btn.Visible = true;
+                    panelParkVal.Visible = true;
 
-                labelParkName.Text = dr["nome_parque"].ToString();
-                labelParkArea.Text = dr["area"].ToString();
-                labelParkEmail.Text = dr["email_parque"].ToString();
-                labelParkLocation.Text = dr["localizacao_parque"].ToString();
-                website = dr["website"].ToString();
+                    labelParkName.Text = dr["nome_parque"].ToString();
+                    labelParkArea.Text = dr["area"].ToString();
+                    labelParkEmail.Text = dr["email_parque"].ToString();
+                    labelParkLocation.Text = dr["localizacao_parque"].ToString();
+                    website = dr["website"].ToString();
 
-                dr.Close();
+                    dr.Close();
+                }
+                sqlcon.Close();
             }
-            sqlcon.Close();
         }
 
         private void website_btn_Click(object sender, System.EventArgs e)

@@ -32,8 +32,8 @@ namespace SadWork
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ResetButton = new FontAwesome.Sharp.IconButton();
-            this.EmailBox = new System.Windows.Forms.TextBox();
-            this.CodeBox = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxCode = new System.Windows.Forms.TextBox();
             this.CodeLabel = new System.Windows.Forms.Label();
             this.SubmitButton = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
@@ -57,7 +57,7 @@ namespace SadWork
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label2.Location = new System.Drawing.Point(77, 92);
+            this.label2.Location = new System.Drawing.Point(78, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 15);
             this.label2.TabIndex = 5;
@@ -87,19 +87,19 @@ namespace SadWork
             this.ResetButton.UseVisualStyleBackColor = false;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
-            // EmailBox
+            // textBoxEmail
             // 
-            this.EmailBox.Location = new System.Drawing.Point(71, 114);
-            this.EmailBox.Name = "EmailBox";
-            this.EmailBox.Size = new System.Drawing.Size(163, 20);
-            this.EmailBox.TabIndex = 1;
+            this.textBoxEmail.Location = new System.Drawing.Point(71, 114);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(163, 20);
+            this.textBoxEmail.TabIndex = 1;
             // 
-            // CodeBox
+            // textBoxCode
             // 
-            this.CodeBox.Location = new System.Drawing.Point(72, 193);
-            this.CodeBox.Name = "CodeBox";
-            this.CodeBox.Size = new System.Drawing.Size(163, 20);
-            this.CodeBox.TabIndex = 2;
+            this.textBoxCode.Location = new System.Drawing.Point(72, 193);
+            this.textBoxCode.Name = "textBoxCode";
+            this.textBoxCode.Size = new System.Drawing.Size(163, 20);
+            this.textBoxCode.TabIndex = 2;
             // 
             // CodeLabel
             // 
@@ -107,7 +107,7 @@ namespace SadWork
             this.CodeLabel.BackColor = System.Drawing.Color.Transparent;
             this.CodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CodeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.CodeLabel.Location = new System.Drawing.Point(78, 171);
+            this.CodeLabel.Location = new System.Drawing.Point(78, 175);
             this.CodeLabel.Name = "CodeLabel";
             this.CodeLabel.Size = new System.Drawing.Size(36, 15);
             this.CodeLabel.TabIndex = 22;
@@ -143,10 +143,10 @@ namespace SadWork
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(306, 384);
             this.Controls.Add(this.SubmitButton);
-            this.Controls.Add(this.CodeBox);
+            this.Controls.Add(this.textBoxCode);
             this.Controls.Add(this.CodeLabel);
             this.Controls.Add(this.ResetButton);
-            this.Controls.Add(this.EmailBox);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -163,8 +163,8 @@ namespace SadWork
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton ResetButton;
-        private System.Windows.Forms.TextBox EmailBox;
-        private System.Windows.Forms.TextBox CodeBox;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxCode;
         private System.Windows.Forms.Label CodeLabel;
         private FontAwesome.Sharp.IconButton SubmitButton;
     }

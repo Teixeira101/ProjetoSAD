@@ -6,6 +6,8 @@ namespace SadWork
 {
     public partial class ShowSimulations : Form
     {
+        private Form currentChildForm;
+
         private string idSimulacao, area, park1, park2, park3, data;
 
         string dbAreas = "Areas";
@@ -91,5 +93,24 @@ namespace SadWork
                 dr.Close();
             }
         }
+        private void OpenChildForm(Form childForm, Form currentChildForm)
+        {
+            currentChildForm.Close();
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelShowSimul.Controls.Add(childForm);
+            panelShowSimul.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void simul_btn_Click(object sender, EventArgs e)
+        {
+            currentChildForm = new ShowSimulations();
+            OpenChildForm(new NewSimulationResults(), currentChildForm);
+        }
+
     }
 }

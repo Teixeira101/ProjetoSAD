@@ -30,19 +30,19 @@ namespace SadWork
         private void iconButtonLearnMore1_Click(object sender, EventArgs e)
         {
             currentChildForm = new NewSimulationResults();
-            OpenChildForm(new NewSimulationlvl2(), currentChildForm);
+            OpenChildForm(new ParkInfo(), currentChildForm);
         }
 
         private void iconButtonLearnMore2_Click(object sender, EventArgs e)
         {
             currentChildForm = new NewSimulationResults();
-            OpenChildForm(new NewSimulationlvl2(), currentChildForm);
+            OpenChildForm(new ParkInfo(), currentChildForm);
         }
 
         private void iconButtonLearnMore3_Click(object sender, EventArgs e)
         {
             currentChildForm = new NewSimulationResults();
-            OpenChildForm(new NewSimulationlvl2(), currentChildForm);
+            OpenChildForm(new ParkInfo(), currentChildForm);
         }
     }
 }

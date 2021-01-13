@@ -105,11 +105,11 @@
     <Compile Include="ParkInfo.Designer.cs">
       <DependentUpon>ParkInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="VerifyCompanyS.cs">
+    <Compile Include="VerifyCompany.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VerifyCompanyS.Designer.cs">
-      <DependentUpon>VerifyCompanyS.cs</DependentUpon>
+    <Compile Include="VerifyCompany.Designer.cs">
+      <DependentUpon>VerifyCompany.cs</DependentUpon>
     </Compile>
     <Compile Include="ConfirmPark.cs">
       <SubType>Form</SubType>
@@ -206,8 +206,8 @@
     <EmbeddedResource Include="ParkInfo.resx">
       <DependentUpon>ParkInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VerifyCompanyS.resx">
-      <DependentUpon>VerifyCompanyS.cs</DependentUpon>
+    <EmbeddedResource Include="VerifyCompany.resx">
+      <DependentUpon>VerifyCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmPark.resx">
       <DependentUpon>ConfirmPark.cs</DependentUpon>

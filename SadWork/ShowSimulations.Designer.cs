@@ -30,7 +30,7 @@ namespace SadWork
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowSimulations));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelShowSimul = new System.Windows.Forms.Panel();
             this.loadData_btn = new FontAwesome.Sharp.IconButton();
             this.seeSimul_btn = new FontAwesome.Sharp.IconButton();
             this.comboBoxId = new System.Windows.Forms.ComboBox();
@@ -45,23 +45,23 @@ namespace SadWork
             this.label2 = new System.Windows.Forms.Label();
             this.labelPark1 = new System.Windows.Forms.Label();
             this.labelArea = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.simul_btn = new System.Windows.Forms.Button();
+            this.panelShowSimul.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelShowSimul
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.loadData_btn);
-            this.panel1.Controls.Add(this.seeSimul_btn);
-            this.panel1.Controls.Add(this.comboBoxId);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(804, 510);
-            this.panel1.TabIndex = 0;
+            this.panelShowSimul.BackColor = System.Drawing.SystemColors.Control;
+            this.panelShowSimul.Controls.Add(this.loadData_btn);
+            this.panelShowSimul.Controls.Add(this.seeSimul_btn);
+            this.panelShowSimul.Controls.Add(this.comboBoxId);
+            this.panelShowSimul.Controls.Add(this.panel2);
+            this.panelShowSimul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelShowSimul.Location = new System.Drawing.Point(0, 0);
+            this.panelShowSimul.Name = "panelShowSimul";
+            this.panelShowSimul.Size = new System.Drawing.Size(804, 510);
+            this.panelShowSimul.TabIndex = 0;
             // 
             // loadData_btn
             // 
@@ -79,7 +79,7 @@ namespace SadWork
             this.loadData_btn.Location = new System.Drawing.Point(533, 121);
             this.loadData_btn.Name = "loadData_btn";
             this.loadData_btn.Size = new System.Drawing.Size(104, 28);
-            this.loadData_btn.TabIndex = 10;
+            this.loadData_btn.TabIndex = 1;
             this.loadData_btn.Text = "Load Data";
             this.loadData_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.loadData_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -101,7 +101,7 @@ namespace SadWork
             this.seeSimul_btn.Location = new System.Drawing.Point(384, 150);
             this.seeSimul_btn.Name = "seeSimul_btn";
             this.seeSimul_btn.Size = new System.Drawing.Size(131, 28);
-            this.seeSimul_btn.TabIndex = 9;
+            this.seeSimul_btn.TabIndex = 3;
             this.seeSimul_btn.Text = "See Simulation";
             this.seeSimul_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.seeSimul_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -116,7 +116,7 @@ namespace SadWork
             this.comboBoxId.Location = new System.Drawing.Point(371, 121);
             this.comboBoxId.Name = "comboBoxId";
             this.comboBoxId.Size = new System.Drawing.Size(156, 28);
-            this.comboBoxId.TabIndex = 3;
+            this.comboBoxId.TabIndex = 2;
             // 
             // panel2
             // 
@@ -131,7 +131,7 @@ namespace SadWork
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.labelPark1);
             this.panel2.Controls.Add(this.labelArea);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.simul_btn);
             this.panel2.Location = new System.Drawing.Point(36, 36);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(227, 440);
@@ -262,30 +262,31 @@ namespace SadWork
             this.labelArea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelArea.Visible = false;
             // 
-            // button1
+            // simul_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(23, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 121);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
+            this.simul_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.simul_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("simul_btn.BackgroundImage")));
+            this.simul_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.simul_btn.FlatAppearance.BorderSize = 0;
+            this.simul_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.simul_btn.Location = new System.Drawing.Point(23, 21);
+            this.simul_btn.Name = "simul_btn";
+            this.simul_btn.Size = new System.Drawing.Size(181, 121);
+            this.simul_btn.TabIndex = 0;
+            this.simul_btn.UseVisualStyleBackColor = false;
+            this.simul_btn.Click += new System.EventHandler(this.simul_btn_Click);
             // 
             // ShowSimulations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 510);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelShowSimul);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ShowSimulations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShowSimulations";
-            this.panel1.ResumeLayout(false);
+            this.panelShowSimul.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -294,9 +295,9 @@ namespace SadWork
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelShowSimul;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button simul_btn;
         private System.Windows.Forms.Label labelArea;
         private System.Windows.Forms.Label labelPark1;
         private System.Windows.Forms.ComboBox comboBoxId;

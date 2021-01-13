@@ -56,7 +56,6 @@ namespace SadWork
             this.img2_btn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.confirm_btn = new FontAwesome.Sharp.IconButton();
-            this.label10 = new System.Windows.Forms.Label();
             this.panelParkVal.SuspendLayout();
             this.panelParkDetails.SuspendLayout();
             this.SuspendLayout();
@@ -122,6 +121,7 @@ namespace SadWork
             // 
             // comboBoxId
             // 
+            this.comboBoxId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxId.FormattingEnabled = true;
             this.comboBoxId.Location = new System.Drawing.Point(294, 111);
@@ -454,21 +454,11 @@ namespace SadWork
             this.confirm_btn.Visible = false;
             this.confirm_btn.Click += new System.EventHandler(this.confirm_btn_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(605, 40);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 48;
-            this.label10.Text = "label10";
-            // 
             // ConfirmPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 510);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.confirm_btn);
             this.Controls.Add(this.panelParkDetails);
             this.Controls.Add(this.delete_btn);
@@ -520,6 +510,5 @@ namespace SadWork
         private System.Windows.Forms.TextBox textBoxCompleteDesc;
         private System.Windows.Forms.Label label8;
         private FontAwesome.Sharp.IconButton confirm_btn;
-        private System.Windows.Forms.Label label10;
     }
 }

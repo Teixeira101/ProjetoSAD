@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace SadWork
@@ -52,6 +53,11 @@ namespace SadWork
         {
             currentChildForm = new ParkInfo();
             OpenChildForm(new ScientificParks(), currentChildForm);
+        }
+
+        private void labelParkWebsite_Click(object sender, EventArgs e)
+        {
+            Process.Start(labelParkWebsite.Text);
         }
     }
 }

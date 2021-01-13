@@ -46,18 +46,17 @@ namespace SadWork
             this.btnExit = new FontAwesome.Sharp.IconPictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.panelHome = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.panelDesktop.SuspendLayout();
+            this.panelHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +93,7 @@ namespace SadWork
             this.verifyCompany_btn.Name = "verifyCompany_btn";
             this.verifyCompany_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.verifyCompany_btn.Size = new System.Drawing.Size(220, 40);
-            this.verifyCompany_btn.TabIndex = 9;
+            this.verifyCompany_btn.TabIndex = 8;
             this.verifyCompany_btn.Text = "Verify Company";
             this.verifyCompany_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.verifyCompany_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -116,7 +115,7 @@ namespace SadWork
             this.confirmPark_btn.Name = "confirmPark_btn";
             this.confirmPark_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.confirmPark_btn.Size = new System.Drawing.Size(220, 40);
-            this.confirmPark_btn.TabIndex = 8;
+            this.confirmPark_btn.TabIndex = 7;
             this.confirmPark_btn.Text = "Confirm Park";
             this.confirmPark_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.confirmPark_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -138,7 +137,7 @@ namespace SadWork
             this.showSimulation_btn.Name = "showSimulation_btn";
             this.showSimulation_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.showSimulation_btn.Size = new System.Drawing.Size(220, 40);
-            this.showSimulation_btn.TabIndex = 7;
+            this.showSimulation_btn.TabIndex = 6;
             this.showSimulation_btn.Text = "Show Simulations";
             this.showSimulation_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.showSimulation_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -160,7 +159,7 @@ namespace SadWork
             this.newSimulation_btn.Name = "newSimulation_btn";
             this.newSimulation_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.newSimulation_btn.Size = new System.Drawing.Size(220, 40);
-            this.newSimulation_btn.TabIndex = 6;
+            this.newSimulation_btn.TabIndex = 5;
             this.newSimulation_btn.Text = "New Simulation";
             this.newSimulation_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.newSimulation_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -182,7 +181,7 @@ namespace SadWork
             this.newPark_btn.Name = "newPark_btn";
             this.newPark_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.newPark_btn.Size = new System.Drawing.Size(220, 40);
-            this.newPark_btn.TabIndex = 5;
+            this.newPark_btn.TabIndex = 4;
             this.newPark_btn.Text = "New Park";
             this.newPark_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.newPark_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -204,7 +203,7 @@ namespace SadWork
             this.scientificParks_btn.Name = "scientificParks_btn";
             this.scientificParks_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.scientificParks_btn.Size = new System.Drawing.Size(220, 40);
-            this.scientificParks_btn.TabIndex = 4;
+            this.scientificParks_btn.TabIndex = 3;
             this.scientificParks_btn.Text = "Scientific Parks";
             this.scientificParks_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.scientificParks_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -226,7 +225,7 @@ namespace SadWork
             this.dashboard_btn.Name = "dashboard_btn";
             this.dashboard_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.dashboard_btn.Size = new System.Drawing.Size(220, 40);
-            this.dashboard_btn.TabIndex = 3;
+            this.dashboard_btn.TabIndex = 2;
             this.dashboard_btn.Text = "Dashboard";
             this.dashboard_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dashboard_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -242,7 +241,7 @@ namespace SadWork
             this.label1.Location = new System.Drawing.Point(25, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 48);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 0;
             this.label1.Text = "We Are \r\nDecisions Support";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -271,7 +270,7 @@ namespace SadWork
             this.panel2.Location = new System.Drawing.Point(220, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(804, 66);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 0;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // login_btn
@@ -286,10 +285,10 @@ namespace SadWork
             this.login_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.login_btn.IconSize = 25;
             this.login_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.login_btn.Location = new System.Drawing.Point(717, 27);
+            this.login_btn.Location = new System.Drawing.Point(717, 33);
             this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(84, 36);
-            this.login_btn.TabIndex = 8;
+            this.login_btn.Size = new System.Drawing.Size(84, 30);
+            this.login_btn.TabIndex = 1;
             this.login_btn.Text = "Login";
             this.login_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.login_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -336,7 +335,7 @@ namespace SadWork
             this.label2.Location = new System.Drawing.Point(48, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Home";
             // 
             // iconPictureBox1
@@ -352,51 +351,20 @@ namespace SadWork
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
             // 
-            // label3
+            // panelHome
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(230, 228);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(340, 88);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "An application to aid decision making \r\nusing the AHP method.\r\nUse it to run simu" +
-    "lations and get help \r\nselecting the best Park for your company!";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(7, 416);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(275, 80);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "If you care to visit some of the parks that\r\nwe present to you. You must Login or" +
-    " Sign Up\r\nwith your Company\'s credentials.\r\nSo the minds behind the scenes can k" +
-    "now \r\nabout your presence there.";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(47)))), ((int)(((byte)(77)))));
-            this.panelDesktop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDesktop.BackgroundImage")));
-            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelDesktop.Controls.Add(this.label5);
-            this.panelDesktop.Controls.Add(this.pictureBox2);
-            this.panelDesktop.Controls.Add(this.label4);
-            this.panelDesktop.Controls.Add(this.label3);
-            this.panelDesktop.Location = new System.Drawing.Point(220, 66);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(0);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(804, 510);
-            this.panelDesktop.TabIndex = 3;
+            this.panelHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(47)))), ((int)(((byte)(77)))));
+            this.panelHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelHome.BackgroundImage")));
+            this.panelHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHome.Controls.Add(this.label5);
+            this.panelHome.Controls.Add(this.pictureBox2);
+            this.panelHome.Controls.Add(this.label3);
+            this.panelHome.Location = new System.Drawing.Point(220, 66);
+            this.panelHome.Margin = new System.Windows.Forms.Padding(0);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(804, 510);
+            this.panelHome.TabIndex = 0;
             // 
             // label5
             // 
@@ -407,7 +375,7 @@ namespace SadWork
             this.label5.Location = new System.Drawing.Point(276, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(284, 25);
-            this.label5.TabIndex = 6;
+            this.label5.TabIndex = 0;
             this.label5.Text = "\"We Are Decisions Support\"!";
             // 
             // pictureBox2
@@ -421,12 +389,27 @@ namespace SadWork
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.5F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(230, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(340, 88);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "An application to aid decision making \r\nusing the AHP method.\r\nUse it to run simu" +
+    "lations and get help \r\nselecting the best Park for your company!";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 576);
-            this.Controls.Add(this.panelDesktop);
+            this.Controls.Add(this.panelHome);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -441,8 +424,8 @@ namespace SadWork
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.panelDesktop.ResumeLayout(false);
-            this.panelDesktop.PerformLayout();
+            this.panelHome.ResumeLayout(false);
+            this.panelHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -455,21 +438,20 @@ namespace SadWork
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton newPark_btn;
         private FontAwesome.Sharp.IconButton scientificParks_btn;
-        private FontAwesome.Sharp.IconButton dashboard_btn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox btnMin;
         private FontAwesome.Sharp.IconPictureBox btnExit;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconButton verifyCompany_btn;
         private FontAwesome.Sharp.IconButton confirmPark_btn;
         public FontAwesome.Sharp.IconButton login_btn;
         public FontAwesome.Sharp.IconButton showSimulation_btn;
+        public FontAwesome.Sharp.IconButton newSimulation_btn;
+        private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        public FontAwesome.Sharp.IconButton newSimulation_btn;
+        private System.Windows.Forms.Label label3;
+        public FontAwesome.Sharp.IconButton dashboard_btn;
     }
 }

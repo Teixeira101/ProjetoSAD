@@ -72,7 +72,7 @@ namespace SadWork
             this.loadParks_btn.Location = new System.Drawing.Point(347, 37);
             this.loadParks_btn.Name = "loadParks_btn";
             this.loadParks_btn.Size = new System.Drawing.Size(110, 28);
-            this.loadParks_btn.TabIndex = 13;
+            this.loadParks_btn.TabIndex = 1;
             this.loadParks_btn.Text = "Load Parks";
             this.loadParks_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.loadParks_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -94,7 +94,7 @@ namespace SadWork
             this.seePark_btn.Location = new System.Drawing.Point(325, 93);
             this.seePark_btn.Name = "seePark_btn";
             this.seePark_btn.Size = new System.Drawing.Size(154, 28);
-            this.seePark_btn.TabIndex = 12;
+            this.seePark_btn.TabIndex = 3;
             this.seePark_btn.Text = "See Selected Park";
             this.seePark_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.seePark_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -109,7 +109,7 @@ namespace SadWork
             this.comboBoxId.Location = new System.Drawing.Point(294, 64);
             this.comboBoxId.Name = "comboBoxId";
             this.comboBoxId.Size = new System.Drawing.Size(216, 28);
-            this.comboBoxId.TabIndex = 11;
+            this.comboBoxId.TabIndex = 2;
             // 
             // panelPark
             // 
@@ -137,7 +137,7 @@ namespace SadWork
             this.learnMore_btn.Location = new System.Drawing.Point(473, 68);
             this.learnMore_btn.Name = "learnMore_btn";
             this.learnMore_btn.Size = new System.Drawing.Size(114, 38);
-            this.learnMore_btn.TabIndex = 9;
+            this.learnMore_btn.TabIndex = 4;
             this.learnMore_btn.Text = "Learn More";
             this.learnMore_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.learnMore_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;

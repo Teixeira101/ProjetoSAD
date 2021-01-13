@@ -9,7 +9,7 @@ namespace SadWork
     public partial class MainPage : Form
     {
 
-        private IconButton currentBtn;
+        public IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
@@ -24,18 +24,7 @@ namespace SadWork
             this.ControlBox = false;
             this.DoubleBuffered = true;
 
-            if (LoginPage.admin)
-            {
-                admin();
-            } 
-            else if (LoginPage.company)
-            {
-                company();
-            } 
-            else
-            {
-                skip();
-            }
+            if (LoginPage.admin) { admin(); } else if (LoginPage.company) { company(); } else { skip(); }
         }
 
         public struct RGBColors
@@ -50,7 +39,7 @@ namespace SadWork
             public static Color color8 = Color.FromArgb(146, 232, 32);
         }
 
-        public void ActivateButton(object senderbtn, Color color)
+        private void ActivateButton(object senderbtn, Color color)
         {
             if (senderbtn != null)
             {
@@ -96,8 +85,8 @@ namespace SadWork
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelDesktop.Controls.Add(childForm);
-            panelDesktop.Tag = childForm;
+            panelHome.Controls.Add(childForm);
+            panelHome.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
             label2.Text = childForm.Text;
@@ -142,7 +131,7 @@ namespace SadWork
         private void verifyCompany_btn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color8);
-            OpenChildForm(new VerifyCompanyS());
+            OpenChildForm(new VerifyCompany());
         }
 
         private void login_btn_Click(object sender, EventArgs e)

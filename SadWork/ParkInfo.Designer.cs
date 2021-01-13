@@ -134,6 +134,7 @@
             this.labelParkWebsite.Size = new System.Drawing.Size(116, 16);
             this.labelParkWebsite.TabIndex = 13;
             this.labelParkWebsite.Text = "labelParkWebsite";
+            this.labelParkWebsite.Click += new System.EventHandler(this.labelParkWebsite_Click);
             // 
             // pictureBox2
             // 

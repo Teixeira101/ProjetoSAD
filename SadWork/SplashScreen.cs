@@ -17,7 +17,7 @@ namespace SadWork
             if(panel2.Width >= 1024)
             {
                 timer1.Stop();
-                ConfirmPark LP = new ConfirmPark();
+                LoginPage LP = new LoginPage();
                 this.Hide();
                 LP.Show();
             }

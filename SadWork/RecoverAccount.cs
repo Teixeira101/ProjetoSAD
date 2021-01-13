@@ -1,34 +1,54 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D;
 
 namespace SadWork
 {
     public partial class RecoverAccount : Form
     {
+        bool existEmail = false;
+        SqlCommand cmd;
+        SqlDataReader dr;
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+        public static string resetEmail;
 
         public RecoverAccount()
         {
             InitializeComponent();
             SubmitButton.Hide();
             CodeLabel.Hide();
-            CodeBox.Hide();
+            textBoxCode.Hide();
         }
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
-            SubmitButton.Show();
-            CodeLabel.Show();
-            CodeBox.Show();
-            ResetButton.Hide();
-            EmailBox.ReadOnly = true;
+            if (!invalidEmail()) 
+            { 
+                sqlcon.Open();
+                cmd = new SqlCommand("SELECT * FROM [dbo].[Empresa] Where [email_empresa] = '" + textBoxEmail.Text.Trim() + "'", sqlcon);
+                using (dr = cmd.ExecuteReader())
+                {
+                    if (dr.Read())
+                    {
+                        existEmail = true;
+                    }
+                }
+                sqlcon.Close();
+
+                if (existEmail)
+                {
+                    SubmitButton.Show();
+                    CodeLabel.Show();
+                    textBoxCode.Show();
+                    ResetButton.Hide();
+                    textBoxEmail.ReadOnly = true;
+                }
+                else
+                {
+                    MessageBox.Show("The E-mail You Have Provided Doesn't Exist!");
+                }
+            }
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -37,6 +57,19 @@ namespace SadWork
             this.Hide();
             objChangePassword.Show();
             objChangePassword.TopMost = true;
+            resetEmail = textBoxEmail.Text.Trim();
+        }
+
+        private bool invalidEmail()
+        {
+            bool isEmail = Regex.IsMatch(textBoxEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
+
+            if (!isEmail)
+            {
+                MessageBox.Show("Incorrect Email Formate!");
+                return true;
+            }
+            return false;
         }
     }
 }

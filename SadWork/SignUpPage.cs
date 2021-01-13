@@ -42,17 +42,17 @@ namespace SadWork
             if (nullCamps())
             {
                 MessageBox.Show("Empty Field(s)!");
-                textBoxEmail.Clear();
+                textBoxCompEmail.Clear();
                 textBoxPwd.Clear();
                 textBoxPwd.Clear();
-                comboBoxArea.SelectedIndex = -1;
+                comboBoxCompArea.SelectedIndex = -1;
                 labelPDF.Visible = false;
             } else if (invalidEmailOrPassword())
             {
                 textBoxCompName.Clear();
-                textBoxEmail.Clear();
+                textBoxCompEmail.Clear();
                 textBoxPwd.Clear();
-                comboBoxArea.SelectedIndex = -1;
+                comboBoxCompArea.SelectedIndex = -1;
                 labelPDF.Visible = false;
             } else
             {
@@ -66,9 +66,10 @@ namespace SadWork
                ,[password]
                ,[comprovativo]
                ,[verificado_empresa]
-               ,[admin])
+               ,[admin]
+               ,[location])
          VALUES
-               ('" + textBoxCompName.Text.Trim() + "', '" + comboBoxArea.SelectedItem.ToString() + "', '" + textBoxEmail.Text.Trim() + "', '" + textBoxPwd.Text.Trim() + "', '" + ofd.FileName + "', '0', '0')", sqlcon);
+               ('" + textBoxCompName.Text.Trim() + "', '" + comboBoxCompArea.SelectedItem.ToString() + "', '" + textBoxCompEmail.Text.Trim() + "', '" + textBoxPwd.Text.Trim() + "', '" + ofd.FileName + "', '0', '0','" + textBoxCompLocation.Text.Trim() + "')", sqlcon);
 
                 cmd.ExecuteNonQuery();
 
@@ -95,7 +96,7 @@ namespace SadWork
 
         private bool nullCamps()
         {
-            if(textBoxCompName.Text == "" || textBoxEmail.Text == "" || textBoxPwd.Text == "" || comboBoxArea.SelectedIndex == 0 || labelPDF.Text == "labelPDF")
+            if(textBoxCompName.Text == "" || textBoxCompEmail.Text == "" || textBoxPwd.Text == "" || textBoxCompLocation.Text == "" || comboBoxCompArea.SelectedIndex == 0 || labelPDF.Text == "labelPDF")
             {
                 return true;
             }
@@ -104,15 +105,15 @@ namespace SadWork
 
         private bool invalidEmailOrPassword()
         {
-            bool isEmail = Regex.IsMatch(textBoxEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
+            bool isEmail = Regex.IsMatch(textBoxCompEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
 
             if (!isEmail && textBoxPwd.TextLength < 8)
             {
-                MessageBox.Show("Incorrect Email Formate and Password Length!");
+                MessageBox.Show("Incorrect Email Format and Password Length!");
                 return true;
             } else if (!isEmail)
             {
-                MessageBox.Show("Incorrect Email Formate!");
+                MessageBox.Show("Incorrect Email Format!");
                 return true;
             } else if(textBoxPwd.TextLength < 8)
             {
@@ -120,6 +121,46 @@ namespace SadWork
                 return true;
             }
             return false;
+        }
+
+        private void textBoxCompName_KeyDown(object sender, KeyEventArgs e)
+        {
+            enterKeyPress(e);
+        }
+
+        private void textBoxEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            enterKeyPress(e);
+        }
+
+        private void textBoxPwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            enterKeyPress(e);
+        }
+
+        private void textBoxLocation_KeyDown(object sender, KeyEventArgs e)
+        {
+            enterKeyPress(e);
+        }
+
+        private void comboBoxArea_KeyDown(object sender, KeyEventArgs e)
+        {
+            enterKeyPress(e);
+        }
+
+        private void buttonProof_KeyDown(object sender, KeyEventArgs e)
+        {
+            enterKeyPress(e);
+        }
+
+        private void enterKeyPress(KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonSignUp.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
         }
     }
 }
