@@ -31,23 +31,31 @@ namespace SadWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowSimulations));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.loadData_btn = new FontAwesome.Sharp.IconButton();
+            this.seeSimul_btn = new FontAwesome.Sharp.IconButton();
+            this.comboBoxId = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelData = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.labelPark3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelPark2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelPark1 = new System.Windows.Forms.Label();
             this.labelArea = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.loadData_btn);
+            this.panel1.Controls.Add(this.seeSimul_btn);
+            this.panel1.Controls.Add(this.comboBoxId);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -55,63 +63,78 @@ namespace SadWork
             this.panel1.Size = new System.Drawing.Size(804, 510);
             this.panel1.TabIndex = 0;
             // 
-            // panel3
+            // loadData_btn
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Location = new System.Drawing.Point(36, 270);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(231, 206);
-            this.panel3.TabIndex = 1;
+            this.loadData_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.loadData_btn.BackColor = System.Drawing.Color.Peru;
+            this.loadData_btn.FlatAppearance.BorderSize = 0;
+            this.loadData_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loadData_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadData_btn.ForeColor = System.Drawing.Color.White;
+            this.loadData_btn.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.loadData_btn.IconColor = System.Drawing.Color.White;
+            this.loadData_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.loadData_btn.IconSize = 25;
+            this.loadData_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.loadData_btn.Location = new System.Drawing.Point(533, 121);
+            this.loadData_btn.Name = "loadData_btn";
+            this.loadData_btn.Size = new System.Drawing.Size(104, 28);
+            this.loadData_btn.TabIndex = 10;
+            this.loadData_btn.Text = "Load Data";
+            this.loadData_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.loadData_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.loadData_btn.UseVisualStyleBackColor = false;
+            this.loadData_btn.Click += new System.EventHandler(this.loadData_btn_Click);
             // 
-            // label4
+            // seeSimul_btn
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(72, 170);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "02/01/2021";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.seeSimul_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.seeSimul_btn.FlatAppearance.BorderSize = 0;
+            this.seeSimul_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.seeSimul_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seeSimul_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.seeSimul_btn.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.seeSimul_btn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.seeSimul_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.seeSimul_btn.IconSize = 25;
+            this.seeSimul_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.seeSimul_btn.Location = new System.Drawing.Point(384, 150);
+            this.seeSimul_btn.Name = "seeSimul_btn";
+            this.seeSimul_btn.Size = new System.Drawing.Size(131, 28);
+            this.seeSimul_btn.TabIndex = 9;
+            this.seeSimul_btn.Text = "See Simulation";
+            this.seeSimul_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.seeSimul_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.seeSimul_btn.UseVisualStyleBackColor = true;
+            this.seeSimul_btn.Visible = false;
+            this.seeSimul_btn.Click += new System.EventHandler(this.seeSimul_btn_Click);
             // 
-            // label3
+            // comboBoxId
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(67, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Automóveis";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(36, 41);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 116);
-            this.button2.TabIndex = 0;
-            this.button2.UseVisualStyleBackColor = false;
+            this.comboBoxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxId.FormattingEnabled = true;
+            this.comboBoxId.Location = new System.Drawing.Point(371, 121);
+            this.comboBoxId.Name = "comboBoxId";
+            this.comboBoxId.Size = new System.Drawing.Size(156, 28);
+            this.comboBoxId.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
             this.panel2.Controls.Add(this.labelData);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.labelPark3);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.labelPark2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.labelPark1);
             this.panel2.Controls.Add(this.labelArea);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(36, 35);
+            this.panel2.Location = new System.Drawing.Point(36, 36);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 206);
+            this.panel2.Size = new System.Drawing.Size(227, 440);
             this.panel2.TabIndex = 0;
             // 
             // labelData
@@ -119,24 +142,125 @@ namespace SadWork
             this.labelData.AutoSize = true;
             this.labelData.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelData.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelData.Location = new System.Drawing.Point(79, 170);
+            this.labelData.Location = new System.Drawing.Point(67, 337);
             this.labelData.Name = "labelData";
-            this.labelData.Size = new System.Drawing.Size(73, 20);
-            this.labelData.TabIndex = 3;
-            this.labelData.Text = "16122020";
+            this.labelData.Size = new System.Drawing.Size(147, 20);
+            this.labelData.TabIndex = 12;
+            this.labelData.Text = "Data da simulação";
             this.labelData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelData.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label7.Location = new System.Drawing.Point(10, 337);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 20);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Date -";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelPark3
+            // 
+            this.labelPark3.AutoSize = true;
+            this.labelPark3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPark3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelPark3.Location = new System.Drawing.Point(67, 295);
+            this.labelPark3.Name = "labelPark3";
+            this.labelPark3.Size = new System.Drawing.Size(146, 20);
+            this.labelPark3.TabIndex = 10;
+            this.labelPark3.Text = "Nome do Parque 3";
+            this.labelPark3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPark3.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(10, 295);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 20);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Park 3 -";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelPark2
+            // 
+            this.labelPark2.AutoSize = true;
+            this.labelPark2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPark2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelPark2.Location = new System.Drawing.Point(67, 251);
+            this.labelPark2.Name = "labelPark2";
+            this.labelPark2.Size = new System.Drawing.Size(146, 20);
+            this.labelPark2.TabIndex = 8;
+            this.labelPark2.Text = "Nome do Parque 2";
+            this.labelPark2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPark2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(10, 251);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Park 2 -";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(10, 207);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Park 1 -";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(10, 166);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Area -";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelPark1
+            // 
+            this.labelPark1.AutoSize = true;
+            this.labelPark1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPark1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelPark1.Location = new System.Drawing.Point(67, 207);
+            this.labelPark1.Name = "labelPark1";
+            this.labelPark1.Size = new System.Drawing.Size(146, 20);
+            this.labelPark1.TabIndex = 3;
+            this.labelPark1.Text = "Nome do Parque 1";
+            this.labelPark1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPark1.Visible = false;
             // 
             // labelArea
             // 
             this.labelArea.AutoSize = true;
             this.labelArea.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelArea.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelArea.Location = new System.Drawing.Point(99, 11);
+            this.labelArea.Location = new System.Drawing.Point(67, 166);
             this.labelArea.Name = "labelArea";
-            this.labelArea.Size = new System.Drawing.Size(33, 20);
+            this.labelArea.Size = new System.Drawing.Size(147, 20);
             this.labelArea.TabIndex = 1;
-            this.labelArea.Text = "987";
+            this.labelArea.Text = "Telecomunicações";
             this.labelArea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelArea.Visible = false;
             // 
             // button1
             // 
@@ -145,9 +269,9 @@ namespace SadWork
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(36, 41);
+            this.button1.Location = new System.Drawing.Point(23, 21);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 116);
+            this.button1.Size = new System.Drawing.Size(181, 121);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -162,8 +286,6 @@ namespace SadWork
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShowSimulations";
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -176,10 +298,17 @@ namespace SadWork
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelArea;
+        private System.Windows.Forms.Label labelPark1;
+        private System.Windows.Forms.ComboBox comboBoxId;
+        public FontAwesome.Sharp.IconButton seeSimul_btn;
         private System.Windows.Forms.Label labelData;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelPark3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelPark2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        public FontAwesome.Sharp.IconButton loadData_btn;
     }
 }
