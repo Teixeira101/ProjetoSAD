@@ -59,13 +59,17 @@ namespace SadWork
            ,[area]
            ,[email_parque]
            ,[localizacao_parque]
-           ,[foto_parque]
+           ,[foto_parque1]
            ,[descricao_parque_total]
            ,[descricao_parque_parcial]
            ,[colaboradores_parque]
-           ,[verificado_parque])
+           ,[verificado_parque]
+           ,[slogan]
+           ,[website]
+           ,[foto_parque2]
+           ,[foto_parque3])
      VALUES
-           ('" + textBoxName.Text.Trim() + "', '" + comboBoxArea.SelectedItem.ToString() + "', '" + textBoxEmail.Text.Trim() + "', '" + textBoxEmail.Text.Trim() + "', '" + ofd.FileName + "', '" + "" + "', '" + textBoxBriefDesc.Text.Trim() + "', '" + checkBoxColab.Checked + "', '0')");
+           ('" + textBoxName.Text.Trim() + "', '" + comboBoxArea.SelectedItem.ToString() + "', '" + textBoxEmail.Text.Trim() + "', '" + textBoxLocation.Text.Trim() + "', '" + ofd.FileName + "', '" + "" + "', '" + textBoxBriefDesc.Text.Trim() + "', '" + checkBoxColab.Checked + "', '0', '" + textBoxSlogan.Text.Trim() + "', '" + textBoxWebsite.Text.Trim() + "', '" + null + "', '" + null + "')");
             sqlcon.Open();
             cmd.Connection = sqlcon;
             cmd.ExecuteNonQuery();

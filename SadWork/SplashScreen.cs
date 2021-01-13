@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SadWork
@@ -24,9 +17,9 @@ namespace SadWork
             if(panel2.Width >= 1024)
             {
                 timer1.Stop();
-                LoginPage LP = new LoginPage();
-                LP.Show();
+                ConfirmPark LP = new ConfirmPark();
                 this.Hide();
+                LP.Show();
             }
         }
     }

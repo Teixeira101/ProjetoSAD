@@ -50,9 +50,9 @@ namespace SadWork
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
             this.label1.Location = new System.Drawing.Point(50, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 25);
+            this.label1.Size = new System.Drawing.Size(215, 25);
             this.label1.TabIndex = 4;
-            this.label1.Text = "CONFIRM PARK";
+            this.label1.Text = "VERIFY COMPANY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2

@@ -48,11 +48,19 @@ namespace SadWork
             this.comboBoxArea = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxSlogan = new System.Windows.Forms.TextBox();
+            this.textBoxWebsite = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panelNewPark.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelNewPark
             // 
+            this.panelNewPark.Controls.Add(this.textBoxWebsite);
+            this.panelNewPark.Controls.Add(this.label9);
+            this.panelNewPark.Controls.Add(this.textBoxSlogan);
+            this.panelNewPark.Controls.Add(this.label7);
             this.panelNewPark.Controls.Add(this.checkBoxColab);
             this.panelNewPark.Controls.Add(this.textBoxLocation);
             this.panelNewPark.Controls.Add(this.label5);
@@ -80,7 +88,7 @@ namespace SadWork
             // checkBoxColab
             // 
             this.checkBoxColab.AutoSize = true;
-            this.checkBoxColab.Location = new System.Drawing.Point(514, 309);
+            this.checkBoxColab.Location = new System.Drawing.Point(514, 361);
             this.checkBoxColab.Name = "checkBoxColab";
             this.checkBoxColab.Size = new System.Drawing.Size(128, 17);
             this.checkBoxColab.TabIndex = 45;
@@ -89,7 +97,7 @@ namespace SadWork
             // 
             // textBoxLocation
             // 
-            this.textBoxLocation.Location = new System.Drawing.Point(123, 341);
+            this.textBoxLocation.Location = new System.Drawing.Point(123, 336);
             this.textBoxLocation.Name = "textBoxLocation";
             this.textBoxLocation.Size = new System.Drawing.Size(191, 20);
             this.textBoxLocation.TabIndex = 44;
@@ -100,7 +108,7 @@ namespace SadWork
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label5.Location = new System.Drawing.Point(126, 320);
+            this.label5.Location = new System.Drawing.Point(126, 315);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 18);
             this.label5.TabIndex = 43;
@@ -111,7 +119,7 @@ namespace SadWork
             // 
             this.labelPDF.AutoSize = true;
             this.labelPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPDF.Location = new System.Drawing.Point(622, 129);
+            this.labelPDF.Location = new System.Drawing.Point(622, 206);
             this.labelPDF.Name = "labelPDF";
             this.labelPDF.Size = new System.Drawing.Size(65, 16);
             this.labelPDF.TabIndex = 42;
@@ -121,7 +129,7 @@ namespace SadWork
             // openFile
             // 
             this.openFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openFile.Location = new System.Drawing.Point(514, 125);
+            this.openFile.Location = new System.Drawing.Point(514, 202);
             this.openFile.Name = "openFile";
             this.openFile.Size = new System.Drawing.Size(102, 24);
             this.openFile.TabIndex = 41;
@@ -142,7 +150,7 @@ namespace SadWork
             this.iconButtonReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonReset.IconSize = 18;
             this.iconButtonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonReset.Location = new System.Drawing.Point(636, 361);
+            this.iconButtonReset.Location = new System.Drawing.Point(636, 401);
             this.iconButtonReset.Name = "iconButtonReset";
             this.iconButtonReset.Size = new System.Drawing.Size(78, 30);
             this.iconButtonReset.TabIndex = 40;
@@ -154,14 +162,14 @@ namespace SadWork
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(123, 267);
+            this.textBoxEmail.Location = new System.Drawing.Point(123, 262);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(191, 20);
             this.textBoxEmail.TabIndex = 39;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(123, 196);
+            this.textBoxName.Location = new System.Drawing.Point(123, 191);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(191, 20);
             this.textBoxName.TabIndex = 38;
@@ -179,7 +187,7 @@ namespace SadWork
             this.iconButtonAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAdd.IconSize = 15;
             this.iconButtonAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonAdd.Location = new System.Drawing.Point(514, 361);
+            this.iconButtonAdd.Location = new System.Drawing.Point(514, 401);
             this.iconButtonAdd.Name = "iconButtonAdd";
             this.iconButtonAdd.Size = new System.Drawing.Size(65, 30);
             this.iconButtonAdd.TabIndex = 37;
@@ -194,15 +202,15 @@ namespace SadWork
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
             this.panel2.Location = new System.Drawing.Point(406, 68);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(6, 354);
+            this.panel2.Size = new System.Drawing.Size(6, 394);
             this.panel2.TabIndex = 36;
             // 
             // textBoxBriefDesc
             // 
-            this.textBoxBriefDesc.Location = new System.Drawing.Point(514, 201);
+            this.textBoxBriefDesc.Location = new System.Drawing.Point(514, 268);
             this.textBoxBriefDesc.Multiline = true;
             this.textBoxBriefDesc.Name = "textBoxBriefDesc";
-            this.textBoxBriefDesc.Size = new System.Drawing.Size(200, 77);
+            this.textBoxBriefDesc.Size = new System.Drawing.Size(200, 71);
             this.textBoxBriefDesc.TabIndex = 35;
             // 
             // label6
@@ -211,7 +219,7 @@ namespace SadWork
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label6.Location = new System.Drawing.Point(517, 104);
+            this.label6.Location = new System.Drawing.Point(517, 181);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 18);
             this.label6.TabIndex = 34;
@@ -224,7 +232,7 @@ namespace SadWork
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label8.Location = new System.Drawing.Point(517, 180);
+            this.label8.Location = new System.Drawing.Point(517, 247);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(161, 18);
             this.label8.TabIndex = 33;
@@ -237,7 +245,7 @@ namespace SadWork
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label4.Location = new System.Drawing.Point(126, 246);
+            this.label4.Location = new System.Drawing.Point(126, 241);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 18);
             this.label4.TabIndex = 32;
@@ -250,7 +258,7 @@ namespace SadWork
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label3.Location = new System.Drawing.Point(126, 175);
+            this.label3.Location = new System.Drawing.Point(126, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 18);
             this.label3.TabIndex = 31;
@@ -291,6 +299,47 @@ namespace SadWork
             this.label1.Text = "ADD PARK";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.label7.Location = new System.Drawing.Point(517, 100);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 18);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Park\'s Slogan";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBoxSlogan
+            // 
+            this.textBoxSlogan.Location = new System.Drawing.Point(514, 121);
+            this.textBoxSlogan.Multiline = true;
+            this.textBoxSlogan.Name = "textBoxSlogan";
+            this.textBoxSlogan.Size = new System.Drawing.Size(191, 44);
+            this.textBoxSlogan.TabIndex = 47;
+            // 
+            // textBoxWebsite
+            // 
+            this.textBoxWebsite.Location = new System.Drawing.Point(123, 405);
+            this.textBoxWebsite.Name = "textBoxWebsite";
+            this.textBoxWebsite.Size = new System.Drawing.Size(191, 20);
+            this.textBoxWebsite.TabIndex = 49;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.label9.Location = new System.Drawing.Point(126, 384);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 18);
+            this.label9.TabIndex = 48;
+            this.label9.Text = "Park\'s Website";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // NewPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,5 +377,9 @@ namespace SadWork
         private System.Windows.Forms.ComboBox comboBoxArea;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxSlogan;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxWebsite;
+        private System.Windows.Forms.Label label9;
     }
 }

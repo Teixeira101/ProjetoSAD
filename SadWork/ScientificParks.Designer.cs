@@ -31,35 +31,97 @@ namespace SadWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScientificParks));
             this.scientificPark_panel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.loadParks_btn = new FontAwesome.Sharp.IconButton();
+            this.seePark_btn = new FontAwesome.Sharp.IconButton();
+            this.comboBoxId = new System.Windows.Forms.ComboBox();
+            this.panelPark = new System.Windows.Forms.Panel();
             this.learnMore_btn = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelParkBriefDesc = new System.Windows.Forms.Label();
+            this.labelNomePark = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.scientificPark_panel.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelPark.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // scientificPark_panel
             // 
-            this.scientificPark_panel.Controls.Add(this.panel2);
+            this.scientificPark_panel.Controls.Add(this.loadParks_btn);
+            this.scientificPark_panel.Controls.Add(this.seePark_btn);
+            this.scientificPark_panel.Controls.Add(this.comboBoxId);
+            this.scientificPark_panel.Controls.Add(this.panelPark);
             this.scientificPark_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scientificPark_panel.Location = new System.Drawing.Point(0, 0);
             this.scientificPark_panel.Name = "scientificPark_panel";
             this.scientificPark_panel.Size = new System.Drawing.Size(804, 510);
             this.scientificPark_panel.TabIndex = 0;
             // 
-            // panel2
+            // loadParks_btn
             // 
-            this.panel2.Controls.Add(this.learnMore_btn);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(59, 48);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(587, 106);
-            this.panel2.TabIndex = 1;
+            this.loadParks_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.loadParks_btn.BackColor = System.Drawing.Color.ForestGreen;
+            this.loadParks_btn.FlatAppearance.BorderSize = 0;
+            this.loadParks_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loadParks_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadParks_btn.ForeColor = System.Drawing.Color.White;
+            this.loadParks_btn.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.loadParks_btn.IconColor = System.Drawing.Color.White;
+            this.loadParks_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.loadParks_btn.IconSize = 25;
+            this.loadParks_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.loadParks_btn.Location = new System.Drawing.Point(347, 37);
+            this.loadParks_btn.Name = "loadParks_btn";
+            this.loadParks_btn.Size = new System.Drawing.Size(110, 28);
+            this.loadParks_btn.TabIndex = 13;
+            this.loadParks_btn.Text = "Load Parks";
+            this.loadParks_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.loadParks_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.loadParks_btn.UseVisualStyleBackColor = false;
+            this.loadParks_btn.Click += new System.EventHandler(this.loadParks_btn_Click);
+            // 
+            // seePark_btn
+            // 
+            this.seePark_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.seePark_btn.FlatAppearance.BorderSize = 0;
+            this.seePark_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.seePark_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seePark_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.seePark_btn.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.seePark_btn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.seePark_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.seePark_btn.IconSize = 25;
+            this.seePark_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.seePark_btn.Location = new System.Drawing.Point(325, 93);
+            this.seePark_btn.Name = "seePark_btn";
+            this.seePark_btn.Size = new System.Drawing.Size(154, 28);
+            this.seePark_btn.TabIndex = 12;
+            this.seePark_btn.Text = "See Selected Park";
+            this.seePark_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.seePark_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.seePark_btn.UseVisualStyleBackColor = true;
+            this.seePark_btn.Visible = false;
+            this.seePark_btn.Click += new System.EventHandler(this.seePark_btn_Click);
+            // 
+            // comboBoxId
+            // 
+            this.comboBoxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxId.FormattingEnabled = true;
+            this.comboBoxId.Location = new System.Drawing.Point(294, 64);
+            this.comboBoxId.Name = "comboBoxId";
+            this.comboBoxId.Size = new System.Drawing.Size(216, 28);
+            this.comboBoxId.TabIndex = 11;
+            // 
+            // panelPark
+            // 
+            this.panelPark.Controls.Add(this.learnMore_btn);
+            this.panelPark.Controls.Add(this.labelParkBriefDesc);
+            this.panelPark.Controls.Add(this.labelNomePark);
+            this.panelPark.Controls.Add(this.pictureBox1);
+            this.panelPark.Location = new System.Drawing.Point(109, 202);
+            this.panelPark.Name = "panelPark";
+            this.panelPark.Size = new System.Drawing.Size(587, 106);
+            this.panelPark.TabIndex = 1;
+            this.panelPark.Visible = false;
             // 
             // learnMore_btn
             // 
@@ -82,33 +144,33 @@ namespace SadWork
             this.learnMore_btn.UseVisualStyleBackColor = true;
             this.learnMore_btn.Click += new System.EventHandler(this.learnMore_btn_Click);
             // 
-            // label2
+            // labelParkBriefDesc
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(125, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(458, 28);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "This science park is located in the Oost city district of Amsterdam and has focus" +
+            this.labelParkBriefDesc.AutoSize = true;
+            this.labelParkBriefDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelParkBriefDesc.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelParkBriefDesc.ForeColor = System.Drawing.Color.White;
+            this.labelParkBriefDesc.Location = new System.Drawing.Point(125, 31);
+            this.labelParkBriefDesc.Name = "labelParkBriefDesc";
+            this.labelParkBriefDesc.Size = new System.Drawing.Size(458, 28);
+            this.labelParkBriefDesc.TabIndex = 4;
+            this.labelParkBriefDesc.Text = "This science park is located in the Oost city district of Amsterdam and has focus" +
     " on\r\nphysics, mathematics, information technology and the life sciences.";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelParkBriefDesc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // labelNomePark
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.label1.Location = new System.Drawing.Point(122, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 24);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Amsterdam Science Park";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNomePark.AutoSize = true;
+            this.labelNomePark.BackColor = System.Drawing.Color.Transparent;
+            this.labelNomePark.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelNomePark.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNomePark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.labelNomePark.Location = new System.Drawing.Point(122, 0);
+            this.labelNomePark.Name = "labelNomePark";
+            this.labelNomePark.Size = new System.Drawing.Size(244, 24);
+            this.labelNomePark.TabIndex = 3;
+            this.labelNomePark.Text = "Amsterdam Science Park";
+            this.labelNomePark.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -133,8 +195,8 @@ namespace SadWork
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScientificParks";
             this.scientificPark_panel.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelPark.ResumeLayout(false);
+            this.panelPark.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -143,10 +205,13 @@ namespace SadWork
         #endregion
 
         private System.Windows.Forms.Panel scientificPark_panel;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelPark;
         private FontAwesome.Sharp.IconButton learnMore_btn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelParkBriefDesc;
+        private System.Windows.Forms.Label labelNomePark;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public FontAwesome.Sharp.IconButton loadParks_btn;
+        public FontAwesome.Sharp.IconButton seePark_btn;
+        private System.Windows.Forms.ComboBox comboBoxId;
     }
 }

@@ -66,7 +66,7 @@ namespace SadWork
             // loadData_btn
             // 
             this.loadData_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.loadData_btn.BackColor = System.Drawing.Color.Peru;
+            this.loadData_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(173)))), ((int)(((byte)(45)))));
             this.loadData_btn.FlatAppearance.BorderSize = 0;
             this.loadData_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loadData_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
