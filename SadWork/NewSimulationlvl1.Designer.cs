@@ -29,279 +29,70 @@ namespace SadWork
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewSimulationlvl1));
             this.panelSimulationlvl1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.submit_btn = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cb1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.b1 = new System.Windows.Forms.CheckBox();
+            this.b2 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cb2 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.b3 = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cb3 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.b4 = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cb4 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.b5 = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cb5 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.b6 = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cb6 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panelSimulationlvl1.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSimulationlvl1
             // 
-            this.panelSimulationlvl1.Controls.Add(this.panel6);
-            this.panelSimulationlvl1.Controls.Add(this.panel5);
-            this.panelSimulationlvl1.Controls.Add(this.panel4);
-            this.panelSimulationlvl1.Controls.Add(this.panel3);
-            this.panelSimulationlvl1.Controls.Add(this.panel2);
+            this.panelSimulationlvl1.Controls.Add(this.b6);
+            this.panelSimulationlvl1.Controls.Add(this.label12);
+            this.panelSimulationlvl1.Controls.Add(this.cb6);
+            this.panelSimulationlvl1.Controls.Add(this.label13);
+            this.panelSimulationlvl1.Controls.Add(this.b5);
+            this.panelSimulationlvl1.Controls.Add(this.label10);
+            this.panelSimulationlvl1.Controls.Add(this.cb5);
+            this.panelSimulationlvl1.Controls.Add(this.label11);
+            this.panelSimulationlvl1.Controls.Add(this.b4);
+            this.panelSimulationlvl1.Controls.Add(this.label8);
+            this.panelSimulationlvl1.Controls.Add(this.cb4);
+            this.panelSimulationlvl1.Controls.Add(this.label9);
+            this.panelSimulationlvl1.Controls.Add(this.b3);
+            this.panelSimulationlvl1.Controls.Add(this.label5);
+            this.panelSimulationlvl1.Controls.Add(this.cb3);
+            this.panelSimulationlvl1.Controls.Add(this.label7);
+            this.panelSimulationlvl1.Controls.Add(this.b2);
+            this.panelSimulationlvl1.Controls.Add(this.label3);
+            this.panelSimulationlvl1.Controls.Add(this.cb2);
+            this.panelSimulationlvl1.Controls.Add(this.label4);
+            this.panelSimulationlvl1.Controls.Add(this.b1);
+            this.panelSimulationlvl1.Controls.Add(this.label2);
+            this.panelSimulationlvl1.Controls.Add(this.cb1);
+            this.panelSimulationlvl1.Controls.Add(this.label1);
             this.panelSimulationlvl1.Controls.Add(this.submit_btn);
-            this.panelSimulationlvl1.Controls.Add(this.panel1);
             this.panelSimulationlvl1.Controls.Add(this.label6);
             this.panelSimulationlvl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSimulationlvl1.Location = new System.Drawing.Point(0, 0);
             this.panelSimulationlvl1.Name = "panelSimulationlvl1";
             this.panelSimulationlvl1.Size = new System.Drawing.Size(804, 510);
             this.panelSimulationlvl1.TabIndex = 15;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.panel6.Controls.Add(this.pictureBox6);
-            this.panel6.Controls.Add(this.checkBox6);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Location = new System.Drawing.Point(554, 281);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(187, 175);
-            this.panel6.TabIndex = 21;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(16, 21);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(159, 120);
-            this.pictureBox6.TabIndex = 20;
-            this.pictureBox6.TabStop = false;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(6, 6);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 18;
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label7.Location = new System.Drawing.Point(29, 144);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(128, 17);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Telecomunicações";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.panel5.Controls.Add(this.pictureBox5);
-            this.panel5.Controls.Add(this.checkBox5);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(307, 281);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(187, 175);
-            this.panel5.TabIndex = 21;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(16, 21);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(159, 120);
-            this.pictureBox5.TabIndex = 20;
-            this.pictureBox5.TabStop = false;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(6, 6);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 18;
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(29, 144);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Telecomunicações";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.checkBox4);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(60, 281);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(187, 175);
-            this.panel4.TabIndex = 24;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(16, 21);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(159, 120);
-            this.pictureBox4.TabIndex = 20;
-            this.pictureBox4.TabStop = false;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(6, 6);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 18;
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(29, 144);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Telecomunicações";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.checkBox3);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(554, 68);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(187, 175);
-            this.panel3.TabIndex = 21;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(16, 21);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(159, 120);
-            this.pictureBox3.TabIndex = 20;
-            this.pictureBox3.TabStop = false;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(6, 6);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 18;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(29, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 17);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Telecomunicações";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.checkBox2);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(307, 68);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 175);
-            this.panel2.TabIndex = 23;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 21);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(159, 120);
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 6);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 18;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(29, 144);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Telecomunicações";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panelSimulationlvl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSimulationlvl1_Paint);
             // 
             // submit_btn
             // 
@@ -325,49 +116,6 @@ namespace SadWork
             this.submit_btn.UseVisualStyleBackColor = true;
             this.submit_btn.Click += new System.EventHandler(this.submit_btn_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(60, 68);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(187, 175);
-            this.panel1.TabIndex = 17;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 120);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 6);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 18;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(29, 144);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Telecomunicações";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -381,6 +129,270 @@ namespace SadWork
             this.label6.Text = "NEW SIMULATION";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(71, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 26);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Trained Staff";
+            // 
+            // cb1
+            // 
+            this.cb1.FormattingEnabled = true;
+            this.cb1.Items.AddRange(new object[] {
+            "Equal Importance",
+            "Moderate Importance",
+            "Strong Importance",
+            "Very Strong Importance",
+            "Extreme Importance"});
+            this.cb1.Location = new System.Drawing.Point(244, 134);
+            this.cb1.Name = "cb1";
+            this.cb1.Size = new System.Drawing.Size(196, 21);
+            this.cb1.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(573, 131);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 26);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Investments";
+            // 
+            // b1
+            // 
+            this.b1.AutoSize = true;
+            this.b1.Location = new System.Drawing.Point(461, 137);
+            this.b1.Name = "b1";
+            this.b1.Size = new System.Drawing.Size(61, 17);
+            this.b1.TabIndex = 27;
+            this.b1.Text = "Inverse";
+            this.b1.UseVisualStyleBackColor = true;
+            // 
+            // b2
+            // 
+            this.b2.AutoSize = true;
+            this.b2.Location = new System.Drawing.Point(461, 179);
+            this.b2.Name = "b2";
+            this.b2.Size = new System.Drawing.Size(61, 17);
+            this.b2.TabIndex = 31;
+            this.b2.Text = "Inverse";
+            this.b2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(573, 173);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 26);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Productivity";
+            // 
+            // cb2
+            // 
+            this.cb2.FormattingEnabled = true;
+            this.cb2.Items.AddRange(new object[] {
+            "Equal Importance",
+            "Moderate Importance",
+            "Strong Importance",
+            "Very Strong Importance",
+            "Extreme Importance"});
+            this.cb2.Location = new System.Drawing.Point(244, 176);
+            this.cb2.Name = "cb2";
+            this.cb2.Size = new System.Drawing.Size(196, 21);
+            this.cb2.TabIndex = 29;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(71, 171);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(148, 26);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Trained Staff";
+            // 
+            // b3
+            // 
+            this.b3.AutoSize = true;
+            this.b3.Location = new System.Drawing.Point(461, 221);
+            this.b3.Name = "b3";
+            this.b3.Size = new System.Drawing.Size(61, 17);
+            this.b3.TabIndex = 35;
+            this.b3.Text = "Inverse";
+            this.b3.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(573, 215);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 26);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Partners";
+            // 
+            // cb3
+            // 
+            this.cb3.FormattingEnabled = true;
+            this.cb3.Items.AddRange(new object[] {
+            "Equal Importance",
+            "Moderate Importance",
+            "Strong Importance",
+            "Very Strong Importance",
+            "Extreme Importance"});
+            this.cb3.Location = new System.Drawing.Point(244, 218);
+            this.cb3.Name = "cb3";
+            this.cb3.Size = new System.Drawing.Size(196, 21);
+            this.cb3.TabIndex = 33;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(71, 213);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(148, 26);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "Trained Staff";
+            // 
+            // b4
+            // 
+            this.b4.AutoSize = true;
+            this.b4.Location = new System.Drawing.Point(461, 263);
+            this.b4.Name = "b4";
+            this.b4.Size = new System.Drawing.Size(61, 17);
+            this.b4.TabIndex = 39;
+            this.b4.Text = "Inverse";
+            this.b4.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(573, 257);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 26);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Productivity";
+            // 
+            // cb4
+            // 
+            this.cb4.FormattingEnabled = true;
+            this.cb4.Items.AddRange(new object[] {
+            "Equal Importance",
+            "Moderate Importance",
+            "Strong Importance",
+            "Very Strong Importance",
+            "Extreme Importance"});
+            this.cb4.Location = new System.Drawing.Point(244, 260);
+            this.cb4.Name = "cb4";
+            this.cb4.Size = new System.Drawing.Size(196, 21);
+            this.cb4.TabIndex = 37;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(71, 255);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(141, 26);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Investments";
+            // 
+            // b5
+            // 
+            this.b5.AutoSize = true;
+            this.b5.Location = new System.Drawing.Point(461, 305);
+            this.b5.Name = "b5";
+            this.b5.Size = new System.Drawing.Size(61, 17);
+            this.b5.TabIndex = 43;
+            this.b5.Text = "Inverse";
+            this.b5.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(573, 299);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(102, 26);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "Partners";
+            // 
+            // cb5
+            // 
+            this.cb5.FormattingEnabled = true;
+            this.cb5.Items.AddRange(new object[] {
+            "Equal Importance",
+            "Moderate Importance",
+            "Strong Importance",
+            "Very Strong Importance",
+            "Extreme Importance"});
+            this.cb5.Location = new System.Drawing.Point(244, 302);
+            this.cb5.Name = "cb5";
+            this.cb5.Size = new System.Drawing.Size(196, 21);
+            this.cb5.TabIndex = 41;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(71, 297);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(141, 26);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Investments";
+            // 
+            // b6
+            // 
+            this.b6.AutoSize = true;
+            this.b6.Location = new System.Drawing.Point(461, 347);
+            this.b6.Name = "b6";
+            this.b6.Size = new System.Drawing.Size(61, 17);
+            this.b6.TabIndex = 47;
+            this.b6.Text = "Inverse";
+            this.b6.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(573, 341);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(102, 26);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "Partners";
+            // 
+            // cb6
+            // 
+            this.cb6.FormattingEnabled = true;
+            this.cb6.Items.AddRange(new object[] {
+            "Equal Importance",
+            "Moderate Importance",
+            "Strong Importance",
+            "Very Strong Importance",
+            "Extreme Importance"});
+            this.cb6.Location = new System.Drawing.Point(244, 344);
+            this.cb6.Name = "cb6";
+            this.cb6.Size = new System.Drawing.Size(196, 21);
+            this.cb6.TabIndex = 45;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label13.Location = new System.Drawing.Point(71, 339);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(137, 26);
+            this.label13.TabIndex = 44;
+            this.label13.Text = "Productivity";
+            // 
             // NewSimulationlvl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,24 +405,6 @@ namespace SadWork
             this.Text = "NewSimulation";
             this.panelSimulationlvl1.ResumeLayout(false);
             this.panelSimulationlvl1.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,30 +412,30 @@ namespace SadWork
         #endregion
         private System.Windows.Forms.Panel panelSimulationlvl1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton submit_btn;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox b6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cb6;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.CheckBox b5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cb5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox b4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cb4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox b3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.ComboBox cb3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox b2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.ComboBox cb2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox b1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cb1;
+        private System.Windows.Forms.Label label1;
     }
 }
