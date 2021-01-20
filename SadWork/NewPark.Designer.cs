@@ -30,6 +30,7 @@ namespace SadWork
         private void InitializeComponent()
         {
             this.panelNewPark = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxWebsite = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxSlogan = new System.Windows.Forms.TextBox();
@@ -53,10 +54,12 @@ namespace SadWork
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelNewPark.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelNewPark
             // 
+            this.panelNewPark.Controls.Add(this.pictureBox1);
             this.panelNewPark.Controls.Add(this.textBoxWebsite);
             this.panelNewPark.Controls.Add(this.label9);
             this.panelNewPark.Controls.Add(this.textBoxSlogan);
@@ -84,6 +87,15 @@ namespace SadWork
             this.panelNewPark.Name = "panelNewPark";
             this.panelNewPark.Size = new System.Drawing.Size(804, 510);
             this.panelNewPark.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(791, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(10, 12);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // textBoxWebsite
             // 
@@ -353,6 +365,7 @@ namespace SadWork
             this.Text = "NewPark";
             this.panelNewPark.ResumeLayout(false);
             this.panelNewPark.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,5 +395,6 @@ namespace SadWork
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxWebsite;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

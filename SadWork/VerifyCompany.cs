@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SadWork
@@ -20,11 +22,36 @@ namespace SadWork
         {
             verCompany_btn.Visible = true;
             delete_btn.Visible = true;
+
+            sqlcon.Open();
+            cmd = new SqlCommand("SELECT * FROM [dbo].[Empresa] Where [nome_empresa] = '" + labelCompName.Text + "'", sqlcon);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                FileStream fs;
+                byte[] pdfByte;
+
+                pdfByte = (byte[])dr["comprovativo"];
+                string filepath = @"D:\" + labelCompName.Text + ".pdf";
+
+                fs = new FileStream(filepath, FileMode.Create);
+
+                fs.Write(pdfByte, 0, pdfByte.Length);
+
+                fs.Close();
+
+                Process Proc = new Process();
+                Proc.StartInfo.FileName = filepath;
+                Proc.Start();
+            }
+            dr.Close();
+            sqlcon.Close();
         }
 
         private void loadUnVerComp_btn_Click(object sender, EventArgs e)
         {
             bool verificado_empresa = false;
+            panelCompVal.Visible = false;
             comboBoxId.Enabled = true;
             comboBoxId.Items.Clear();
             seeUnVerComp_btn.Visible = true;
@@ -95,6 +122,7 @@ namespace SadWork
         {
             seeUnVerComp_btn.Visible = false;
             comboBoxId.Enabled = true;
+            sqlcon.Open();
             using (cmd = new SqlCommand("DELETE FROM [dbo].[Empresa] Where [nome_empresa] = '" + comboBoxId.SelectedItem + "'", sqlcon))
             {
                 comboBoxId.Items.Clear();

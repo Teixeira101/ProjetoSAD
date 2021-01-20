@@ -1,22 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SadWork
 {
     public partial class ScientificParks : Form
     {
+        public static string learnMoreParkId;
         private Form currentChildForm;
         SqlCommand cmd;
         SqlDataReader dr;
         SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+
         public ScientificParks()
         {
             InitializeComponent();
@@ -43,6 +40,9 @@ namespace SadWork
 
         private void loadParks_btn_Click(object sender, EventArgs e)
         {
+            panelPark.Visible = false;
+            comboBoxId.Enabled = true;
+            comboBoxId.Items.Clear();
             bool verificado_parque = true;
             seePark_btn.Visible = true;
             sqlcon.Open();
@@ -63,15 +63,40 @@ namespace SadWork
 
         private void seePark_btn_Click(object sender, EventArgs e)
         {
+            seePark_btn.Enabled = false;
+            comboBoxId.Enabled = false;
             sqlcon.Open();
             cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [nome_parque] = '" + comboBoxId.SelectedItem + "'", sqlcon);
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 panelPark.Visible = true;
+                learnMoreParkId = dr["id_parque"].ToString();
                 labelNomePark.Text = dr["nome_parque"].ToString();
                 labelParkBriefDesc.Text = dr["descricao_parque_parcial"].ToString();
-                dr.Close();
+                labelParkBriefDesc.MaximumSize = new Size(458, 28);
+                labelParkBriefDesc.AutoSize = true;
+            }
+            dr.Close();
+
+            cmd = new SqlCommand("SELECT foto_parque1 FROM [dbo].[Parque] Where [nome_parque] = '" + comboBoxId.SelectedItem + "'", sqlcon);
+            dr = cmd.ExecuteReader();
+            dr.Read();
+            if (dr.HasRows)
+            {
+                try
+                {
+                    byte[] img = (byte[])dr[0];
+                    if (img == null)
+                    {
+                        pictureBox1.Image = null;
+                    } else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pictureBox1.Image = Image.FromStream(ms);
+                    }
+                }
+                catch (Exception) { }
             }
             sqlcon.Close();
         }

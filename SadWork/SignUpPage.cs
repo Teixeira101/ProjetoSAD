@@ -1,23 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
-using System.Net.Mail;
+using Google.Apis.Auth.OAuth2;
+using System.IO;
+using System.Threading;
+using Google.Apis.Util.Store;
+using Google.Apis.Drive.v3;
+using Google.Apis.Services;
 
 namespace SadWork
 {
     public partial class SignUpPage : Form
     {
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+        string filename;
         public SignUpPage()
         {
             InitializeComponent();
+
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -34,6 +36,8 @@ namespace SadWork
             {
                 labelPDF.Text = ofd.SafeFileName;
                 labelPDF.Visible = true;
+
+                filename = ofd.FileName;
             }
         }
 
@@ -42,9 +46,10 @@ namespace SadWork
             if (nullCamps())
             {
                 MessageBox.Show("Empty Field(s)!");
+                textBoxCompName.Clear();
                 textBoxCompEmail.Clear();
                 textBoxPwd.Clear();
-                textBoxPwd.Clear();
+                textBoxCompLocation.Clear();
                 comboBoxCompArea.SelectedIndex = -1;
                 labelPDF.Visible = false;
             } else if (invalidEmailOrPassword())
@@ -56,8 +61,12 @@ namespace SadWork
                 labelPDF.Visible = false;
             } else
             {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
                 sqlcon.Open();
+
+                FileStream fs = File.OpenRead(filename);
+                byte[] contents = new byte[fs.Length];
+                fs.Read(contents, 0, (int)fs.Length);
+                fs.Close();
 
                 SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Empresa]
                ([nome_empresa]
@@ -67,16 +76,16 @@ namespace SadWork
                ,[comprovativo]
                ,[verificado_empresa]
                ,[admin]
-               ,[location])
+               ,[localizacao])
          VALUES
-               ('" + textBoxCompName.Text.Trim() + "', '" + comboBoxCompArea.SelectedItem.ToString() + "', '" + textBoxCompEmail.Text.Trim() + "', '" + textBoxPwd.Text.Trim() + "', '" + ofd.FileName + "', '0', '0','" + textBoxCompLocation.Text.Trim() + "')", sqlcon);
-
+               ('" + textBoxCompName.Text.Trim() + "', '" + comboBoxCompArea.SelectedItem.ToString() + "', '" + textBoxCompEmail.Text.Trim() + "', '" + textBoxPwd.Text.Trim() + "', @pdf, '0', '0','" + textBoxCompLocation.Text.Trim() + "')", sqlcon);
+                cmd.Parameters.AddWithValue("@pdf", contents);
                 cmd.ExecuteNonQuery();
 
                 LoginPage.admin = false;
-                LoginPage.company = false;
+                LoginPage.company = true;
 
-                MainPage MP = new MainPage();
+                LoginPage MP = new LoginPage();
                 this.Hide();
                 MP.Show();
                 sqlcon.Close();
@@ -96,7 +105,7 @@ namespace SadWork
 
         private bool nullCamps()
         {
-            if(textBoxCompName.Text == "" || textBoxCompEmail.Text == "" || textBoxPwd.Text == "" || textBoxCompLocation.Text == "" || comboBoxCompArea.SelectedIndex == 0 || labelPDF.Text == "labelPDF")
+            if(textBoxCompName.Text.Trim() == "" || textBoxCompEmail.Text.Trim() == "" || textBoxPwd.Text.Trim() == "" || textBoxCompLocation.Text.Trim() == "" || comboBoxCompArea.SelectedIndex == -1 || labelPDF.Text.Trim() == "labelPDF")
             {
                 return true;
             }

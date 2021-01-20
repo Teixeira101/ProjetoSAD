@@ -56,6 +56,14 @@ namespace SadWork
             this.img2_btn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.confirm_btn = new FontAwesome.Sharp.IconButton();
+            this.comboBoxTf = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBoxInv = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBoxProd = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBoxPn = new System.Windows.Forms.ComboBox();
             this.panelParkVal.SuspendLayout();
             this.panelParkDetails.SuspendLayout();
             this.SuspendLayout();
@@ -99,7 +107,6 @@ namespace SadWork
             // seeUnVerPark_btn
             // 
             this.seeUnVerPark_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.seeUnVerPark_btn.FlatAppearance.BorderSize = 0;
             this.seeUnVerPark_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.seeUnVerPark_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seeUnVerPark_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
@@ -108,9 +115,9 @@ namespace SadWork
             this.seeUnVerPark_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.seeUnVerPark_btn.IconSize = 25;
             this.seeUnVerPark_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.seeUnVerPark_btn.Location = new System.Drawing.Point(325, 140);
+            this.seeUnVerPark_btn.Location = new System.Drawing.Point(325, 135);
             this.seeUnVerPark_btn.Name = "seeUnVerPark_btn";
-            this.seeUnVerPark_btn.Size = new System.Drawing.Size(154, 28);
+            this.seeUnVerPark_btn.Size = new System.Drawing.Size(156, 30);
             this.seeUnVerPark_btn.TabIndex = 30;
             this.seeUnVerPark_btn.Text = "See Selected Park";
             this.seeUnVerPark_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -265,7 +272,6 @@ namespace SadWork
             // 
             this.addMoreDetails_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.addMoreDetails_btn.BackColor = System.Drawing.SystemColors.Control;
-            this.addMoreDetails_btn.FlatAppearance.BorderSize = 0;
             this.addMoreDetails_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addMoreDetails_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addMoreDetails_btn.ForeColor = System.Drawing.Color.MediumSeaGreen;
@@ -274,9 +280,9 @@ namespace SadWork
             this.addMoreDetails_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.addMoreDetails_btn.IconSize = 20;
             this.addMoreDetails_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addMoreDetails_btn.Location = new System.Drawing.Point(544, 110);
+            this.addMoreDetails_btn.Location = new System.Drawing.Point(541, 112);
             this.addMoreDetails_btn.Name = "addMoreDetails_btn";
-            this.addMoreDetails_btn.Size = new System.Drawing.Size(156, 26);
+            this.addMoreDetails_btn.Size = new System.Drawing.Size(158, 26);
             this.addMoreDetails_btn.TabIndex = 34;
             this.addMoreDetails_btn.Text = "Add More Details";
             this.addMoreDetails_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -289,7 +295,6 @@ namespace SadWork
             // 
             this.delete_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.delete_btn.BackColor = System.Drawing.SystemColors.Control;
-            this.delete_btn.FlatAppearance.BorderSize = 0;
             this.delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete_btn.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -298,9 +303,9 @@ namespace SadWork
             this.delete_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.delete_btn.IconSize = 20;
             this.delete_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete_btn.Location = new System.Drawing.Point(710, 111);
+            this.delete_btn.Location = new System.Drawing.Point(710, 112);
             this.delete_btn.Name = "delete_btn";
-            this.delete_btn.Size = new System.Drawing.Size(82, 26);
+            this.delete_btn.Size = new System.Drawing.Size(84, 26);
             this.delete_btn.TabIndex = 35;
             this.delete_btn.Text = "Delete";
             this.delete_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,6 +316,14 @@ namespace SadWork
             // 
             // panelParkDetails
             // 
+            this.panelParkDetails.Controls.Add(this.label13);
+            this.panelParkDetails.Controls.Add(this.comboBoxPn);
+            this.panelParkDetails.Controls.Add(this.label12);
+            this.panelParkDetails.Controls.Add(this.comboBoxProd);
+            this.panelParkDetails.Controls.Add(this.label11);
+            this.panelParkDetails.Controls.Add(this.comboBoxInv);
+            this.panelParkDetails.Controls.Add(this.label10);
+            this.panelParkDetails.Controls.Add(this.comboBoxTf);
             this.panelParkDetails.Controls.Add(this.textBoxCompleteDesc);
             this.panelParkDetails.Controls.Add(this.label8);
             this.panelParkDetails.Controls.Add(this.labelImg3);
@@ -434,7 +447,6 @@ namespace SadWork
             // 
             this.confirm_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.confirm_btn.BackColor = System.Drawing.SystemColors.Control;
-            this.confirm_btn.FlatAppearance.BorderSize = 0;
             this.confirm_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirm_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirm_btn.ForeColor = System.Drawing.Color.Goldenrod;
@@ -443,9 +455,9 @@ namespace SadWork
             this.confirm_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.confirm_btn.IconSize = 20;
             this.confirm_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.confirm_btn.Location = new System.Drawing.Point(357, 242);
+            this.confirm_btn.Location = new System.Drawing.Point(183, 112);
             this.confirm_btn.Name = "confirm_btn";
-            this.confirm_btn.Size = new System.Drawing.Size(88, 26);
+            this.confirm_btn.Size = new System.Drawing.Size(90, 26);
             this.confirm_btn.TabIndex = 47;
             this.confirm_btn.Text = "Confirm";
             this.confirm_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -453,6 +465,102 @@ namespace SadWork
             this.confirm_btn.UseVisualStyleBackColor = false;
             this.confirm_btn.Visible = false;
             this.confirm_btn.Click += new System.EventHandler(this.confirm_btn_Click);
+            // 
+            // comboBoxTf
+            // 
+            this.comboBoxTf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTf.FormattingEnabled = true;
+            this.comboBoxTf.Items.AddRange(new object[] {
+            "1",
+            "3",
+            "5",
+            "7",
+            "9"});
+            this.comboBoxTf.Location = new System.Drawing.Point(231, 27);
+            this.comboBoxTf.Name = "comboBoxTf";
+            this.comboBoxTf.Size = new System.Drawing.Size(39, 28);
+            this.comboBoxTf.TabIndex = 52;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(218, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 13);
+            this.label10.TabIndex = 53;
+            this.label10.Text = "Trained Staff";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(222, 58);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 13);
+            this.label11.TabIndex = 55;
+            this.label11.Text = "Investments";
+            // 
+            // comboBoxInv
+            // 
+            this.comboBoxInv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxInv.FormattingEnabled = true;
+            this.comboBoxInv.Items.AddRange(new object[] {
+            "1",
+            "3",
+            "5",
+            "7",
+            "9"});
+            this.comboBoxInv.Location = new System.Drawing.Point(231, 74);
+            this.comboBoxInv.Name = "comboBoxInv";
+            this.comboBoxInv.Size = new System.Drawing.Size(39, 28);
+            this.comboBoxInv.TabIndex = 54;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(222, 105);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 13);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "Productivity";
+            // 
+            // comboBoxProd
+            // 
+            this.comboBoxProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxProd.FormattingEnabled = true;
+            this.comboBoxProd.Items.AddRange(new object[] {
+            "1",
+            "3",
+            "5",
+            "7",
+            "9"});
+            this.comboBoxProd.Location = new System.Drawing.Point(231, 121);
+            this.comboBoxProd.Name = "comboBoxProd";
+            this.comboBoxProd.Size = new System.Drawing.Size(39, 28);
+            this.comboBoxProd.TabIndex = 56;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(228, 154);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 13);
+            this.label13.TabIndex = 59;
+            this.label13.Text = "Partners";
+            // 
+            // comboBoxPn
+            // 
+            this.comboBoxPn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPn.FormattingEnabled = true;
+            this.comboBoxPn.Items.AddRange(new object[] {
+            "1",
+            "3",
+            "5",
+            "7",
+            "9"});
+            this.comboBoxPn.Location = new System.Drawing.Point(231, 170);
+            this.comboBoxPn.Name = "comboBoxPn";
+            this.comboBoxPn.Size = new System.Drawing.Size(39, 28);
+            this.comboBoxPn.TabIndex = 58;
             // 
             // ConfirmPark
             // 
@@ -465,9 +573,9 @@ namespace SadWork
             this.Controls.Add(this.addMoreDetails_btn);
             this.Controls.Add(this.panelParkVal);
             this.Controls.Add(this.loadUnVerPark_btn);
-            this.Controls.Add(this.seeUnVerPark_btn);
             this.Controls.Add(this.comboBoxId);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.seeUnVerPark_btn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConfirmPark";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -510,5 +618,13 @@ namespace SadWork
         private System.Windows.Forms.TextBox textBoxCompleteDesc;
         private System.Windows.Forms.Label label8;
         private FontAwesome.Sharp.IconButton confirm_btn;
+        private System.Windows.Forms.ComboBox comboBoxTf;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBoxPn;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBoxProd;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBoxInv;
     }
 }

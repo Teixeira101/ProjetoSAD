@@ -269,7 +269,6 @@ namespace SadWork
             // seeUnVerComp_btn
             // 
             this.seeUnVerComp_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.seeUnVerComp_btn.FlatAppearance.BorderSize = 0;
             this.seeUnVerComp_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.seeUnVerComp_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seeUnVerComp_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
@@ -278,9 +277,9 @@ namespace SadWork
             this.seeUnVerComp_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.seeUnVerComp_btn.IconSize = 25;
             this.seeUnVerComp_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.seeUnVerComp_btn.Location = new System.Drawing.Point(325, 135);
+            this.seeUnVerComp_btn.Location = new System.Drawing.Point(325, 131);
             this.seeUnVerComp_btn.Name = "seeUnVerComp_btn";
-            this.seeUnVerComp_btn.Size = new System.Drawing.Size(154, 28);
+            this.seeUnVerComp_btn.Size = new System.Drawing.Size(156, 30);
             this.seeUnVerComp_btn.TabIndex = 35;
             this.seeUnVerComp_btn.Text = "See Selected Park";
             this.seeUnVerComp_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -306,10 +305,10 @@ namespace SadWork
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 510);
             this.Controls.Add(this.loadUnVerComp_btn);
-            this.Controls.Add(this.seeUnVerComp_btn);
             this.Controls.Add(this.comboBoxId);
             this.Controls.Add(this.panelCompVal);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.seeUnVerComp_btn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VerifyCompany";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -51,19 +51,12 @@ namespace SadWork
 
         private void GetValuesFromForm()
         {
-
-            int id1;
-            int.TryParse(cb1.SelectedValue.ToString(), out id1);
-            int id2;
-            int.TryParse(cb2.SelectedValue.ToString(), out id2);
-            int id3;
-            int.TryParse(cb3.SelectedValue.ToString(), out id3);
-            int id4;
-            int.TryParse(cb4.SelectedValue.ToString(), out id4);
-            int id5;
-            int.TryParse(cb5.SelectedValue.ToString(), out id5);
-            int id6;
-            int.TryParse(cb6.SelectedValue.ToString(), out id6);
+            int id1 = cb1.SelectedIndex;
+            int id2 = cb2.SelectedIndex;
+            int id3 = cb3.SelectedIndex;
+            int id4 = cb4.SelectedIndex;
+            int id5 = cb5.SelectedIndex;
+            int id6 = cb6.SelectedIndex;
 
             criteriaArray[0, 0] = 1;
             criteriaArray[0, 1] = GetFirst(id1, b1.Checked); 
@@ -208,25 +201,18 @@ namespace SadWork
             criteriaArray[3, 4] = v4 / sum;
 
             form.critArray = criteriaArray;
-
-        }
-
-        private int NumberOfParks()
-        {
-            int x = 0;
-            return x;
         }
 
         private void GetValuesFromParks()
         {
             SqlConnection myConnection = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
             myConnection.Open();
-            string oString = "SELECT COUNT(*) FROM Parks";
+            string oString = "SELECT COUNT(*) FROM [dbo].[Parque]";
             SqlCommand oCmd = new SqlCommand(oString, myConnection);
 
             count = Convert.ToInt32(oCmd.ExecuteScalar());
             
-            SqlCommand tempCmd = new SqlCommand("SELECT id, trained_staff, investments, productivity, partners FROM Parks", myConnection);
+            SqlCommand tempCmd = new SqlCommand("SELECT id_parque, trained_staff, investments, productivity, partners FROM [dbo].[Parque]", myConnection);
 
             SqlDataReader reader = tempCmd.ExecuteReader();
 
@@ -238,7 +224,6 @@ namespace SadWork
             myConnection.Close();
 
             form.count = count;
-
         }
 
         private void ReadSingleRow(IDataRecord record)
@@ -248,7 +233,6 @@ namespace SadWork
             parksList[Convert.ToInt32(record[0])].Iv = Convert.ToInt32(record[2]);
             parksList[Convert.ToInt32(record[0])].Pd = Convert.ToInt32(record[3]);
             parksList[Convert.ToInt32(record[0])].Pt = Convert.ToInt32(record[4]);
-
         }
 
         private void CompareValuesFromParks()
@@ -429,7 +413,7 @@ namespace SadWork
                         total = parksArrayTf[i, y];
                     } else if (y == stop)
                     {
-                        total = (total * parksArrayTf[i, y]) * 1 / count;
+                        total = (total * parksArrayTf[i, y]) ^ (1 / count);
                         pValueArrayTf[i] = total;
                     } else
                     {
@@ -456,7 +440,7 @@ namespace SadWork
                     }
                     else if (y == stop)
                     {
-                        total = (total * parksArrayIv[i, y]) * 1 / count;
+                        total = (total * parksArrayIv[i, y]) ^ (1 / count);
                         pValueArrayIv[i] = total;
                     }
                     else
@@ -484,7 +468,7 @@ namespace SadWork
                     }
                     else if (y == stop)
                     {
-                        total = (total * parksArrayPd[i, y]) * 1 / count;
+                        total = (total * parksArrayPd[i, y]) ^ (1 / count);
                         pValueArrayPd[i] = total;
                     }
                     else
@@ -512,7 +496,7 @@ namespace SadWork
                     }
                     else if (y == stop)
                     {
-                        total = (total * parksArrayPt[i, y]) * 1 / count;
+                        total = (total * parksArrayPt[i, y]) ^ (1 / count);
                         pValueArrayPt[i] = total;
                     }
                     else
@@ -618,14 +602,7 @@ namespace SadWork
             public int Tf { get; set; }
             public int Iv { get; set; }
             public int Pd { get; set; }
-            public int Pt { get; set; }           
-        }
-
-        
-
-        private void panelSimulationlvl1_Paint(object sender, PaintEventArgs e)
-        {
-
+            public int Pt { get; set; }
         }
     }
 }

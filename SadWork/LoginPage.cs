@@ -249,7 +249,7 @@ namespace SadWork
         {
             if (e.KeyCode == Keys.Enter)
             {
-                buttonSignUp.PerformClick();
+                login_btn.PerformClick();
                 e.SuppressKeyPress = true;
                 e.Handled = true;
             }

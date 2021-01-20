@@ -1,5 +1,6 @@
 ﻿using System.Data.SqlClient;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SadWork
@@ -7,6 +8,8 @@ namespace SadWork
     public partial class ConfirmPark : Form
     {
         private string website;
+        string imgLoc1 = "";
+        string imgLoc2 = "";
         SqlCommand cmd;
         SqlDataReader dr;
         SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
@@ -18,13 +21,23 @@ namespace SadWork
 
         private void loadUnVerPark_btn_Click(object sender, System.EventArgs e)
         {
-            seeUnVerPark_btn.Enabled = true;
-            comboBoxId.Enabled = true;
+            //Clear ComboBox
             comboBoxId.Items.Clear();
-            bool verificado_parque = false;
-            seeUnVerPark_btn.Visible = true;
-            sqlcon.Open();
 
+            //Visible False - botões/panel
+            addMoreDetails_btn.Visible = false;
+            delete_btn.Visible = false;
+            panelParkVal.Visible = false;
+
+            //Visible True - botões
+            seeUnVerPark_btn.Visible = true;
+
+            //Ativar botões
+            comboBoxId.Enabled = true;
+            seeUnVerPark_btn.Enabled = true;
+
+            sqlcon.Open();
+            bool verificado_parque = false;
             cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [verificado_parque] = '" + verificado_parque + "'", sqlcon);
 
             using (dr = cmd.ExecuteReader())
@@ -50,8 +63,6 @@ namespace SadWork
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    delete_btn.Visible = true;
-                    addMoreDetails_btn.Visible = true;
                     panelParkVal.Visible = true;
 
                     labelParkName.Text = dr["nome_parque"].ToString();
@@ -68,6 +79,9 @@ namespace SadWork
 
         private void website_btn_Click(object sender, System.EventArgs e)
         {
+            addMoreDetails_btn.Enabled = true;
+            addMoreDetails_btn.Visible = true;
+            delete_btn.Visible = true;
             Process.Start(website);
         }
 
@@ -90,14 +104,22 @@ namespace SadWork
 
         private void addMoreDetails_btn_Click(object sender, System.EventArgs e)
         {
+            addMoreDetails_btn.Enabled = false;
             confirm_btn.Visible = true;
             panelParkDetails.Visible = true;
         }
 
         private void confirm_btn_Click(object sender, System.EventArgs e)
         {
+            FileStream fs1 = new FileStream(imgLoc1, FileMode.Open, FileAccess.Read);
+            FileStream fs2 = new FileStream(imgLoc2, FileMode.Open, FileAccess.Read);
+            BinaryReader br1 = new BinaryReader(fs1);
+            BinaryReader br2 = new BinaryReader(fs2);
+            byte[] img1 = br1.ReadBytes((int)fs1.Length);
+            byte[] img2 = br2.ReadBytes((int)fs2.Length);
+
             sqlcon.Open();
-            using (cmd = new SqlCommand("UPDATE [dbo].[Parque] SET [descricao_parque_total] = '" + textBoxCompleteDesc.Text.Trim() + "', [verificado_parque] = '1', [foto_parque2] = '" + ofd.FileName + "', [foto_parque3] = '" + ofd2.FileName + "' Where [nome_parque] = '" + comboBoxId.SelectedItem + "'", sqlcon))
+            using (cmd = new SqlCommand("UPDATE [dbo].[Parque] SET [descricao_parque_total] = '" + textBoxCompleteDesc.Text.Trim() + "', [verificado_parque] = '1', [foto_parque2] = @img1, [foto_parque3] = @img2, [trained_staff] = '" + comboBoxTf.SelectedItem + "', [investments] = '" + comboBoxInv.SelectedItem + "', [productivity] = '" + comboBoxProd.SelectedItem + "', [partners] = '" + comboBoxPn.SelectedItem + "' Where [nome_parque] = '" + comboBoxId.SelectedItem + "'", sqlcon))
             {
                 comboBoxId.Items.Clear();
                 comboBoxId.Enabled = true;
@@ -108,6 +130,8 @@ namespace SadWork
                 panelParkDetails.Visible = false;
                 confirm_btn.Visible = false;
 
+                cmd.Parameters.Add(new SqlParameter("@img1", img1));
+                cmd.Parameters.Add(new SqlParameter("@img2", img2));
                 cmd.ExecuteNonQuery();
             }
             sqlcon.Close();
@@ -116,11 +140,12 @@ namespace SadWork
         OpenFileDialog ofd = new OpenFileDialog();
         private void img2_btn_Click(object sender, System.EventArgs e)
         {
-            ofd.Filter = "JPEG|*.jfif";
+            ofd.Filter = "JPG|*.jpg";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 labelImg2.Text = ofd.SafeFileName;
                 labelImg2.Visible = true;
+                imgLoc1 = ofd.FileName.ToString();
             }
         }
 
@@ -132,6 +157,7 @@ namespace SadWork
             {
                 labelImg3.Text = ofd2.SafeFileName;
                 labelImg3.Visible = true;
+                imgLoc2 = ofd.FileName.ToString();
             }
         }
     }
