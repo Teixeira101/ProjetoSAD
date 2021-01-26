@@ -8,7 +8,9 @@ namespace SadWork
 {
     public partial class NewSimulationlvl1 : Form
     {
-        int[,] criteriaArray = new int[4, 5];
+        int cUsed = 0;
+        int[,] cTable;
+        int[] cValues = new int[4];
         public List<ParkCriteria> parksList = new List<ParkCriteria>();
         int count;
         NewSimulationResults form = new NewSimulationResults();
@@ -37,8 +39,9 @@ namespace SadWork
 
         private void submit_btn_Click(object sender, EventArgs e)
         {
+            GetCriteriaValues();
 
-            GetValuesFromForm();
+            CalculateCriteriaValues();
 
             CalculateLastRows();
 
@@ -49,160 +52,138 @@ namespace SadWork
             currentChildForm = new NewSimulationlvl1();
             OpenChildForm(new NewSimulationResults(), currentChildForm);
             
-        }      
-
-        private void GetValuesFromForm()
-        {
-            int id1 = cb1.SelectedIndex;
-            int id2 = cb2.SelectedIndex;
-            int id3 = cb3.SelectedIndex;
-            int id4 = cb4.SelectedIndex;
-            int id5 = cb5.SelectedIndex;
-            int id6 = cb6.SelectedIndex;
-
-            criteriaArray[0, 0] = 1;
-            criteriaArray[0, 1] = GetFirst(id1, b1.Checked); 
-            criteriaArray[0, 2] = GetFirst(id2, b2.Checked);            
-            criteriaArray[0, 3] = GetFirst(id3, b3.Checked);
-            criteriaArray[1, 0] = GetSecond(id1, b1.Checked);
-            criteriaArray[1, 1] = 1;
-            criteriaArray[1, 2] = GetFirst(id4, b4.Checked);
-            criteriaArray[1, 3] = GetFirst(id5, b5.Checked);
-            criteriaArray[2, 0] = GetSecond(id2, b2.Checked);
-            criteriaArray[2, 1] = GetSecond(id4, b4.Checked);
-            criteriaArray[2, 2] = 1;            
-            criteriaArray[2, 3] = GetFirst(id6, b6.Checked);
-            criteriaArray[3, 0] = GetSecond(id3, b3.Checked);
-            criteriaArray[3, 1] = GetSecond(id5, b5.Checked);
-            criteriaArray[3, 2] = GetSecond(id6, b6.Checked);
-            criteriaArray[3, 3] = 1;
-
         }
 
-        private int GetFirst(int cb, bool b)
+        private void GetCriteriaValues()
         {
-            int x;
-            if (!b)
-            {                             
-                switch (cb)
-                {
-                    case 0:
-                        x = 1;                      
-                        break;
-                    case 1:
-                        x = 3;
-                        break;
-                    case 2:
-                        x = 5;
-                        break;
-                    case 3:
-                        x = 7;
-                        break;
-                    case 4:
-                        x = 9;
-                        break;
-                    default:
-                        x = 1;
-                        break;
-                }
+            if (tb1.Value == 0)
+            {
+                cValues[0] = tb1.Value;
+            } else
+            {
+                cValues[0] = tb1.Value;
+                cUsed = cUsed + 1;
+            }
+
+            if (tb2.Value == 0)
+            {
+                cValues[1] = tb2.Value;
             }
             else
             {
-                switch (cb)
-                {
-                    case 0:
-                        x = 1;
-                        break;
-                    case 1:
-                        x = 1 / 3;
-                        break;
-                    case 2:
-                        x = 1 / 5;
-                        break;
-                    case 3:
-                        x = 1 / 7;
-                        break;
-                    case 4:
-                        x = 1 / 9;
-                        break;
-                    default:
-                        x = 1;
-                        break;
-                }
+                cValues[1] = tb2.Value;
+                cUsed = cUsed + 1;
             }
-            return x;
-        }
 
-        private int GetSecond(int cb, bool b)
-        {
-            int x;
-            if (!b)
+            if (tb3.Value == 0)
             {
-                switch (cb)
-                {
-                    case 0:
-                        x = 1;
-                        break;
-                    case 1:
-                        x = 1 / 3;
-                        break;
-                    case 2:
-                        x = 1 / 5;
-                        break;
-                    case 3:
-                        x = 1 / 7;
-                        break;
-                    case 4:
-                        x = 1 / 9;
-                        break;
-                    default:
-                        x = 1;
-                        break;
-                }
+                cValues[2] = tb3.Value;
             }
             else
             {
-                switch (cb)
-                {
-                    case 0:
-                        x = 1;
-                        break;
-                    case 1:
-                        x = 3;
-                        break;
-                    case 2:
-                        x = 5;
-                        break;
-                    case 3:
-                        x = 7;
-                        break;
-                    case 4:
-                        x = 9;
-                        break;
-                    default:
-                        x = 1;
-                        break;
-                }
+                cValues[2] = tb3.Value;
+                cUsed = cUsed + 1;
             }
-            return x;
+
+            if (tb4.Value == 0)
+            {
+                cValues[3] = tb4.Value;
+            }
+            else
+            {
+                cValues[3] = tb4.Value;
+                cUsed = cUsed + 1;
+            }
+            
         }
 
-        private void CalculateLastRows()
+        private void CalculateCriteriaValues()
         {
+            int[,] cMultiArray = new int[cUsed, cUsed + 1];
+            int[] cArray = new int[cUsed];
+            int x = 0;
+            int diff = 0;
+            int[] tempValues = new int[cUsed];
+            int sum = 0;
 
-            int v1 = (criteriaArray[0, 0] * criteriaArray[0, 1] * criteriaArray[0, 2] * criteriaArray[0, 3]) ^ (1 / 4);
-            int v2 = (criteriaArray[1, 0] * criteriaArray[1, 1] * criteriaArray[1, 2] * criteriaArray[1, 3]) ^ (1 / 4);
-            int v3 = (criteriaArray[2, 0] * criteriaArray[2, 1] * criteriaArray[2, 2] * criteriaArray[2, 3]) ^ (1 / 4);
-            int v4 = (criteriaArray[3, 0] * criteriaArray[3, 1] * criteriaArray[3, 2] * criteriaArray[3, 3]) ^ (1 / 4);
+            for (int i = 0; i < cValues.Length; i++)
+            {
+                if (cValues[i] != 0)
+                {
+                    cArray[x] = cValues[i];
+                    x = x + 1;
+                }
+            }
 
-            int sum = v1 + v2 + v3 + v4;
+            for (int i = 0; i < cUsed; i++)
+            {
+                for (int y = 0; y < cUsed; y++)
+                {
+                    diff = cArray[i] - cArray[y];
 
-            criteriaArray[0, 4] = v1 / sum;
-            criteriaArray[1, 4] = v2 / sum;
-            criteriaArray[2, 4] = v3 / sum;
-            criteriaArray[3, 4] = v4 / sum;
+                    switch (diff)
+                    {
+                        case 4:
+                            cMultiArray[i, y] = 9;
+                            break;
+                        case 3:
+                            cMultiArray[i, y] = 7;
+                            break;
+                        case 2:
+                            cMultiArray[i, y] = 5;
+                            break;
+                        case 1:
+                            cMultiArray[i, y] = 3;
+                            break;
+                        case 0:
+                            cMultiArray[i, y] = 1;
+                            break;
+                        case -1:
+                            cMultiArray[i, y] = 1 / 3;
+                            break;
+                        case -2:
+                            cMultiArray[i, y] = 1 / 5;
+                            break;
+                        case -3:
+                            cMultiArray[i, y] = 1 / 7;
+                            break;
+                        case -4:
+                            cMultiArray[i, y] = 1 / 9;
+                            break;
+                        default:
+                            cMultiArray[i, y] = 1;
+                            break;
+                    }
+                }
+            }
 
-            form.critArray = criteriaArray;
+            for (int i = 0; i < cUsed; i++)
+            {
+                for (int y = 0; y < cUsed; y++)
+                {
+                    if (y == cUsed - 1)
+                    {
+                        tempValues[i] = (tempValues[i] * cMultiArray[i, y]) ^ (1 / cUsed);
+                    } else
+                    {
+                        tempValues[i] = tempValues[i] * cMultiArray[i, y];
+                    }
+                }
+            }
+
+            for (int i = 0; i < cUsed; i++)
+            {
+                sum = sum + tempValues[i];
+            }
+
+            for (int i = 0; i < cUsed; i++)
+            {
+                cMultiArray[i, cUsed + 1] = tempValues[i] / sum;
+            }
+
+            cTable = cMultiArray;
+            form.critArray = cMultiArray;
+
         }
 
         private void GetValuesFromParks()
@@ -610,6 +591,82 @@ namespace SadWork
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            a1.Visible = true;
+            a2.Visible = false;
+            a3.Visible = false;
+            a4.Visible = false;
+            impT.Visible = true;
+            t0.Visible = true;
+            t1.Visible = true;
+            t2.Visible = true;
+            t3.Visible = true;
+            t4.Visible = true;
+            t5.Visible = true;
+            tb1.Visible = true;
+            tb2.Visible = false;
+            tb3.Visible = false;
+            tb4.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            a1.Visible = false;
+            a2.Visible = true;
+            a3.Visible = false;
+            a4.Visible = false;
+            impT.Visible = true;
+            t0.Visible = true;
+            t1.Visible = true;
+            t2.Visible = true;
+            t3.Visible = true;
+            t4.Visible = true;
+            t5.Visible = true;
+            tb1.Visible = false;
+            tb2.Visible = true;
+            tb3.Visible = false;
+            tb4.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            a1.Visible = false;
+            a2.Visible = false;
+            a3.Visible = true;
+            a4.Visible = false;
+            impT.Visible = true;
+            t0.Visible = true;
+            t1.Visible = true;
+            t2.Visible = true;
+            t3.Visible = true;
+            t4.Visible = true;
+            t5.Visible = true;
+            tb1.Visible = false;
+            tb2.Visible = false;
+            tb3.Visible = true;
+            tb4.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            a1.Visible = false;
+            a2.Visible = false;
+            a3.Visible = false;
+            a4.Visible = true;
+            impT.Visible = true;
+            t0.Visible = true;
+            t1.Visible = true;
+            t2.Visible = true;
+            t3.Visible = true;
+            t4.Visible = true;
+            t5.Visible = true;
+            tb1.Visible = false;
+            tb2.Visible = false;
+            tb3.Visible = false;
+            tb4.Visible = true;
         }
     }
 }
