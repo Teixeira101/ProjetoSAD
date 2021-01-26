@@ -18,6 +18,8 @@ namespace SadWork
         public NewSimulationlvl1()
         {
             InitializeComponent();
+
+            tb1.Orientation = Orientation.Vertical;
         }
 
         private void OpenChildForm(Form childForm, Form currentChildForm)
@@ -603,6 +605,11 @@ namespace SadWork
             public int Iv { get; set; }
             public int Pd { get; set; }
             public int Pt { get; set; }
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            
         }
     }
 }
