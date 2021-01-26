@@ -78,9 +78,9 @@ namespace SadWork
             this.loadData_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.loadData_btn.Location = new System.Drawing.Point(533, 121);
             this.loadData_btn.Name = "loadData_btn";
-            this.loadData_btn.Size = new System.Drawing.Size(104, 28);
+            this.loadData_btn.Size = new System.Drawing.Size(144, 28);
             this.loadData_btn.TabIndex = 1;
-            this.loadData_btn.Text = "Load Data";
+            this.loadData_btn.Text = "Load Simulations";
             this.loadData_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.loadData_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.loadData_btn.UseVisualStyleBackColor = false;
