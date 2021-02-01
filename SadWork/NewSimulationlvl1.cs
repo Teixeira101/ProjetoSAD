@@ -181,6 +181,7 @@ namespace SadWork
 
             cTable = cMultiArray;
             form.critArray = cMultiArray;
+            form.cC = cValues;
 
         }
 
