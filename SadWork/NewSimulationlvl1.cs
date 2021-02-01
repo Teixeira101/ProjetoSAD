@@ -43,8 +43,6 @@ namespace SadWork
 
             CalculateCriteriaValues();
 
-            CalculateLastRows();
-
             GetValuesFromParks();
 
             CompareValuesFromParks();
@@ -667,6 +665,11 @@ namespace SadWork
             tb2.Visible = false;
             tb3.Visible = false;
             tb4.Visible = true;
+        }
+
+        private void panelSimulationlvl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
