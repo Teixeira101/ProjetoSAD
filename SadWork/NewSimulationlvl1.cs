@@ -43,11 +43,8 @@ namespace SadWork
 
             CalculateCriteriaValues();
 
-<<<<<<< HEAD
-            //CalculateLastRows();
+            CalculateLastRows();
 
-=======
->>>>>>> 8c8f8779903298bd0f474b2f467c0f026bcee41f
             GetValuesFromParks();
 
             CompareValuesFromParks();
