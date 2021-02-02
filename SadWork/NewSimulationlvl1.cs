@@ -43,8 +43,11 @@ namespace SadWork
 
             CalculateCriteriaValues();
 
+<<<<<<< HEAD
             //CalculateLastRows();
 
+=======
+>>>>>>> 8c8f8779903298bd0f474b2f467c0f026bcee41f
             GetValuesFromParks();
 
             CompareValuesFromParks();
@@ -183,6 +186,7 @@ namespace SadWork
 
             cTable = cMultiArray;
             form.critArray = cMultiArray;
+            form.cC = cValues;
 
         }
 
@@ -667,6 +671,11 @@ namespace SadWork
             tb2.Visible = false;
             tb3.Visible = false;
             tb4.Visible = true;
+        }
+
+        private void panelSimulationlvl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
