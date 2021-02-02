@@ -13,12 +13,11 @@ namespace SadWork
         {
             InitializeComponent();
 
-            comboBoxArea.Items.Add("Telecomunicações");
-            comboBoxArea.Items.Add("Comércio Digital");
-            comboBoxArea.Items.Add("Ensino");
-            comboBoxArea.Items.Add("Automóveis");
-            comboBoxArea.Items.Add("Fitness");
-            comboBoxArea.Items.Add("Produtos Alimentares");
+            comboBoxArea.Items.Add("Ciências e Tecnologias");
+            comboBoxArea.Items.Add("Tecnologia Alimentar");
+            comboBoxArea.Items.Add("Biotecnologia");
+            comboBoxArea.Items.Add("Empreendedorismo");
+            comboBoxArea.Items.Add("Comércio");
         }
 
         OpenFileDialog ofd = new OpenFileDialog();

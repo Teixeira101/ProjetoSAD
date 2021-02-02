@@ -43,8 +43,10 @@ namespace SadWork
             panelPark.Visible = false;
             comboBoxId.Enabled = true;
             comboBoxId.Items.Clear();
+            comboBoxId.SelectedIndex = -1;
             bool verificado_parque = true;
             seePark_btn.Visible = true;
+            seePark_btn.Enabled = true;
             sqlcon.Open();
 
             cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [verificado_parque] = '" + verificado_parque + "'", sqlcon);
