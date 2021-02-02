@@ -105,6 +105,8 @@ namespace SadWork
 
             GetValuesFromParks();
 
+            PopulateForm();
+
         }
 
         private void GetValuesFromParks()
@@ -124,6 +126,15 @@ namespace SadWork
 
             myConnection.Close();
             
+        }
+
+        private void PopulateForm()
+        {
+            ID.Text = parksList[0].Id.ToString();
+            TF.Text = parksList[0].Tf.ToString();
+            IV.Text = parksList[0].Iv.ToString();
+            PD.Text = parksList[0].Pd.ToString();
+            PT.Text = parksList[0].Pt.ToString();
         }
 
         private void ReadSingleRow(IDataRecord record)
