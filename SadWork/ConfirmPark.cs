@@ -152,7 +152,7 @@ namespace SadWork
         OpenFileDialog ofd2 = new OpenFileDialog();
         private void img3_btn_Click(object sender, System.EventArgs e)
         {
-            ofd2.Filter = "JPEG|*.jfif";
+            ofd2.Filter = "JPG|*.jpg";
             if (ofd2.ShowDialog() == DialogResult.OK)
             {
                 labelImg3.Text = ofd2.SafeFileName;

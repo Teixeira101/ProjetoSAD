@@ -94,7 +94,6 @@ namespace SadWork
             this.panelSimulationlvl1.Name = "panelSimulationlvl1";
             this.panelSimulationlvl1.Size = new System.Drawing.Size(804, 510);
             this.panelSimulationlvl1.TabIndex = 15;
-            this.panelSimulationlvl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSimulationlvl1_Paint);
             // 
             // a4
             // 
@@ -326,7 +325,6 @@ namespace SadWork
             this.tb1.TabIndex = 37;
             this.tb1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.tb1.Visible = false;
-            this.tb1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // t4
             // 

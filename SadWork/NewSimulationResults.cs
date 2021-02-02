@@ -10,16 +10,17 @@ namespace SadWork
     public partial class NewSimulationResults : Form
     {
         private Form currentChildForm;
-        public int count { get; set; }
-        public int[] cC { get; set; }
-        public int[,] critArray { get; set; }
-        public int[,] pArrayTf { get; set; }
-        public int[,] pArrayIv { get; set; }
-        public int[,] pArrayPd { get; set; }
-        public int[,] pArrayPt { get; set; }
-        int[] bestPark = new int[] { 0, 0 };
-        int[] bestPark2 = new int[] { 0, 0 };
-        int[] bestPark3 = new int[] { 0, 0 };
+        public static int count { get; set; }
+        public static int cUsed { get; set; }
+        public static int[] cC { get; set; }
+        public static double[,] critArray { get; set; }
+        public static double[,] pArrayTf { get; set; }
+        public static double[,] pArrayIv { get; set; }
+        public static double[,] pArrayPd { get; set; }
+        public static double[,] pArrayPt { get; set; }
+        double[] bestPark = new double[] { 0, 0 };
+        double[] bestPark2 = new double[] { 0, 0 };
+        double[] bestPark3 = new double[] { 0, 0 };
         public List<ParkCriteria> parksList = new List<ParkCriteria>();
 
 
@@ -27,21 +28,32 @@ namespace SadWork
         {
             InitializeComponent();
 
-            LastCalculations();
+            if (cC != null)
+            {
+                LastCalculations();
+            } else
+            {
+                Console.Out.WriteLine("NULO");
+            }
         }
 
         private void LastCalculations()
         {
-            int[,] parksFinal = new int[count, 2];
-            
+            Console.Out.WriteLine("ENTROU NO LASTCALCULATIONS");
+            double[,] parksFinal = new double[count, 2];
+
             int x = 0;
+            Console.Out.WriteLine("pArrayTf: " + pArrayTf[0, count]);
+            Console.Out.WriteLine("pArrayIv: " + pArrayIv[0, count]);
+            Console.Out.WriteLine("pArrayPd: " + pArrayPd[0, count]);
+            Console.Out.WriteLine("pArrayPt: " + pArrayPt[0, count]);
 
             if (cC[0] > 0)
             {
                 for (int i = 0; i < count; i++)
                 {
-                    parksFinal[i, 1] = parksFinal[i, 1] + (pArrayTf[i, count + 1] * critArray[x, 4]);
-                    parksFinal[i, 0] = pArrayTf[i, count + 2];
+                    parksFinal[i, 1] = parksFinal[i, 1] + (pArrayTf[i, count] * critArray[x, cUsed]);
+                    parksFinal[i, 0] = pArrayTf[i, count + 1];
                 }
                 x = x + 1;
             }
@@ -50,8 +62,8 @@ namespace SadWork
             {
                 for (int i = 0; i < count; i++)
                 {
-                    parksFinal[i, 1] = parksFinal[i, 1] + (pArrayIv[i, count + 1] * critArray[x, 4]);
-                    parksFinal[i, 0] = pArrayIv[i, count + 2];
+                    parksFinal[i, 1] = parksFinal[i, 1] + (pArrayIv[i, count] * critArray[x, cUsed]);
+                    parksFinal[i, 0] = pArrayIv[i, count + 1];
                 }
                 x = x + 1;
             }
@@ -60,8 +72,8 @@ namespace SadWork
             {
                 for (int i = 0; i < count; i++)
                 {
-                    parksFinal[i, 1] = parksFinal[i, 1] + (pArrayPd[i, count + 1] * critArray[x, 4]);
-                    parksFinal[i, 0] = pArrayPd[i, count + 2];
+                    parksFinal[i, 1] = parksFinal[i, 1] + (pArrayPd[i, count] * critArray[x, cUsed]);
+                    parksFinal[i, 0] = pArrayPd[i, count + 1];
                 }
                 x = x + 1;
             }
@@ -70,8 +82,8 @@ namespace SadWork
             {
                 for (int i = 0; i < count; i++)
                 {
-                    parksFinal[i, 1] = parksFinal[i, 1] + (pArrayPt[i, count + 1] * critArray[x, 4]);
-                    parksFinal[i, 0] = pArrayPt[i, count + 2];
+                    parksFinal[i, 1] = parksFinal[i, 1] + (pArrayPt[i, count] * critArray[x, cUsed]);
+                    parksFinal[i, 0] = pArrayPt[i, count + 1];
                 }
             }
             /*
@@ -111,11 +123,14 @@ namespace SadWork
 
         private void GetValuesFromParks()
         {
+            Console.Out.WriteLine("BEST PARK 1: " + bestPark[0]);
+            Console.Out.WriteLine("BEST PARK 2: " + bestPark2[0]);
+            Console.Out.WriteLine("BEST PARK 3: " + bestPark3[0]);
+
             SqlConnection myConnection = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
             myConnection.Open();
-            
 
-            SqlCommand tempCmd = new SqlCommand("SELECT id_parque, trained_staff, investments, productivity, partners FROM [dbo].[Parque] WHERE id_parque=" + bestPark[1] + " OR id_parque=" + bestPark2[1] + " OR id_parque=" + bestPark3[1], myConnection);
+            SqlCommand tempCmd = new SqlCommand("SELECT id_parque, trained_staff, investments, productivity, partners FROM [dbo].[Parque] WHERE id_parque = 2", myConnection);
 
             SqlDataReader reader = tempCmd.ExecuteReader();
 
@@ -125,7 +140,7 @@ namespace SadWork
             }
 
             myConnection.Close();
-            
+
         }
 
         private void PopulateForm()
@@ -139,11 +154,13 @@ namespace SadWork
 
         private void ReadSingleRow(IDataRecord record)
         {
-            parksList[Convert.ToInt32(record[0])].Id = Convert.ToInt32(record[0]);
-            parksList[Convert.ToInt32(record[0])].Tf = Convert.ToInt32(record[1]);
-            parksList[Convert.ToInt32(record[0])].Iv = Convert.ToInt32(record[2]);
-            parksList[Convert.ToInt32(record[0])].Pd = Convert.ToInt32(record[3]);
-            parksList[Convert.ToInt32(record[0])].Pt = Convert.ToInt32(record[4]);
+            parksList.Add(new ParkCriteria{
+                Id = Convert.ToInt32(record[0]),
+                Tf = Convert.ToInt32(record[1]),
+                Iv = Convert.ToInt32(record[2]),
+                Pd = Convert.ToInt32(record[3]),
+                Pt = Convert.ToInt32(record[4])
+            });
         }
 
         private void OpenChildForm(Form childForm, Form currentChildForm)

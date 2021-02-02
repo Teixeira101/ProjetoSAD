@@ -46,6 +46,14 @@ namespace SadWork
             this.addMoreDetails_btn = new FontAwesome.Sharp.IconButton();
             this.delete_btn = new FontAwesome.Sharp.IconButton();
             this.panelParkDetails = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBoxPn = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBoxProd = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBoxInv = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBoxTf = new System.Windows.Forms.ComboBox();
             this.textBoxCompleteDesc = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.labelImg3 = new System.Windows.Forms.Label();
@@ -56,14 +64,6 @@ namespace SadWork
             this.img2_btn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.confirm_btn = new FontAwesome.Sharp.IconButton();
-            this.comboBoxTf = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBoxInv = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBoxProd = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.comboBoxPn = new System.Windows.Forms.ComboBox();
             this.panelParkVal.SuspendLayout();
             this.panelParkDetails.SuspendLayout();
             this.SuspendLayout();
@@ -339,6 +339,102 @@ namespace SadWork
             this.panelParkDetails.TabIndex = 46;
             this.panelParkDetails.Visible = false;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(228, 154);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 13);
+            this.label13.TabIndex = 59;
+            this.label13.Text = "Partners";
+            // 
+            // comboBoxPn
+            // 
+            this.comboBoxPn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPn.FormattingEnabled = true;
+            this.comboBoxPn.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.comboBoxPn.Location = new System.Drawing.Point(231, 170);
+            this.comboBoxPn.Name = "comboBoxPn";
+            this.comboBoxPn.Size = new System.Drawing.Size(39, 28);
+            this.comboBoxPn.TabIndex = 58;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(222, 105);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 13);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "Productivity";
+            // 
+            // comboBoxProd
+            // 
+            this.comboBoxProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxProd.FormattingEnabled = true;
+            this.comboBoxProd.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.comboBoxProd.Location = new System.Drawing.Point(231, 121);
+            this.comboBoxProd.Name = "comboBoxProd";
+            this.comboBoxProd.Size = new System.Drawing.Size(39, 28);
+            this.comboBoxProd.TabIndex = 56;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(222, 58);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 13);
+            this.label11.TabIndex = 55;
+            this.label11.Text = "Investments";
+            // 
+            // comboBoxInv
+            // 
+            this.comboBoxInv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxInv.FormattingEnabled = true;
+            this.comboBoxInv.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.comboBoxInv.Location = new System.Drawing.Point(231, 74);
+            this.comboBoxInv.Name = "comboBoxInv";
+            this.comboBoxInv.Size = new System.Drawing.Size(39, 28);
+            this.comboBoxInv.TabIndex = 54;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(218, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 13);
+            this.label10.TabIndex = 53;
+            this.label10.Text = "Trained Staff";
+            // 
+            // comboBoxTf
+            // 
+            this.comboBoxTf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTf.FormattingEnabled = true;
+            this.comboBoxTf.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.comboBoxTf.Location = new System.Drawing.Point(231, 27);
+            this.comboBoxTf.Name = "comboBoxTf";
+            this.comboBoxTf.Size = new System.Drawing.Size(39, 28);
+            this.comboBoxTf.TabIndex = 52;
+            // 
             // textBoxCompleteDesc
             // 
             this.textBoxCompleteDesc.Location = new System.Drawing.Point(12, 214);
@@ -465,102 +561,6 @@ namespace SadWork
             this.confirm_btn.UseVisualStyleBackColor = false;
             this.confirm_btn.Visible = false;
             this.confirm_btn.Click += new System.EventHandler(this.confirm_btn_Click);
-            // 
-            // comboBoxTf
-            // 
-            this.comboBoxTf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTf.FormattingEnabled = true;
-            this.comboBoxTf.Items.AddRange(new object[] {
-            "1",
-            "3",
-            "5",
-            "7",
-            "9"});
-            this.comboBoxTf.Location = new System.Drawing.Point(231, 27);
-            this.comboBoxTf.Name = "comboBoxTf";
-            this.comboBoxTf.Size = new System.Drawing.Size(39, 28);
-            this.comboBoxTf.TabIndex = 52;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(218, 11);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 13);
-            this.label10.TabIndex = 53;
-            this.label10.Text = "Trained Staff";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(222, 58);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 13);
-            this.label11.TabIndex = 55;
-            this.label11.Text = "Investments";
-            // 
-            // comboBoxInv
-            // 
-            this.comboBoxInv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxInv.FormattingEnabled = true;
-            this.comboBoxInv.Items.AddRange(new object[] {
-            "1",
-            "3",
-            "5",
-            "7",
-            "9"});
-            this.comboBoxInv.Location = new System.Drawing.Point(231, 74);
-            this.comboBoxInv.Name = "comboBoxInv";
-            this.comboBoxInv.Size = new System.Drawing.Size(39, 28);
-            this.comboBoxInv.TabIndex = 54;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(222, 105);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 13);
-            this.label12.TabIndex = 57;
-            this.label12.Text = "Productivity";
-            // 
-            // comboBoxProd
-            // 
-            this.comboBoxProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxProd.FormattingEnabled = true;
-            this.comboBoxProd.Items.AddRange(new object[] {
-            "1",
-            "3",
-            "5",
-            "7",
-            "9"});
-            this.comboBoxProd.Location = new System.Drawing.Point(231, 121);
-            this.comboBoxProd.Name = "comboBoxProd";
-            this.comboBoxProd.Size = new System.Drawing.Size(39, 28);
-            this.comboBoxProd.TabIndex = 56;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(228, 154);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 13);
-            this.label13.TabIndex = 59;
-            this.label13.Text = "Partners";
-            // 
-            // comboBoxPn
-            // 
-            this.comboBoxPn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxPn.FormattingEnabled = true;
-            this.comboBoxPn.Items.AddRange(new object[] {
-            "1",
-            "3",
-            "5",
-            "7",
-            "9"});
-            this.comboBoxPn.Location = new System.Drawing.Point(231, 170);
-            this.comboBoxPn.Name = "comboBoxPn";
-            this.comboBoxPn.Size = new System.Drawing.Size(39, 28);
-            this.comboBoxPn.TabIndex = 58;
             // 
             // ConfirmPark
             // 
