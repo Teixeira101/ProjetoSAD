@@ -92,6 +92,7 @@ namespace SadWork
                 cValues[3] = tb4.Value;
                 cUsed = cUsed + 1;
             }
+
             NewSimulationResults.cUsed = cUsed;
 
         }
@@ -101,9 +102,9 @@ namespace SadWork
             double[,] cMultiArray = new double[cUsed, cUsed + 1];
             double[] cArray = new double[cUsed];
             int x = 0;
-            double diff = 0;
+            double diff = 0.0;
             double[] tempValues = new double[cUsed];
-            double sum = 0;
+            double sum = 0.0;
 
             for (int i = 0; i < cValues.Length; i++)
             {
@@ -162,13 +163,11 @@ namespace SadWork
                 {
                     if (y == 0)
                     {
-                        Console.Out.WriteLine("cMultiArray ANTES: " + cMultiArray[i, y]);
                         tempValues[i] = cMultiArray[i, y];
-                        Console.Out.WriteLine("tempValues ANTES: " + tempValues[i]);
                     }
                     else if (y == cUsed - 1)
                     {
-                        tempValues[i] = Math.Pow((tempValues[i] * cMultiArray[i, y]), ((double)1 / (double)cUsed));
+                        tempValues[i] = Math.Pow(tempValues[i] * cMultiArray[i, y], (double)1 / (double)cUsed);
                     }
                     else
                     {
@@ -184,10 +183,7 @@ namespace SadWork
 
             for (int i = 0; i < cUsed; i++)
             {
-                Console.Out.WriteLine("tempValues: " + tempValues[i]);
-                Console.Out.WriteLine("SUM: " + sum);
                 cMultiArray[i, cUsed] = tempValues[i] / sum;
-                Console.Out.WriteLine("cMultiArray: " + cMultiArray[i, cUsed]);
             }
 
             cTable = cMultiArray;
@@ -247,17 +243,14 @@ namespace SadWork
 
             for (int i = 0; i < count; i++)
             {
-                Console.Out.WriteLine(parksList[i].Id);
                 parksArrayTf[i, count + 1] = parksList[i].Id;
                 parksArrayIv[i, count + 1] = parksList[i].Id;
                 parksArrayPd[i, count + 1] = parksList[i].Id;
                 parksArrayPt[i, count + 1] = parksList[i].Id;
-
             }
 
             for (int i = 0; i < count; i++)
             {
-
                 for (int y = 0; y < count; y++)
                 {
 
@@ -295,6 +288,9 @@ namespace SadWork
                         case -4:
                             parksArrayTf[i, y] = (double)1 / (double)9;
                             break;
+                        default:
+                            parksArrayTf[i, y] = 1;
+                            break;
                     }
 
                     switch (difIv)
@@ -325,6 +321,9 @@ namespace SadWork
                             break;
                         case -4:
                             parksArrayIv[i, y] = (double)1 / (double)9;
+                            break;
+                        default:
+                            parksArrayTf[i, y] = 1;
                             break;
                     }
 
@@ -357,6 +356,9 @@ namespace SadWork
                         case -4:
                             parksArrayPd[i, y] = (double)1 / (double)9;
                             break;
+                        default:
+                            parksArrayTf[i, y] = 1;
+                            break;
                     }
 
                     switch (difPt)
@@ -388,20 +390,23 @@ namespace SadWork
                         case -4:
                             parksArrayPt[i, y] = (double)1 / (double)9;
                             break;
+                        default:
+                            parksArrayTf[i, y] = 1;
+                            break;
                     }
-
-                    Console.Out.WriteLine("parksArrayPt: " + parksArrayPt[i, y]);
 
                 }
 
             }
 
+            double total = 0.0;
+            int stop = count - 1;
+
             //For Tf
             for (int i = 0; i < count; i++)
             {
 
-                double total = 0;
-                int stop = count - 1;
+                total = 0.0;
 
                 for (int y = 0; y < count; y++)
                 {
@@ -412,7 +417,7 @@ namespace SadWork
                     }
                     else if (y == stop)
                     {
-                        total = Math.Pow(total * parksArrayTf[i, y], ((double)1 / (double)count));
+                        total = Math.Pow(total * parksArrayTf[i, y], (double)1 / (double)count);
                         pValueArrayTf[i] = total;
                     }
                     else
@@ -421,7 +426,6 @@ namespace SadWork
                     }
 
                 }
-                Console.Out.WriteLine("TOTAL: " + total);
 
             }
 
@@ -429,8 +433,7 @@ namespace SadWork
             for (int i = 0; i < count; i++)
             {
 
-                double total = 0;
-                int stop = count - 1;
+                total = 0;
 
                 for (int y = 0; y < count; y++)
                 {
@@ -457,8 +460,7 @@ namespace SadWork
             for (int i = 0; i < count; i++)
             {
 
-                double total = 0;
-                int stop = count - 1;
+                total = 0;
 
                 for (int y = 0; y < count; y++)
                 {
@@ -485,8 +487,7 @@ namespace SadWork
             for (int i = 0; i < count; i++)
             {
 
-                double total = 0;
-                int stop = count - 1;
+                total = 0;
 
                 for (int y = 0; y < count; y++)
                 {
@@ -509,12 +510,11 @@ namespace SadWork
 
             }
 
+            double sum = 0.0;
+
             //For Tf Sum
             for (int i = 0; i < count; i++)
             {
-
-                double sum = 0;
-                int stop = count - 1;
 
                 if (i == stop)
                 {
@@ -528,12 +528,10 @@ namespace SadWork
 
             }
 
+            sum = 0.0;
             //For Iv Sum
             for (int i = 0; i < count; i++)
             {
-                Console.Out.WriteLine("ARRAY IV: " + pValueArrayIv[i]);
-                double sum = 0;
-                int stop = count - 1;
 
                 if (i == stop)
                 {
@@ -547,12 +545,10 @@ namespace SadWork
 
             }
 
+            sum = 0.0;
             //For Pd Sum
             for (int i = 0; i < count; i++)
             {
-
-                double sum = 0;
-                int stop = count - 1;
 
                 if (i == stop)
                 {
@@ -566,12 +562,10 @@ namespace SadWork
 
             }
 
+            sum = 0.0;
             //For Pt Sum
             for (int i = 0; i < count; i++)
             {
-
-                double sum = 0;
-                int stop = count - 1;
 
                 if (i == stop)
                 {
@@ -584,10 +578,6 @@ namespace SadWork
                 }
 
             }
-            Console.Out.WriteLine(sumTf);
-            Console.Out.WriteLine(sumIv);
-            Console.Out.WriteLine(sumPd);
-            Console.Out.WriteLine(sumPt);
 
 
             //For Final Values

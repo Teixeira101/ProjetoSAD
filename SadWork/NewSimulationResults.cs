@@ -31,22 +31,14 @@ namespace SadWork
             if (cC != null)
             {
                 LastCalculations();
-            } else
-            {
-                Console.Out.WriteLine("NULO");
             }
         }
 
         private void LastCalculations()
         {
-            Console.Out.WriteLine("ENTROU NO LASTCALCULATIONS");
             double[,] parksFinal = new double[count, 2];
 
             int x = 0;
-            Console.Out.WriteLine("pArrayTf: " + pArrayTf[0, count]);
-            Console.Out.WriteLine("pArrayIv: " + pArrayIv[0, count]);
-            Console.Out.WriteLine("pArrayPd: " + pArrayPd[0, count]);
-            Console.Out.WriteLine("pArrayPt: " + pArrayPt[0, count]);
 
             if (cC[0] > 0)
             {
@@ -86,29 +78,43 @@ namespace SadWork
                     parksFinal[i, 0] = pArrayPt[i, count + 1];
                 }
             }
-            /*
+
+            //Best Park 1
             for (int i = 0; i < count; i++)
             {
-                parksFinal[i, 1] = pArrayTf[i, count + 1] * critArray[0, 4] + pArrayIv[i, count + 1] * critArray[1, 4] + pArrayPd[i, count + 1] * critArray[2, 4] + pArrayPt[i, count + 1] * critArray[3, 4];
-                parksFinal[i, 0] = pArrayTf[i, count + 2];
-            }
-            */
-            for (int i = 0; i < count; i++)
-            {
+
                 if (bestPark[1] < parksFinal[i, 1])
                 {
                     bestPark[0] = parksFinal[i, 0];
                     bestPark[1] = parksFinal[i, 1];
                 }
-                else if (bestPark2[1] < parksFinal[i, 1])
+            }
+
+            //Best Park 2
+            for (int i = 0; i < count; i++)
+            {
+
+                if (bestPark2[1] < parksFinal[i, 1])
                 {
-                    bestPark2[0] = parksFinal[i, 0];
-                    bestPark2[1] = parksFinal[i, 1];
+                    if (parksFinal[i, 0] != bestPark[0])
+                    {
+                        bestPark2[0] = parksFinal[i, 0];
+                        bestPark2[1] = parksFinal[i, 1];
+                    }
                 }
-                else if (bestPark3[1] < parksFinal[i, 1])
+            }
+
+            //Best Park 3
+            for (int i = 0; i < count; i++)
+            {
+
+                if (bestPark3[1] < parksFinal[i, 1])
                 {
-                    bestPark3[0] = parksFinal[i, 0];
-                    bestPark3[1] = parksFinal[i, 1];
+                    if (parksFinal[i, 0] != bestPark[0] && parksFinal[i, 0] != bestPark2[0])
+                    {
+                        bestPark3[0] = parksFinal[i, 0];
+                        bestPark3[1] = parksFinal[i, 1];
+                    }
                 }
             }
 
@@ -117,20 +123,22 @@ namespace SadWork
 
             GetValuesFromParks();
 
-            PopulateForm();
+            PopulateForm(area, nome, localizacao, 0);
+            PopulateForm(area2, nome2, localizacao2, 1);
+            PopulateForm(area3, nome3, localizacao3, 2);
 
         }
 
         private void GetValuesFromParks()
         {
-            Console.Out.WriteLine("BEST PARK 1: " + bestPark[0]);
-            Console.Out.WriteLine("BEST PARK 2: " + bestPark2[0]);
-            Console.Out.WriteLine("BEST PARK 3: " + bestPark3[0]);
+            Console.Out.WriteLine("BEST PARK 1 FINAL: " + bestPark[0]);
+            Console.Out.WriteLine("BEST PARK 2 FINAL: " + bestPark2[0]);
+            Console.Out.WriteLine("BEST PARK 3 FINAL: " + bestPark3[0]);
 
             SqlConnection myConnection = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
             myConnection.Open();
 
-            SqlCommand tempCmd = new SqlCommand("SELECT id_parque, trained_staff, investments, productivity, partners FROM [dbo].[Parque] WHERE id_parque = 2", myConnection);
+            SqlCommand tempCmd = new SqlCommand("SELECT id_parque, nome_parque, area, localizacao_parque FROM [dbo].[Parque] WHERE id_parque = '" + bestPark[0] + "' OR id_parque = '" + bestPark2[0] + "' OR id_parque = '" + bestPark3[0] + "'", myConnection);
 
             SqlDataReader reader = tempCmd.ExecuteReader();
 
@@ -143,24 +151,22 @@ namespace SadWork
 
         }
 
-        private void PopulateForm()
-        {
-            ID.Text = parksList[0].Id.ToString();
-            TF.Text = parksList[0].Tf.ToString();
-            IV.Text = parksList[0].Iv.ToString();
-            PD.Text = parksList[0].Pd.ToString();
-            PT.Text = parksList[0].Pt.ToString();
-        }
-
         private void ReadSingleRow(IDataRecord record)
         {
-            parksList.Add(new ParkCriteria{
+            parksList.Add(new ParkCriteria
+            {
                 Id = Convert.ToInt32(record[0]),
-                Tf = Convert.ToInt32(record[1]),
-                Iv = Convert.ToInt32(record[2]),
-                Pd = Convert.ToInt32(record[3]),
-                Pt = Convert.ToInt32(record[4])
+                nome = Convert.ToString(record[1]),
+                area = Convert.ToString(record[2]),
+                localizacao = Convert.ToString(record[3])
             });
+        }
+
+        private void PopulateForm(Label nomeFun, Label areaFun, Label localizacaoFun, int index)
+        {
+            nomeFun.Text = parksList[index].nome.ToString();
+            areaFun.Text = parksList[index].area.ToString();
+            localizacaoFun.Text = parksList[index].localizacao.ToString();
         }
 
         private void OpenChildForm(Form childForm, Form currentChildForm)
@@ -197,10 +203,9 @@ namespace SadWork
         public class ParkCriteria
         {
             public int Id { get; set; }
-            public int Tf { get; set; }
-            public int Iv { get; set; }
-            public int Pd { get; set; }
-            public int Pt { get; set; }
+            public String nome { get; set; }
+            public String area { get; set; }
+            public String localizacao { get; set; }
         }
     }
 }
