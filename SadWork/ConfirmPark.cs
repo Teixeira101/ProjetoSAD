@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
@@ -113,6 +114,8 @@ namespace SadWork
         {
             FileStream fs1 = new FileStream(imgLoc1, FileMode.Open, FileAccess.Read);
             FileStream fs2 = new FileStream(imgLoc2, FileMode.Open, FileAccess.Read);
+            Console.Out.WriteLine(imgLoc1);
+            Console.Out.WriteLine(imgLoc2);
             BinaryReader br1 = new BinaryReader(fs1);
             BinaryReader br2 = new BinaryReader(fs2);
             byte[] img1 = br1.ReadBytes((int)fs1.Length);
@@ -157,7 +160,7 @@ namespace SadWork
             {
                 labelImg3.Text = ofd2.SafeFileName;
                 labelImg3.Visible = true;
-                imgLoc2 = ofd.FileName.ToString();
+                imgLoc2 = ofd2.FileName.ToString();
             }
         }
     }

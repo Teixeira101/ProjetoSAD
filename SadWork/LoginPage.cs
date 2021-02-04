@@ -16,6 +16,8 @@ namespace SadWork
     public partial class LoginPage : Form
     {
         public static string admin_email = "anfisaprata@gmail.com";
+        public static string currentUserId = "";
+
         public static bool admin = false;
         public static bool company = false;
 
@@ -102,13 +104,14 @@ namespace SadWork
                 if (dr.Read())
                 {
                     dr.Close();
-                    cmd = new SqlCommand(@"SELECT [email_empresa], [verificado_empresa] FROM [dbo].[Empresa] Where [email_empresa] = @emailEmpresa and [verificado_empresa] = @verificado_empresa", sqlcon);
+                    cmd = new SqlCommand(@"SELECT [id_empresa], [email_empresa], [verificado_empresa] FROM [dbo].[Empresa] Where [email_empresa] = @emailEmpresa and [verificado_empresa] = @verificado_empresa", sqlcon);
                     cmd.Parameters.Add(new SqlParameter("@emailEmpresa", textBoxEmail.Text.Trim()));
                     cmd.Parameters.Add(new SqlParameter("@verificado_empresa", true));
                     dr = cmd.ExecuteReader();
 
                     if (dr.Read())
                     {
+                        currentUserId = dr[0].ToString();
                         dr.Close();
                         sqlcon.Close();
                         if (textBoxEmail.Text.Trim() == admin_email)
@@ -121,6 +124,7 @@ namespace SadWork
                             admin = false;
                             company = true;
                         }
+
                         MainPage objMainPage = new MainPage();
                         this.Hide();
                         objMainPage.Show();

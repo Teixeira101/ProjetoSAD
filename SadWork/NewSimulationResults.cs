@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
-using static SadWork.MainPage;
 
 namespace SadWork
 {
@@ -23,6 +24,10 @@ namespace SadWork
         double[] bestPark3 = new double[] { 0, 0 };
         public List<ParkCriteria> parksList = new List<ParkCriteria>();
 
+        SqlConnection myConnection = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+        SqlCommand tempCmd;
+        SqlDataReader reader;
+
 
         public NewSimulationResults()
         {
@@ -31,7 +36,28 @@ namespace SadWork
             if (cC != null)
             {
                 LastCalculations();
+
+                AddSimulationdb();
             }
+
+        }
+
+        private void AddSimulationdb()
+        {
+            SqlConnection myConnection = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+            myConnection.Open();
+
+            SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Resultado_Simulacao]
+               ([id_proposta1]
+               ,[id_proposta2]
+               ,[id_proposta3]
+               ,[id_empresa]
+               ,[data])
+         VALUES
+               ('" + bestPark[0] + "', '" + bestPark2[0] + "', '" + bestPark3[0] + "', '" + LoginPage.currentUserId + "', '" + DateTime.Now.ToString() +  "')", myConnection);
+
+            cmd.ExecuteNonQuery();
+
         }
 
         private void LastCalculations()
@@ -123,9 +149,9 @@ namespace SadWork
 
             GetValuesFromParks();
 
-            PopulateForm(area, nome, localizacao, 0);
-            PopulateForm(area2, nome2, localizacao2, 1);
-            PopulateForm(area3, nome3, localizacao3, 2);
+            PopulateForm(nome, area, localizacao, 0);
+            PopulateForm(nome2, area2, localizacao2, 1);
+            PopulateForm(nome3, area2, localizacao3, 2);
 
         }
 
@@ -134,21 +160,35 @@ namespace SadWork
             Console.Out.WriteLine("BEST PARK 1 FINAL: " + bestPark[0]);
             Console.Out.WriteLine("BEST PARK 2 FINAL: " + bestPark2[0]);
             Console.Out.WriteLine("BEST PARK 3 FINAL: " + bestPark3[0]);
-
-            SqlConnection myConnection = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+            
             myConnection.Open();
 
-            SqlCommand tempCmd = new SqlCommand("SELECT id_parque, nome_parque, area, localizacao_parque FROM [dbo].[Parque] WHERE id_parque = '" + bestPark[0] + "' OR id_parque = '" + bestPark2[0] + "' OR id_parque = '" + bestPark3[0] + "'", myConnection);
+            setCamps(bestPark);
+            setCamps(bestPark2);
+            setCamps(bestPark3);
 
-            SqlDataReader reader = tempCmd.ExecuteReader();
+
+            setImages("foto_parque1", bestPark, pictureBox1);
+            setImages("foto_parque1", bestPark2, pictureBox2);
+            setImages("foto_parque1", bestPark3, pictureBox3);
+
+            myConnection.Close();
+
+        }
+
+        private void setCamps(double[] park)
+        {
+
+            tempCmd = new SqlCommand("SELECT id_parque, nome_parque, area, localizacao_parque FROM [dbo].[Parque] WHERE id_parque = '" + park[0] +  "'", myConnection);
+
+            reader = tempCmd.ExecuteReader();
 
             while (reader.Read())
             {
                 ReadSingleRow((IDataRecord)reader);
             }
 
-            myConnection.Close();
-
+            reader.Close();
         }
 
         private void ReadSingleRow(IDataRecord record)
@@ -162,11 +202,39 @@ namespace SadWork
             });
         }
 
+        private void setImages(String var, double[] parkArray, PictureBox pc)
+        {
+            reader.Close();
+
+            tempCmd = new SqlCommand("SELECT " + var + " FROM [dbo].[Parque] Where id_parque = '" + parkArray[0] + "'", myConnection);
+            reader = tempCmd.ExecuteReader();
+            reader.Read();
+            if (reader.HasRows)
+            {
+                try
+                {
+                    byte[] img = (byte[])reader[0];
+                    if (img == null)
+                    {
+                        pc.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pc.Image = Image.FromStream(ms);
+                    }
+                }
+                catch (Exception) { }
+            }
+        }
+
         private void PopulateForm(Label nomeFun, Label areaFun, Label localizacaoFun, int index)
         {
             nomeFun.Text = parksList[index].nome.ToString();
             areaFun.Text = parksList[index].area.ToString();
             localizacaoFun.Text = parksList[index].localizacao.ToString();
+            localizacaoFun.MaximumSize = new Size(260, 26);
+            localizacaoFun.AutoSize = true;
         }
 
         private void OpenChildForm(Form childForm, Form currentChildForm)

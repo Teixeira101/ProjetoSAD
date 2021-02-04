@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SadWork
@@ -8,11 +10,10 @@ namespace SadWork
     {
         private Form currentChildForm;
 
-        private string idSimulacao, area, park1, park2, park3, data;
+        public static bool parkClick;
+        public static string parkId;
 
-        string dbAreas = "Areas";
-        string campoIdArea = "id_area";
-        string campoArea = "area";
+        private string idSimulacao, park1, park2, park3, data;
 
         string dbParque = "Parque";
         string campoIdParque = "id_parque";
@@ -33,6 +34,7 @@ namespace SadWork
 
         private void loadData_btn_Click(object sender, EventArgs e)
         {
+            comboBoxId.Items.Clear();
             seeSimul_btn.Visible = true;
             sqlcon.Open();
 
@@ -48,6 +50,30 @@ namespace SadWork
                 dr.Close();
             }
             sqlcon.Close();
+        }
+
+        private void labelPark1_Click(object sender, EventArgs e)
+        {
+            parkClick = true;
+            parkId = park1;
+            currentChildForm = new ShowSimulations();
+            OpenChildForm(new ParkInfo(), currentChildForm);
+        }
+
+        private void labelPark2_Click(object sender, EventArgs e)
+        {
+            parkClick = true;
+            parkId = park2;
+            currentChildForm = new ShowSimulations();
+            OpenChildForm(new ParkInfo(), currentChildForm);
+        }
+
+        private void labelPark3_Click(object sender, EventArgs e)
+        {
+            parkClick = true;
+            parkId = park3;
+            currentChildForm = new ShowSimulations();
+            OpenChildForm(new ParkInfo(), currentChildForm);
         }
 
         private void seeSimul_btn_Click(object sender, EventArgs e)
@@ -69,15 +95,15 @@ namespace SadWork
                 park1 = dr["id_proposta1"].ToString();
                 park2 = dr["id_proposta2"].ToString();
                 park3 = dr["id_proposta3"].ToString();
-                area = dr["area"].ToString();
                 data = dr["data"].ToString();
                 dr.Close();
 
-                showSimulationDetails(dbAreas, campoIdArea, area, labelArea, campoArea);
                 showSimulationDetails(dbParque, campoIdParque, park1, labelPark1, campoNomeParque);
                 showSimulationDetails(dbParque, campoIdParque, park2, labelPark2, campoNomeParque);
                 showSimulationDetails(dbParque, campoIdParque, park3, labelPark3, campoNomeParque);
                 showSimulationDetails(dbResultSimul, campoIdResultSimul, idSimulacao, labelData, campoDataSimul);
+
+                setImage(park1);
             }
             sqlcon.Close();
         }
@@ -90,13 +116,45 @@ namespace SadWork
             {
                 lb.Text = dr[campoLabel].ToString();
                 lb.Visible = true;
+                lb.MaximumSize = new Size(146, 40);
+                lb.AutoSize = true;
                 dr.Close();
             }
         }
+
+        private void setImage(String parkId)
+        {
+            Console.Out.WriteLine(parkId);
+
+            cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [id_parque] = '4'", sqlcon);
+            dr = cmd.ExecuteReader();
+            dr.Read();
+            if (dr.HasRows)
+            {
+                try
+                {
+                    byte[] img = (byte[]) dr["foto_parque1"];
+                    if (img == null)
+                    {
+                        pictureBox1.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pictureBox1.Image = Image.FromStream(ms);
+                    }
+                }
+                catch (Exception) { }
+            }
+            sqlcon.Close();
+        }
+
         private void OpenChildForm(Form childForm, Form currentChildForm)
         {
-            currentChildForm.Close();
-            currentChildForm = childForm;
+            if (!parkClick)
+            {
+                currentChildForm.Close();
+            }
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -104,12 +162,6 @@ namespace SadWork
             panelShowSimul.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-        }
-
-        private void simul_btn_Click(object sender, EventArgs e)
-        {
-            currentChildForm = new ShowSimulations();
-            OpenChildForm(new NewSimulationResults(), currentChildForm);
         }
 
     }

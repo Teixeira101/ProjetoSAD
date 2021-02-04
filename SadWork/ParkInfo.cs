@@ -3,7 +3,6 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace SadWork
@@ -20,6 +19,14 @@ namespace SadWork
             InitializeComponent();
 
             sqlcon.Open();
+            /*if (ShowSimulations.parkClick)
+            {
+                cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [id_parque] = '" + ShowSimulations.parkId + "' AND [verificado_parque] = '" + true + "'", sqlcon);
+            } else
+            {
+                cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [id_parque] = '" + ScientificParks.learnMoreParkId + "' AND [verificado_parque] = '" + true + "'", sqlcon);
+            }*/
+
             cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [id_parque] = '" + ScientificParks.learnMoreParkId + "' AND [verificado_parque] = '" + true + "'", sqlcon);
             dr = cmd.ExecuteReader();
 
@@ -46,15 +53,23 @@ namespace SadWork
 
         private void OpenChildForm(Form childForm, Form currentChildForm)
         {
-            currentChildForm.Close();
-            currentChildForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            parkInfo_panel.Controls.Add(childForm);
-            parkInfo_panel.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            Console.Out.WriteLine("OPEN CHILD FORM: " + ShowSimulations.parkClick);
+            if (!ShowSimulations.parkClick)
+            {
+                currentChildForm.Close();
+                currentChildForm = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                parkInfo_panel.Controls.Add(childForm);
+                parkInfo_panel.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
+            } else {
+                ShowSimulations.parkClick = false;
+                this.Close();
+            }
+            
         }
 
         private void back_btn_Click(object sender, EventArgs e)
@@ -70,8 +85,16 @@ namespace SadWork
 
         private void convertByteArrayToImage(string foto_parqueId, PictureBox pictureBox)
         {
+            Console.Out.WriteLine("CONVERT TO IMAGE: " + ScientificParks.learnMoreParkId);
             sqlcon.Open();
-            cmd = new SqlCommand("SELECT " + foto_parqueId + " FROM [dbo].[Parque] Where [nome_parque] = '" + ScientificParks.learnMoreParkId + "'", sqlcon);
+            if (ShowSimulations.parkClick)
+            {
+                cmd = new SqlCommand("SELECT " + foto_parqueId + " FROM [dbo].[Parque] Where [nome_parque] = '" + ShowSimulations.parkId + "'", sqlcon);
+            }
+            else
+            {
+                cmd = new SqlCommand("SELECT " + foto_parqueId + " FROM [dbo].[Parque] Where [id_parque] = '" + ScientificParks.learnMoreParkId + "'", sqlcon);
+            }
             dr = cmd.ExecuteReader();
             dr.Read();
             if (dr.HasRows)

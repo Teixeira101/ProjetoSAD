@@ -125,7 +125,7 @@ namespace SadWork
             this.localizacao3.AutoSize = true;
             this.localizacao3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.localizacao3.ForeColor = System.Drawing.Color.White;
-            this.localizacao3.Location = new System.Drawing.Point(234, 72);
+            this.localizacao3.Location = new System.Drawing.Point(213, 59);
             this.localizacao3.Name = "localizacao3";
             this.localizacao3.Size = new System.Drawing.Size(29, 13);
             this.localizacao3.TabIndex = 3;
@@ -136,7 +136,7 @@ namespace SadWork
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(137, 72);
+            this.label10.Location = new System.Drawing.Point(127, 57);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 16);
             this.label10.TabIndex = 2;
@@ -147,7 +147,7 @@ namespace SadWork
             this.nome3.AutoSize = true;
             this.nome3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nome3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.nome3.Location = new System.Drawing.Point(136, 19);
+            this.nome3.Location = new System.Drawing.Point(124, 19);
             this.nome3.Name = "nome3";
             this.nome3.Size = new System.Drawing.Size(121, 20);
             this.nome3.TabIndex = 1;
@@ -158,7 +158,7 @@ namespace SadWork
             this.area3.AutoSize = true;
             this.area3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.area3.ForeColor = System.Drawing.Color.White;
-            this.area3.Location = new System.Drawing.Point(136, 0);
+            this.area3.Location = new System.Drawing.Point(126, 0);
             this.area3.Name = "area3";
             this.area3.Size = new System.Drawing.Size(87, 16);
             this.area3.TabIndex = 0;
@@ -214,7 +214,7 @@ namespace SadWork
             this.localizacao2.AutoSize = true;
             this.localizacao2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.localizacao2.ForeColor = System.Drawing.Color.White;
-            this.localizacao2.Location = new System.Drawing.Point(234, 72);
+            this.localizacao2.Location = new System.Drawing.Point(213, 59);
             this.localizacao2.Name = "localizacao2";
             this.localizacao2.Size = new System.Drawing.Size(29, 13);
             this.localizacao2.TabIndex = 3;
@@ -225,7 +225,7 @@ namespace SadWork
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(137, 72);
+            this.label6.Location = new System.Drawing.Point(127, 57);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 2;
@@ -236,7 +236,7 @@ namespace SadWork
             this.nome2.AutoSize = true;
             this.nome2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nome2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.nome2.Location = new System.Drawing.Point(136, 19);
+            this.nome2.Location = new System.Drawing.Point(124, 19);
             this.nome2.Name = "nome2";
             this.nome2.Size = new System.Drawing.Size(121, 20);
             this.nome2.TabIndex = 1;
@@ -247,7 +247,7 @@ namespace SadWork
             this.area2.AutoSize = true;
             this.area2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.area2.ForeColor = System.Drawing.Color.White;
-            this.area2.Location = new System.Drawing.Point(136, 0);
+            this.area2.Location = new System.Drawing.Point(126, 0);
             this.area2.Name = "area2";
             this.area2.Size = new System.Drawing.Size(87, 16);
             this.area2.TabIndex = 0;
@@ -303,7 +303,7 @@ namespace SadWork
             this.localizacao.AutoSize = true;
             this.localizacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.localizacao.ForeColor = System.Drawing.Color.White;
-            this.localizacao.Location = new System.Drawing.Point(234, 72);
+            this.localizacao.Location = new System.Drawing.Point(213, 59);
             this.localizacao.Name = "localizacao";
             this.localizacao.Size = new System.Drawing.Size(29, 13);
             this.localizacao.TabIndex = 3;
@@ -314,7 +314,7 @@ namespace SadWork
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(137, 72);
+            this.label3.Location = new System.Drawing.Point(127, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 16);
             this.label3.TabIndex = 2;
@@ -325,7 +325,7 @@ namespace SadWork
             this.nome.AutoSize = true;
             this.nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.nome.Location = new System.Drawing.Point(136, 19);
+            this.nome.Location = new System.Drawing.Point(124, 19);
             this.nome.Name = "nome";
             this.nome.Size = new System.Drawing.Size(121, 20);
             this.nome.TabIndex = 1;
@@ -336,7 +336,7 @@ namespace SadWork
             this.area.AutoSize = true;
             this.area.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.area.ForeColor = System.Drawing.Color.White;
-            this.area.Location = new System.Drawing.Point(136, 0);
+            this.area.Location = new System.Drawing.Point(126, 0);
             this.area.Name = "area";
             this.area.Size = new System.Drawing.Size(87, 16);
             this.area.TabIndex = 0;

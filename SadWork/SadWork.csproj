@@ -227,12 +227,6 @@
     <Compile Include="NewSimulationlvl1.Designer.cs">
       <DependentUpon>NewSimulationlvl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewSimulationlvl2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewSimulationlvl2.Designer.cs">
-      <DependentUpon>NewSimulationlvl2.cs</DependentUpon>
-    </Compile>
     <Compile Include="NewSimulationResults.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,9 +294,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewSimulationlvl1.resx">
       <DependentUpon>NewSimulationlvl1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewSimulationlvl2.resx">
-      <DependentUpon>NewSimulationlvl2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewSimulationResults.resx">
       <DependentUpon>NewSimulationResults.cs</DependentUpon>

@@ -20,6 +20,11 @@ namespace SadWork
         {
             InitializeComponent();
 
+            comboBoxCompArea.Items.Add("Ciências e Tecnologias");
+            comboBoxCompArea.Items.Add("Tecnologia Alimentar");
+            comboBoxCompArea.Items.Add("Biotecnologia");
+            comboBoxCompArea.Items.Add("Empreendedorismo");
+            comboBoxCompArea.Items.Add("Comércio");
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

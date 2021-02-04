@@ -265,13 +265,6 @@ namespace SadWork
             // comboBoxCompArea
             // 
             this.comboBoxCompArea.FormattingEnabled = true;
-            this.comboBoxCompArea.Items.AddRange(new object[] {
-            "Telecomunicações",
-            "Comércio Digital",
-            "Ensino",
-            "Automóveis",
-            "Fitness",
-            "Produtos Alimentares"});
             this.comboBoxCompArea.Location = new System.Drawing.Point(634, 393);
             this.comboBoxCompArea.Name = "comboBoxCompArea";
             this.comboBoxCompArea.Size = new System.Drawing.Size(113, 21);
