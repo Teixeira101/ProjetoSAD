@@ -125,15 +125,15 @@ namespace SadWork
         private void setImage(String parkId)
         {
             Console.Out.WriteLine(parkId);
-
-            cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [id_parque] = '4'", sqlcon);
+            int a = Convert.ToInt32(parkId);
+            cmd = new SqlCommand("SELECT foto_parque1 FROM [dbo].[Parque] Where [id_parque] = " + a + "", sqlcon);
             dr = cmd.ExecuteReader();
             dr.Read();
             if (dr.HasRows)
             {
                 try
                 {
-                    byte[] img = (byte[]) dr["foto_parque1"];
+                    byte[] img = (byte[]) dr[0];
                     if (img == null)
                     {
                         pictureBox1.Image = null;

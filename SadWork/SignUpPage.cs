@@ -14,7 +14,10 @@ namespace SadWork
 {
     public partial class SignUpPage : Form
     {
+        SqlCommand cmd;
+        SqlDataReader dr;
         SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+
         string filename;
         public SignUpPage()
         {
@@ -51,19 +54,17 @@ namespace SadWork
             if (nullCamps())
             {
                 MessageBox.Show("Empty Field(s)!");
+            } else if (invalidEmailOrPassword() || existingEmaildb())
+            {
                 textBoxCompName.Clear();
                 textBoxCompEmail.Clear();
                 textBoxPwd.Clear();
                 textBoxCompLocation.Clear();
                 comboBoxCompArea.SelectedIndex = -1;
                 labelPDF.Visible = false;
-            } else if (invalidEmailOrPassword())
-            {
-                textBoxCompName.Clear();
-                textBoxCompEmail.Clear();
-                textBoxPwd.Clear();
-                comboBoxCompArea.SelectedIndex = -1;
-                labelPDF.Visible = false;
+
+                if (sqlcon.State == ConnectionState.Open)
+                    sqlcon.Close();
             } else
             {
                 sqlcon.Open();
@@ -134,6 +135,35 @@ namespace SadWork
                 MessageBox.Show("Incorrect Password Length!");
                 return true;
             }
+            return false;
+        }
+
+        private bool existingEmaildb()
+        {
+            sqlcon.Open();
+
+            string oString = "SELECT COUNT(*) FROM [dbo].[Empresa]";
+            cmd = new SqlCommand(oString, sqlcon);
+
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+            cmd = new SqlCommand("SELECT * FROM [dbo].[Empresa] Where [email_empresa] = '" + textBoxCompEmail.Text + "' OR [nome_empresa] = '" + textBoxCompName.Text + "'", sqlcon);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                for(int i = 0; i < count; i++)
+                {
+                    if (dr["nome_empresa"].ToString() == textBoxCompName.Text || dr["email_empresa"].ToString() == textBoxCompEmail.Text)
+                    {
+                        MessageBox.Show("Nome e/ou Email já existentes!");
+                        return true;
+                    }
+                }
+            }
+
+            dr.Close();
+            
+            sqlcon.Close();
             return false;
         }
 

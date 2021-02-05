@@ -267,7 +267,7 @@ namespace SadWork
             this.comboBoxCompArea.FormattingEnabled = true;
             this.comboBoxCompArea.Location = new System.Drawing.Point(634, 393);
             this.comboBoxCompArea.Name = "comboBoxCompArea";
-            this.comboBoxCompArea.Size = new System.Drawing.Size(113, 21);
+            this.comboBoxCompArea.Size = new System.Drawing.Size(142, 21);
             this.comboBoxCompArea.TabIndex = 5;
             this.comboBoxCompArea.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxArea_KeyDown);
             // 

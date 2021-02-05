@@ -75,7 +75,7 @@ namespace SadWork
             this.loadData_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.loadData_btn.IconSize = 25;
             this.loadData_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.loadData_btn.Location = new System.Drawing.Point(533, 121);
+            this.loadData_btn.Location = new System.Drawing.Point(575, 121);
             this.loadData_btn.Name = "loadData_btn";
             this.loadData_btn.Size = new System.Drawing.Size(144, 28);
             this.loadData_btn.TabIndex = 1;
@@ -97,7 +97,7 @@ namespace SadWork
             this.seeSimul_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.seeSimul_btn.IconSize = 25;
             this.seeSimul_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.seeSimul_btn.Location = new System.Drawing.Point(384, 150);
+            this.seeSimul_btn.Location = new System.Drawing.Point(406, 150);
             this.seeSimul_btn.Name = "seeSimul_btn";
             this.seeSimul_btn.Size = new System.Drawing.Size(131, 28);
             this.seeSimul_btn.TabIndex = 3;
@@ -114,7 +114,7 @@ namespace SadWork
             this.comboBoxId.FormattingEnabled = true;
             this.comboBoxId.Location = new System.Drawing.Point(371, 121);
             this.comboBoxId.Name = "comboBoxId";
-            this.comboBoxId.Size = new System.Drawing.Size(156, 28);
+            this.comboBoxId.Size = new System.Drawing.Size(198, 28);
             this.comboBoxId.TabIndex = 2;
             // 
             // panel2
@@ -141,6 +141,7 @@ namespace SadWork
             this.pictureBox1.Location = new System.Drawing.Point(23, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 

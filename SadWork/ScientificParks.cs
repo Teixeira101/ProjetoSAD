@@ -42,6 +42,7 @@ namespace SadWork
         private void loadParks_btn_Click(object sender, EventArgs e)
         {
             panelPark.Visible = false;
+            panel3.Visible = false;
             comboBoxId.Enabled = true;
             comboBoxId.Items.Clear();
             comboBoxId.SelectedIndex = -1;
@@ -66,19 +67,23 @@ namespace SadWork
 
         private void seePark_btn_Click(object sender, EventArgs e)
         {
-            seePark_btn.Enabled = false;
-            comboBoxId.Enabled = false;
             sqlcon.Open();
             cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [nome_parque] = '" + comboBoxId.SelectedItem + "'", sqlcon);
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 panelPark.Visible = true;
+                panel3.Visible = true;
                 learnMoreParkId = dr["id_parque"].ToString();
                 labelNomePark.Text = dr["nome_parque"].ToString();
+                labelParkArea.Text = dr["area"].ToString();
                 labelParkBriefDesc.Text = dr["descricao_parque_parcial"].ToString();
-                labelParkBriefDesc.MaximumSize = new Size(458, 28);
+                labelParkBriefDesc.MaximumSize = new Size(320, 126);
                 labelParkBriefDesc.AutoSize = true;
+                Console.Out.WriteLine("Label Height: " + labelParkBriefDesc.Height);
+                int heightCentro = (155 - labelParkBriefDesc.Height) / 2;
+                Console.Out.WriteLine("Int Height: " + heightCentro);
+                labelParkBriefDesc.Location = new Point(27, heightCentro + 30);
             }
             dr.Close();
 
