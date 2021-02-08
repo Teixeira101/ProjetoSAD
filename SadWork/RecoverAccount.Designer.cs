@@ -42,11 +42,11 @@ namespace SadWork
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
             this.label1.Location = new System.Drawing.Point(32, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 23);
+            this.label1.Size = new System.Drawing.Size(200, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "RESET PASSWORD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,7 +70,7 @@ namespace SadWork
             this.ResetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
             this.ResetButton.FlatAppearance.BorderSize = 0;
             this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetButton.ForeColor = System.Drawing.Color.White;
             this.ResetButton.IconChar = FontAwesome.Sharp.IconChar.Spinner;
             this.ResetButton.IconColor = System.Drawing.Color.White;
@@ -79,7 +79,7 @@ namespace SadWork
             this.ResetButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ResetButton.Location = new System.Drawing.Point(64, 309);
             this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(71, 25);
+            this.ResetButton.Size = new System.Drawing.Size(78, 25);
             this.ResetButton.TabIndex = 3;
             this.ResetButton.Text = "Reset";
             this.ResetButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -120,7 +120,7 @@ namespace SadWork
             this.SubmitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
             this.SubmitButton.FlatAppearance.BorderSize = 0;
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SubmitButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubmitButton.ForeColor = System.Drawing.Color.White;
             this.SubmitButton.IconChar = FontAwesome.Sharp.IconChar.Spinner;
             this.SubmitButton.IconColor = System.Drawing.Color.White;
@@ -129,7 +129,7 @@ namespace SadWork
             this.SubmitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubmitButton.Location = new System.Drawing.Point(168, 309);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(80, 25);
+            this.SubmitButton.Size = new System.Drawing.Size(84, 25);
             this.SubmitButton.TabIndex = 4;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

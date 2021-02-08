@@ -2,6 +2,8 @@
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
 
 namespace SadWork
 {
@@ -12,6 +14,8 @@ namespace SadWork
         SqlDataReader dr;
         SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
         public static string resetEmail;
+        string randomCode;
+        public static string to;
 
         public RecoverAccount()
         {
@@ -23,6 +27,19 @@ namespace SadWork
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
+            string from, pass, messageBody;
+            Random rand = new Random();
+            randomCode = (rand.Next(999999)).ToString();
+            to = (textBoxEmail.Text).ToString();
+            MailMessage message = new MailMessage();
+            from = "teste@teste.com";
+            pass = "asdasdasd";
+            messageBody = "Your reset code is " + randomCode;
+            message.To.Add(to);
+            message.From = new MailAddress(from);
+            message.Body = messageBody;
+            message.Subject = "We Are Decisions Support - Password Reset";
+            
             if (!invalidEmail()) 
             { 
                 sqlcon.Open();
@@ -38,11 +55,27 @@ namespace SadWork
 
                 if (existEmail)
                 {
-                    SubmitButton.Show();
-                    CodeLabel.Show();
-                    textBoxCode.Show();
-                    ResetButton.Hide();
-                    textBoxEmail.ReadOnly = true;
+                    SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                    smtp.EnableSsl = true;
+                    smtp.Port = 587;
+                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    smtp.Credentials = new NetworkCredential(from, pass);
+                    try
+                    {
+                        smtp.Send(message);
+                        MessageBox.Show("Code sent successfully!");
+                        SubmitButton.Show();
+                        CodeLabel.Show();
+                        textBoxCode.Show();
+                        ResetButton.Hide();
+                        textBoxEmail.ReadOnly = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+
+                    }
+                    
                 }
                 else
                 {
@@ -53,11 +86,20 @@ namespace SadWork
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            ChangePassword objChangePassword = new ChangePassword();
-            this.Hide();
-            objChangePassword.Show();
-            objChangePassword.TopMost = true;
-            resetEmail = textBoxEmail.Text.Trim();
+            if (randomCode == (textBoxCode.Text).ToString())
+            {
+                to = textBoxEmail.Text;
+                ChangePassword objChangePassword = new ChangePassword();
+                this.Hide();
+                objChangePassword.Show();
+                objChangePassword.TopMost = true;
+                resetEmail = textBoxEmail.Text.Trim();
+            }
+            else
+            {
+                MessageBox.Show("Wrong Code!");
+            }
+            
         }
 
         private bool invalidEmail()
