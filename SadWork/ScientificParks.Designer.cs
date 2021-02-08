@@ -35,12 +35,17 @@ namespace SadWork
             this.seePark_btn = new FontAwesome.Sharp.IconButton();
             this.comboBoxId = new System.Windows.Forms.ComboBox();
             this.panelPark = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelParkArea = new System.Windows.Forms.Label();
             this.learnMore_btn = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelParkBriefDesc = new System.Windows.Forms.Label();
             this.labelNomePark = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.scientificPark_panel.SuspendLayout();
             this.panelPark.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,6 +55,7 @@ namespace SadWork
             this.scientificPark_panel.Controls.Add(this.seePark_btn);
             this.scientificPark_panel.Controls.Add(this.comboBoxId);
             this.scientificPark_panel.Controls.Add(this.panelPark);
+            this.scientificPark_panel.Controls.Add(this.panel3);
             this.scientificPark_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scientificPark_panel.Location = new System.Drawing.Point(0, 0);
             this.scientificPark_panel.Name = "scientificPark_panel";
@@ -113,75 +119,117 @@ namespace SadWork
             // 
             // panelPark
             // 
+            this.panelPark.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelPark.Controls.Add(this.panel1);
+            this.panelPark.Controls.Add(this.labelParkArea);
             this.panelPark.Controls.Add(this.learnMore_btn);
+            this.panelPark.Controls.Add(this.panel2);
             this.panelPark.Controls.Add(this.labelParkBriefDesc);
             this.panelPark.Controls.Add(this.labelNomePark);
-            this.panelPark.Controls.Add(this.pictureBox1);
-            this.panelPark.Location = new System.Drawing.Point(109, 202);
+            this.panelPark.Location = new System.Drawing.Point(130, 197);
             this.panelPark.Name = "panelPark";
-            this.panelPark.Size = new System.Drawing.Size(587, 106);
+            this.panelPark.Size = new System.Drawing.Size(545, 217);
             this.panelPark.TabIndex = 1;
             this.panelPark.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Location = new System.Drawing.Point(0, 187);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(545, 2);
+            this.panel1.TabIndex = 6;
+            // 
+            // labelParkArea
+            // 
+            this.labelParkArea.AutoSize = true;
+            this.labelParkArea.BackColor = System.Drawing.Color.Transparent;
+            this.labelParkArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelParkArea.ForeColor = System.Drawing.Color.Green;
+            this.labelParkArea.Location = new System.Drawing.Point(47, 194);
+            this.labelParkArea.Name = "labelParkArea";
+            this.labelParkArea.Size = new System.Drawing.Size(80, 15);
+            this.labelParkArea.TabIndex = 5;
+            this.labelParkArea.Text = "Park\'s Area";
+            this.labelParkArea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // learnMore_btn
             // 
+            this.learnMore_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.learnMore_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.learnMore_btn.FlatAppearance.BorderSize = 0;
             this.learnMore_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.learnMore_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.learnMore_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.learnMore_btn.ForeColor = System.Drawing.Color.White;
             this.learnMore_btn.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleRight;
-            this.learnMore_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.learnMore_btn.IconColor = System.Drawing.Color.White;
             this.learnMore_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.learnMore_btn.IconSize = 25;
             this.learnMore_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.learnMore_btn.Location = new System.Drawing.Point(473, 68);
+            this.learnMore_btn.Location = new System.Drawing.Point(436, 188);
             this.learnMore_btn.Name = "learnMore_btn";
-            this.learnMore_btn.Size = new System.Drawing.Size(114, 38);
+            this.learnMore_btn.Size = new System.Drawing.Size(109, 29);
             this.learnMore_btn.TabIndex = 4;
             this.learnMore_btn.Text = "Learn More";
             this.learnMore_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.learnMore_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.learnMore_btn.UseVisualStyleBackColor = true;
+            this.learnMore_btn.UseVisualStyleBackColor = false;
             this.learnMore_btn.Click += new System.EventHandler(this.learnMore_btn_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Orange;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(381, 24);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(161, 138);
+            this.panel2.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(153, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // labelParkBriefDesc
             // 
             this.labelParkBriefDesc.AutoSize = true;
             this.labelParkBriefDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelParkBriefDesc.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParkBriefDesc.ForeColor = System.Drawing.Color.White;
-            this.labelParkBriefDesc.Location = new System.Drawing.Point(125, 31);
+            this.labelParkBriefDesc.ForeColor = System.Drawing.Color.Black;
+            this.labelParkBriefDesc.Location = new System.Drawing.Point(27, 46);
             this.labelParkBriefDesc.Name = "labelParkBriefDesc";
-            this.labelParkBriefDesc.Size = new System.Drawing.Size(458, 28);
+            this.labelParkBriefDesc.Size = new System.Drawing.Size(300, 70);
             this.labelParkBriefDesc.TabIndex = 4;
-            this.labelParkBriefDesc.Text = "This science park is located in the Oost city district of Amsterdam and has focus" +
-    " on\r\nphysics, mathematics, information technology and the life sciences.";
+            this.labelParkBriefDesc.Text = resources.GetString("labelParkBriefDesc.Text");
             this.labelParkBriefDesc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelNomePark
             // 
             this.labelNomePark.AutoSize = true;
             this.labelNomePark.BackColor = System.Drawing.Color.Transparent;
-            this.labelNomePark.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelNomePark.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNomePark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.labelNomePark.Location = new System.Drawing.Point(122, 0);
+            this.labelNomePark.Location = new System.Drawing.Point(8, 8);
             this.labelNomePark.Name = "labelNomePark";
             this.labelNomePark.Size = new System.Drawing.Size(244, 24);
             this.labelNomePark.TabIndex = 3;
             this.labelNomePark.Text = "Amsterdam Science Park";
             this.labelNomePark.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // panel3
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.ForeColor = System.Drawing.Color.Red;
+            this.panel3.Location = new System.Drawing.Point(128, 195);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(549, 221);
+            this.panel3.TabIndex = 8;
+            this.panel3.Visible = false;
             // 
             // ScientificParks
             // 
@@ -197,6 +245,7 @@ namespace SadWork
             this.scientificPark_panel.ResumeLayout(false);
             this.panelPark.ResumeLayout(false);
             this.panelPark.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -213,5 +262,9 @@ namespace SadWork
         public FontAwesome.Sharp.IconButton loadParks_btn;
         public FontAwesome.Sharp.IconButton seePark_btn;
         private System.Windows.Forms.ComboBox comboBoxId;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labelParkArea;
+        private System.Windows.Forms.Panel panel3;
     }
 }

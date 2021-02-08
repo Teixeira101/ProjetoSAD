@@ -38,7 +38,7 @@ namespace SadWork
                 labelParkSlogan.MaximumSize = new Size(366, 75);
                 labelParkSlogan.AutoSize = true;
                 labelDescTotalPark.Text = dr["descricao_parque_total"].ToString();
-                labelDescTotalPark.MaximumSize = new Size(510, 150);
+                labelDescTotalPark.MaximumSize = new Size(550, 180);
                 labelDescTotalPark.AutoSize = true;
                 labelParkWebsite.Text = dr["website"].ToString();
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -70,6 +71,8 @@ namespace SadWork
                     labelParkArea.Text = dr["area"].ToString();
                     labelParkEmail.Text = dr["email_parque"].ToString();
                     labelParkLocation.Text = dr["localizacao_parque"].ToString();
+                    labelParkLocation.MaximumSize = new Size(260, 32);
+                    labelParkLocation.AutoSize = true;
                     website = dr["website"].ToString();
 
                     dr.Close();

@@ -115,7 +115,7 @@ namespace SadWork
             this.seeUnVerPark_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.seeUnVerPark_btn.IconSize = 25;
             this.seeUnVerPark_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.seeUnVerPark_btn.Location = new System.Drawing.Point(325, 135);
+            this.seeUnVerPark_btn.Location = new System.Drawing.Point(324, 135);
             this.seeUnVerPark_btn.Name = "seeUnVerPark_btn";
             this.seeUnVerPark_btn.Size = new System.Drawing.Size(156, 30);
             this.seeUnVerPark_btn.TabIndex = 30;
@@ -131,9 +131,9 @@ namespace SadWork
             this.comboBoxId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxId.FormattingEnabled = true;
-            this.comboBoxId.Location = new System.Drawing.Point(294, 111);
+            this.comboBoxId.Location = new System.Drawing.Point(260, 111);
             this.comboBoxId.Name = "comboBoxId";
-            this.comboBoxId.Size = new System.Drawing.Size(216, 28);
+            this.comboBoxId.Size = new System.Drawing.Size(285, 28);
             this.comboBoxId.TabIndex = 29;
             // 
             // panelParkVal
@@ -280,7 +280,7 @@ namespace SadWork
             this.addMoreDetails_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.addMoreDetails_btn.IconSize = 20;
             this.addMoreDetails_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addMoreDetails_btn.Location = new System.Drawing.Point(541, 112);
+            this.addMoreDetails_btn.Location = new System.Drawing.Point(552, 112);
             this.addMoreDetails_btn.Name = "addMoreDetails_btn";
             this.addMoreDetails_btn.Size = new System.Drawing.Size(158, 26);
             this.addMoreDetails_btn.TabIndex = 34;
@@ -303,7 +303,7 @@ namespace SadWork
             this.delete_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.delete_btn.IconSize = 20;
             this.delete_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete_btn.Location = new System.Drawing.Point(710, 112);
+            this.delete_btn.Location = new System.Drawing.Point(716, 112);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(84, 26);
             this.delete_btn.TabIndex = 35;
@@ -551,7 +551,7 @@ namespace SadWork
             this.confirm_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.confirm_btn.IconSize = 20;
             this.confirm_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.confirm_btn.Location = new System.Drawing.Point(183, 112);
+            this.confirm_btn.Location = new System.Drawing.Point(164, 112);
             this.confirm_btn.Name = "confirm_btn";
             this.confirm_btn.Size = new System.Drawing.Size(90, 26);
             this.confirm_btn.TabIndex = 47;
