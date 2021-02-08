@@ -30,10 +30,9 @@ namespace SadWork
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.loadUnVerPark_btn = new FontAwesome.Sharp.IconButton();
-            this.seeUnVerPark_btn = new FontAwesome.Sharp.IconButton();
             this.comboBoxId = new System.Windows.Forms.ComboBox();
             this.panelParkVal = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.labelParkName = new System.Windows.Forms.Label();
             this.website_btn = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,70 +73,28 @@ namespace SadWork
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label1.Location = new System.Drawing.Point(50, 33);
+            this.label1.Location = new System.Drawing.Point(310, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "CONFIRM PARK";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // loadUnVerPark_btn
-            // 
-            this.loadUnVerPark_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.loadUnVerPark_btn.BackColor = System.Drawing.Color.Red;
-            this.loadUnVerPark_btn.FlatAppearance.BorderSize = 0;
-            this.loadUnVerPark_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loadUnVerPark_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadUnVerPark_btn.ForeColor = System.Drawing.Color.White;
-            this.loadUnVerPark_btn.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.loadUnVerPark_btn.IconColor = System.Drawing.Color.White;
-            this.loadUnVerPark_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.loadUnVerPark_btn.IconSize = 25;
-            this.loadUnVerPark_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.loadUnVerPark_btn.Location = new System.Drawing.Point(315, 83);
-            this.loadUnVerPark_btn.Name = "loadUnVerPark_btn";
-            this.loadUnVerPark_btn.Size = new System.Drawing.Size(174, 28);
-            this.loadUnVerPark_btn.TabIndex = 31;
-            this.loadUnVerPark_btn.Text = "Load Unverified Parks";
-            this.loadUnVerPark_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.loadUnVerPark_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.loadUnVerPark_btn.UseVisualStyleBackColor = false;
-            this.loadUnVerPark_btn.Click += new System.EventHandler(this.loadUnVerPark_btn_Click);
-            // 
-            // seeUnVerPark_btn
-            // 
-            this.seeUnVerPark_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.seeUnVerPark_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.seeUnVerPark_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seeUnVerPark_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.seeUnVerPark_btn.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.seeUnVerPark_btn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.seeUnVerPark_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.seeUnVerPark_btn.IconSize = 25;
-            this.seeUnVerPark_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.seeUnVerPark_btn.Location = new System.Drawing.Point(324, 135);
-            this.seeUnVerPark_btn.Name = "seeUnVerPark_btn";
-            this.seeUnVerPark_btn.Size = new System.Drawing.Size(156, 30);
-            this.seeUnVerPark_btn.TabIndex = 30;
-            this.seeUnVerPark_btn.Text = "See Selected Park";
-            this.seeUnVerPark_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.seeUnVerPark_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.seeUnVerPark_btn.UseVisualStyleBackColor = true;
-            this.seeUnVerPark_btn.Visible = false;
-            this.seeUnVerPark_btn.Click += new System.EventHandler(this.seeUnVerPark_btn_Click);
-            // 
             // comboBoxId
             // 
             this.comboBoxId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxId.FormattingEnabled = true;
-            this.comboBoxId.Location = new System.Drawing.Point(260, 111);
+            this.comboBoxId.Location = new System.Drawing.Point(260, 76);
             this.comboBoxId.Name = "comboBoxId";
             this.comboBoxId.Size = new System.Drawing.Size(285, 28);
             this.comboBoxId.TabIndex = 29;
+            this.comboBoxId.SelectionChangeCommitted += new System.EventHandler(this.comboBoxId_SelectionChangeCommitted);
             // 
             // panelParkVal
             // 
+            this.panelParkVal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.panelParkVal.Controls.Add(this.label14);
             this.panelParkVal.Controls.Add(this.labelParkName);
             this.panelParkVal.Controls.Add(this.website_btn);
             this.panelParkVal.Controls.Add(this.label3);
@@ -153,11 +110,25 @@ namespace SadWork
             this.panelParkVal.TabIndex = 32;
             this.panelParkVal.Visible = false;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
+            this.label14.Location = new System.Drawing.Point(14, 7);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(133, 18);
+            this.label14.TabIndex = 47;
+            this.label14.Text = "Park Info Details";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // labelParkName
             // 
             this.labelParkName.AutoSize = true;
             this.labelParkName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParkName.Location = new System.Drawing.Point(16, 27);
+            this.labelParkName.ForeColor = System.Drawing.Color.White;
+            this.labelParkName.Location = new System.Drawing.Point(16, 72);
             this.labelParkName.Name = "labelParkName";
             this.labelParkName.Size = new System.Drawing.Size(50, 16);
             this.labelParkName.TabIndex = 34;
@@ -166,7 +137,7 @@ namespace SadWork
             // website_btn
             // 
             this.website_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.website_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.website_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
             this.website_btn.FlatAppearance.BorderSize = 0;
             this.website_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.website_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,11 +161,11 @@ namespace SadWork
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label3.Location = new System.Drawing.Point(14, 9);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
+            this.label3.Location = new System.Drawing.Point(14, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 18);
+            this.label3.Size = new System.Drawing.Size(94, 18);
             this.label3.TabIndex = 39;
             this.label3.Text = "Park\'s Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,7 +174,8 @@ namespace SadWork
             // 
             this.labelParkArea.AutoSize = true;
             this.labelParkArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParkArea.Location = new System.Drawing.Point(16, 231);
+            this.labelParkArea.ForeColor = System.Drawing.Color.White;
+            this.labelParkArea.Location = new System.Drawing.Point(16, 246);
             this.labelParkArea.Name = "labelParkArea";
             this.labelParkArea.Size = new System.Drawing.Size(51, 16);
             this.labelParkArea.TabIndex = 35;
@@ -213,11 +185,11 @@ namespace SadWork
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label4.Location = new System.Drawing.Point(15, 69);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
+            this.label4.Location = new System.Drawing.Point(15, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 18);
+            this.label4.Size = new System.Drawing.Size(106, 18);
             this.label4.TabIndex = 40;
             this.label4.Text = "Contact E-mail";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,7 +198,8 @@ namespace SadWork
             // 
             this.labelParkEmail.AutoSize = true;
             this.labelParkEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParkEmail.Location = new System.Drawing.Point(15, 87);
+            this.labelParkEmail.ForeColor = System.Drawing.Color.White;
+            this.labelParkEmail.Location = new System.Drawing.Point(15, 130);
             this.labelParkEmail.Name = "labelParkEmail";
             this.labelParkEmail.Size = new System.Drawing.Size(133, 16);
             this.labelParkEmail.TabIndex = 36;
@@ -236,11 +209,11 @@ namespace SadWork
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label2.Location = new System.Drawing.Point(15, 213);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
+            this.label2.Location = new System.Drawing.Point(15, 222);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 18);
+            this.label2.Size = new System.Drawing.Size(84, 18);
             this.label2.TabIndex = 38;
             this.label2.Text = "Park\'s Area";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,11 +222,11 @@ namespace SadWork
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label5.Location = new System.Drawing.Point(14, 147);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
+            this.label5.Location = new System.Drawing.Point(14, 164);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 18);
+            this.label5.Size = new System.Drawing.Size(111, 18);
             this.label5.TabIndex = 41;
             this.label5.Text = "Park\'s Location";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -262,7 +235,8 @@ namespace SadWork
             // 
             this.labelParkLocation.AutoSize = true;
             this.labelParkLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParkLocation.Location = new System.Drawing.Point(16, 165);
+            this.labelParkLocation.ForeColor = System.Drawing.Color.White;
+            this.labelParkLocation.Location = new System.Drawing.Point(16, 188);
             this.labelParkLocation.Name = "labelParkLocation";
             this.labelParkLocation.Size = new System.Drawing.Size(125, 16);
             this.labelParkLocation.TabIndex = 37;
@@ -274,13 +248,13 @@ namespace SadWork
             this.addMoreDetails_btn.BackColor = System.Drawing.SystemColors.Control;
             this.addMoreDetails_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addMoreDetails_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addMoreDetails_btn.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.addMoreDetails_btn.ForeColor = System.Drawing.Color.Goldenrod;
             this.addMoreDetails_btn.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.addMoreDetails_btn.IconColor = System.Drawing.Color.MediumSeaGreen;
+            this.addMoreDetails_btn.IconColor = System.Drawing.Color.Goldenrod;
             this.addMoreDetails_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.addMoreDetails_btn.IconSize = 20;
             this.addMoreDetails_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addMoreDetails_btn.Location = new System.Drawing.Point(552, 112);
+            this.addMoreDetails_btn.Location = new System.Drawing.Point(326, 125);
             this.addMoreDetails_btn.Name = "addMoreDetails_btn";
             this.addMoreDetails_btn.Size = new System.Drawing.Size(158, 26);
             this.addMoreDetails_btn.TabIndex = 34;
@@ -297,13 +271,13 @@ namespace SadWork
             this.delete_btn.BackColor = System.Drawing.SystemColors.Control;
             this.delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete_btn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.delete_btn.ForeColor = System.Drawing.Color.IndianRed;
             this.delete_btn.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.delete_btn.IconColor = System.Drawing.Color.DodgerBlue;
+            this.delete_btn.IconColor = System.Drawing.Color.IndianRed;
             this.delete_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.delete_btn.IconSize = 20;
             this.delete_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete_btn.Location = new System.Drawing.Point(716, 112);
+            this.delete_btn.Location = new System.Drawing.Point(490, 125);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(84, 26);
             this.delete_btn.TabIndex = 35;
@@ -316,6 +290,7 @@ namespace SadWork
             // 
             // panelParkDetails
             // 
+            this.panelParkDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
             this.panelParkDetails.Controls.Add(this.label13);
             this.panelParkDetails.Controls.Add(this.comboBoxPn);
             this.panelParkDetails.Controls.Add(this.label12);
@@ -342,6 +317,7 @@ namespace SadWork
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(228, 154);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 13);
@@ -366,6 +342,7 @@ namespace SadWork
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(222, 105);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 13);
@@ -390,6 +367,7 @@ namespace SadWork
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(222, 58);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 13);
@@ -414,6 +392,7 @@ namespace SadWork
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(218, 11);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 13);
@@ -440,7 +419,7 @@ namespace SadWork
             this.textBoxCompleteDesc.Location = new System.Drawing.Point(12, 214);
             this.textBoxCompleteDesc.Multiline = true;
             this.textBoxCompleteDesc.Name = "textBoxCompleteDesc";
-            this.textBoxCompleteDesc.Size = new System.Drawing.Size(200, 71);
+            this.textBoxCompleteDesc.Size = new System.Drawing.Size(258, 71);
             this.textBoxCompleteDesc.TabIndex = 51;
             // 
             // label8
@@ -448,7 +427,7 @@ namespace SadWork
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
             this.label8.Location = new System.Drawing.Point(15, 193);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(197, 18);
@@ -460,6 +439,7 @@ namespace SadWork
             // 
             this.labelImg3.AutoSize = true;
             this.labelImg3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelImg3.ForeColor = System.Drawing.Color.White;
             this.labelImg3.Location = new System.Drawing.Point(120, 151);
             this.labelImg3.Name = "labelImg3";
             this.labelImg3.Size = new System.Drawing.Size(67, 16);
@@ -470,6 +450,7 @@ namespace SadWork
             // img3_btn
             // 
             this.img3_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.img3_btn.ForeColor = System.Drawing.Color.White;
             this.img3_btn.Location = new System.Drawing.Point(12, 147);
             this.img3_btn.Name = "img3_btn";
             this.img3_btn.Size = new System.Drawing.Size(102, 24);
@@ -483,7 +464,7 @@ namespace SadWork
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
             this.label9.Location = new System.Drawing.Point(15, 126);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(119, 18);
@@ -495,19 +476,20 @@ namespace SadWork
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Purple;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
             this.label7.Location = new System.Drawing.Point(15, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 18);
+            this.label7.Size = new System.Drawing.Size(154, 18);
             this.label7.TabIndex = 46;
-            this.label7.Text = "Park Info Details";
+            this.label7.Text = "Park Additional Info";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelImg2
             // 
             this.labelImg2.AutoSize = true;
             this.labelImg2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelImg2.ForeColor = System.Drawing.Color.White;
             this.labelImg2.Location = new System.Drawing.Point(120, 86);
             this.labelImg2.Name = "labelImg2";
             this.labelImg2.Size = new System.Drawing.Size(67, 16);
@@ -518,6 +500,7 @@ namespace SadWork
             // img2_btn
             // 
             this.img2_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.img2_btn.ForeColor = System.Drawing.Color.White;
             this.img2_btn.Location = new System.Drawing.Point(12, 82);
             this.img2_btn.Name = "img2_btn";
             this.img2_btn.Size = new System.Drawing.Size(102, 24);
@@ -531,7 +514,7 @@ namespace SadWork
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
             this.label6.Location = new System.Drawing.Point(15, 61);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 18);
@@ -545,13 +528,13 @@ namespace SadWork
             this.confirm_btn.BackColor = System.Drawing.SystemColors.Control;
             this.confirm_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirm_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirm_btn.ForeColor = System.Drawing.Color.Goldenrod;
+            this.confirm_btn.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.confirm_btn.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.confirm_btn.IconColor = System.Drawing.Color.Goldenrod;
+            this.confirm_btn.IconColor = System.Drawing.Color.MediumSeaGreen;
             this.confirm_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.confirm_btn.IconSize = 20;
             this.confirm_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.confirm_btn.Location = new System.Drawing.Point(164, 112);
+            this.confirm_btn.Location = new System.Drawing.Point(230, 125);
             this.confirm_btn.Name = "confirm_btn";
             this.confirm_btn.Size = new System.Drawing.Size(90, 26);
             this.confirm_btn.TabIndex = 47;
@@ -572,10 +555,8 @@ namespace SadWork
             this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.addMoreDetails_btn);
             this.Controls.Add(this.panelParkVal);
-            this.Controls.Add(this.loadUnVerPark_btn);
             this.Controls.Add(this.comboBoxId);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.seeUnVerPark_btn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConfirmPark";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -592,8 +573,6 @@ namespace SadWork
         #endregion
 
         private System.Windows.Forms.Label label1;
-        public FontAwesome.Sharp.IconButton loadUnVerPark_btn;
-        public FontAwesome.Sharp.IconButton seeUnVerPark_btn;
         private System.Windows.Forms.ComboBox comboBoxId;
         private System.Windows.Forms.Panel panelParkVal;
         private System.Windows.Forms.Label labelParkName;
@@ -626,5 +605,6 @@ namespace SadWork
         private System.Windows.Forms.ComboBox comboBoxProd;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBoxInv;
+        private System.Windows.Forms.Label label14;
     }
 }

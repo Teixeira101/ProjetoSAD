@@ -30,57 +30,63 @@ namespace SadWork
             string from, pass, messageBody;
             Random rand = new Random();
             randomCode = (rand.Next(999999)).ToString();
-            to = (textBoxEmail.Text).ToString();
-            MailMessage message = new MailMessage();
-            from = "sadworkdm@gmail.com";
-            pass = "grupo1sad";
-            messageBody = "Your reset code is " + randomCode;
-            message.To.Add(to);
-            message.From = new MailAddress(from);
-            message.Body = messageBody;
-            message.Subject = "We Are Decisions Support - Password Reset";
+
+            if (textBoxEmail.Text.ToString() != "") {
+                to = (textBoxEmail.Text).ToString();
+                MailMessage message = new MailMessage();
+                from = "sadworkdm@gmail.com";
+                pass = "grupo1sad";
+                messageBody = "Your reset code is " + randomCode;
+                message.To.Add(to);
+                message.From = new MailAddress(from);
+                message.Body = messageBody;
+                message.Subject = "We Are Decisions Support - Password Reset";
             
-            if (!invalidEmail()) 
-            { 
-                sqlcon.Open();
-                cmd = new SqlCommand("SELECT * FROM [dbo].[Empresa] Where [email_empresa] = '" + textBoxEmail.Text.Trim() + "'", sqlcon);
-                using (dr = cmd.ExecuteReader())
-                {
-                    if (dr.Read())
+                if (!invalidEmail()) 
+                { 
+                    sqlcon.Open();
+                    cmd = new SqlCommand("SELECT * FROM [dbo].[Empresa] Where [email_empresa] = '" + textBoxEmail.Text.Trim() + "'", sqlcon);
+                    using (dr = cmd.ExecuteReader())
                     {
-                        existEmail = true;
+                        if (dr.Read())
+                        {
+                            existEmail = true;
+                        }
                     }
-                }
-                sqlcon.Close();
+                    sqlcon.Close();
 
-                if (existEmail)
-                {
-                    SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                    smtp.EnableSsl = true;
-                    smtp.Port = 587;
-                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    smtp.Credentials = new NetworkCredential(from, pass);
-                    try
+                    if (existEmail)
                     {
-                        smtp.Send(message);
-                        MessageBox.Show("Code sent successfully!");
-                        SubmitButton.Show();
-                        CodeLabel.Show();
-                        textBoxCode.Show();
-                        ResetButton.Hide();
-                        textBoxEmail.ReadOnly = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
+                        SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                        smtp.EnableSsl = true;
+                        smtp.Port = 587;
+                        smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        smtp.Credentials = new NetworkCredential(from, pass);
+                        try
+                        {
+                            smtp.Send(message);
+                            MessageBox.Show("Code sent successfully!");
+                            SubmitButton.Show();
+                            CodeLabel.Show();
+                            textBoxCode.Show();
+                            ResetButton.Hide();
+                            textBoxEmail.ReadOnly = true;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
 
-                    }
+                        }
                     
+                    }
+                    else
+                    {
+                        MessageBox.Show("The E-mail You Have Provided Doesn't Exist!");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("The E-mail You Have Provided Doesn't Exist!");
-                }
+            } else
+            {
+                MessageBox.Show("Invalid Email!");
             }
         }
 

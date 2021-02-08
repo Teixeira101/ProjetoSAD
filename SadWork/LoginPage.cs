@@ -172,10 +172,7 @@ namespace SadWork
 
         private void buttonForgotPwd_Click(object sender, EventArgs e)
         {
-            Black objBlack = new Black();
-            objBlack.Show();
-            objBlack.Opacity = .5;
-            objBlack.ShowInTaskbar = false;
+            this.Enabled = false;
             RecoverAccount objRecoverAccount = new RecoverAccount();
             objRecoverAccount.Show();
             objRecoverAccount.TopMost = true;

@@ -48,6 +48,7 @@ namespace SadWork
             this.buttonSignUp = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelBlack = new System.Windows.Forms.Panel();
             this.panelLoginPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
@@ -74,6 +75,7 @@ namespace SadWork
             this.panelLoginPage.Controls.Add(this.buttonSignUp);
             this.panelLoginPage.Controls.Add(this.label2);
             this.panelLoginPage.Controls.Add(this.pictureBox1);
+            this.panelLoginPage.Controls.Add(this.panelBlack);
             this.panelLoginPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLoginPage.Location = new System.Drawing.Point(0, 0);
             this.panelLoginPage.Name = "panelLoginPage";
@@ -303,6 +305,14 @@ namespace SadWork
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
+            // panelBlack
+            // 
+            this.panelBlack.BackColor = System.Drawing.Color.Transparent;
+            this.panelBlack.Location = new System.Drawing.Point(0, 0);
+            this.panelBlack.Name = "panelBlack";
+            this.panelBlack.Size = new System.Drawing.Size(1025, 576);
+            this.panelBlack.TabIndex = 35;
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,5 +358,6 @@ namespace SadWork
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconPictureBox btnMin;
         private FontAwesome.Sharp.IconPictureBox btnExit;
+        private System.Windows.Forms.Panel panelBlack;
     }
 }

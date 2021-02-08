@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParkInfo));
             this.parkInfo_panel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.back_btn = new FontAwesome.Sharp.IconButton();
@@ -38,7 +39,6 @@
             this.labelParkArea = new System.Windows.Forms.Label();
             this.labelNomePark = new System.Windows.Forms.Label();
             this.labelParkWebsite = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.parkInfo_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,7 +46,7 @@
             // 
             // parkInfo_panel
             // 
-            this.parkInfo_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("parkInfo_panel.BackgroundImage")));
+            this.parkInfo_panel.BackColor = System.Drawing.Color.White;
             this.parkInfo_panel.Controls.Add(this.label1);
             this.parkInfo_panel.Controls.Add(this.pictureBox2);
             this.parkInfo_panel.Controls.Add(this.pictureBox1);
@@ -62,12 +62,24 @@
             this.parkInfo_panel.Size = new System.Drawing.Size(804, 510);
             this.parkInfo_panel.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(27, 481);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Para mais informações:";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(584, 324);
+            this.pictureBox2.Location = new System.Drawing.Point(560, 302);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(188, 167);
+            this.pictureBox2.Size = new System.Drawing.Size(212, 167);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
@@ -75,9 +87,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(30, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(560, 114);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 187);
+            this.pictureBox1.Size = new System.Drawing.Size(212, 167);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -88,13 +100,13 @@
             this.back_btn.FlatAppearance.BorderSize = 0;
             this.back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.back_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back_btn.ForeColor = System.Drawing.Color.Turquoise;
+            this.back_btn.ForeColor = System.Drawing.Color.Black;
             this.back_btn.IconChar = FontAwesome.Sharp.IconChar.Backward;
-            this.back_btn.IconColor = System.Drawing.Color.Turquoise;
+            this.back_btn.IconColor = System.Drawing.Color.Black;
             this.back_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.back_btn.IconSize = 25;
             this.back_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.back_btn.Location = new System.Drawing.Point(680, 21);
+            this.back_btn.Location = new System.Drawing.Point(12, 12);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(96, 27);
             this.back_btn.TabIndex = 18;
@@ -109,21 +121,21 @@
             this.labelDescTotalPark.AutoSize = true;
             this.labelDescTotalPark.BackColor = System.Drawing.Color.Transparent;
             this.labelDescTotalPark.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescTotalPark.Location = new System.Drawing.Point(29, 250);
+            this.labelDescTotalPark.Location = new System.Drawing.Point(27, 115);
             this.labelDescTotalPark.Name = "labelDescTotalPark";
-            this.labelDescTotalPark.Size = new System.Drawing.Size(129, 16);
+            this.labelDescTotalPark.Size = new System.Drawing.Size(500, 144);
             this.labelDescTotalPark.TabIndex = 17;
-            this.labelDescTotalPark.Text = "labelDescTotalPark";
+            this.labelDescTotalPark.Text = resources.GetString("labelDescTotalPark.Text");
             // 
             // labelParkSlogan
             // 
             this.labelParkSlogan.AutoSize = true;
             this.labelParkSlogan.BackColor = System.Drawing.Color.Transparent;
-            this.labelParkSlogan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParkSlogan.ForeColor = System.Drawing.Color.Navy;
-            this.labelParkSlogan.Location = new System.Drawing.Point(454, 170);
+            this.labelParkSlogan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelParkSlogan.ForeColor = System.Drawing.Color.Gray;
+            this.labelParkSlogan.Location = new System.Drawing.Point(345, 57);
             this.labelParkSlogan.Name = "labelParkSlogan";
-            this.labelParkSlogan.Size = new System.Drawing.Size(169, 25);
+            this.labelParkSlogan.Size = new System.Drawing.Size(115, 18);
             this.labelParkSlogan.TabIndex = 16;
             this.labelParkSlogan.Text = "labelParkSlogan";
             this.labelParkSlogan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,11 +144,11 @@
             // 
             this.labelParkArea.AutoSize = true;
             this.labelParkArea.BackColor = System.Drawing.Color.Transparent;
-            this.labelParkArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParkArea.ForeColor = System.Drawing.Color.White;
-            this.labelParkArea.Location = new System.Drawing.Point(249, 51);
+            this.labelParkArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelParkArea.ForeColor = System.Drawing.Color.Gray;
+            this.labelParkArea.Location = new System.Drawing.Point(695, 12);
             this.labelParkArea.Name = "labelParkArea";
-            this.labelParkArea.Size = new System.Drawing.Size(99, 18);
+            this.labelParkArea.Size = new System.Drawing.Size(95, 16);
             this.labelParkArea.TabIndex = 15;
             this.labelParkArea.Text = "labelParkArea";
             // 
@@ -145,8 +157,8 @@
             this.labelNomePark.AutoSize = true;
             this.labelNomePark.BackColor = System.Drawing.Color.Transparent;
             this.labelNomePark.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNomePark.ForeColor = System.Drawing.Color.Green;
-            this.labelNomePark.Location = new System.Drawing.Point(246, 19);
+            this.labelNomePark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.labelNomePark.Location = new System.Drawing.Point(312, 19);
             this.labelNomePark.Name = "labelNomePark";
             this.labelNomePark.Size = new System.Drawing.Size(181, 29);
             this.labelNomePark.TabIndex = 14;
@@ -156,26 +168,14 @@
             // 
             this.labelParkWebsite.AutoSize = true;
             this.labelParkWebsite.BackColor = System.Drawing.Color.Transparent;
-            this.labelParkWebsite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParkWebsite.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.labelParkWebsite.Location = new System.Drawing.Point(175, 475);
+            this.labelParkWebsite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelParkWebsite.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.labelParkWebsite.Location = new System.Drawing.Point(176, 481);
             this.labelParkWebsite.Name = "labelParkWebsite";
             this.labelParkWebsite.Size = new System.Drawing.Size(116, 16);
             this.labelParkWebsite.TabIndex = 13;
             this.labelParkWebsite.Text = "labelParkWebsite";
             this.labelParkWebsite.Click += new System.EventHandler(this.labelParkWebsite_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(27, 475);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 16);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Para mais informações:";
             // 
             // ParkInfo
             // 

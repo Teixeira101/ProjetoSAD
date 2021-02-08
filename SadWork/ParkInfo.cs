@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SadWork
@@ -33,13 +35,24 @@ namespace SadWork
             if (dr.Read())
             {
                 labelNomePark.Text = dr["nome_parque"].ToString();
+                int widthCentro = (804 - labelNomePark.Width) / 2;
+                labelNomePark.Location = new Point(widthCentro, 19);
+
                 labelParkArea.Text = dr["area"].ToString();
+                labelParkArea.Location = new Point(804 - (labelParkArea.Width + 12), 19);
+
                 labelParkSlogan.Text = dr["slogan"].ToString();
-                labelParkSlogan.MaximumSize = new Size(366, 75);
+                labelParkSlogan.MaximumSize = new Size(320, 75);
                 labelParkSlogan.AutoSize = true;
+                int widthCentro2 = (804 - labelParkSlogan.Width) / 2;
+                labelParkSlogan.Location = new Point(widthCentro2, 57);
+
                 labelDescTotalPark.Text = dr["descricao_parque_total"].ToString();
-                labelDescTotalPark.MaximumSize = new Size(550, 180);
+                labelDescTotalPark.MaximumSize = new Size(500, 240);
                 labelDescTotalPark.AutoSize = true;
+                int heightCentro = (355 - labelDescTotalPark.Height) / 2;
+                labelDescTotalPark.Location = new Point(27, heightCentro + 114);
+
                 labelParkWebsite.Text = dr["website"].ToString();
 
                 dr.Close();

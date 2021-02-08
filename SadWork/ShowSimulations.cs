@@ -76,6 +76,11 @@ namespace SadWork
             OpenChildForm(new ParkInfo(), currentChildForm);
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void seeSimul_btn_Click(object sender, EventArgs e)
         {
             sqlcon.Open();

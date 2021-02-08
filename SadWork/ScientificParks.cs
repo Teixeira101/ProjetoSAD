@@ -17,6 +17,7 @@ namespace SadWork
         public ScientificParks()
         {
             InitializeComponent();
+            loadParks();
         }
 
         private void OpenChildForm(Form childForm, Form currentChildForm)
@@ -39,16 +40,13 @@ namespace SadWork
             OpenChildForm(new ParkInfo(), currentChildForm);
         }
 
-        private void loadParks_btn_Click(object sender, EventArgs e)
+        private void loadParks()
         {
             panelPark.Visible = false;
-            panel3.Visible = false;
             comboBoxId.Enabled = true;
             comboBoxId.Items.Clear();
             comboBoxId.SelectedIndex = -1;
             bool verificado_parque = true;
-            seePark_btn.Visible = true;
-            seePark_btn.Enabled = true;
             sqlcon.Open();
 
             cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [verificado_parque] = '" + verificado_parque + "'", sqlcon);
@@ -65,7 +63,7 @@ namespace SadWork
             sqlcon.Close();
         }
 
-        private void seePark_btn_Click(object sender, EventArgs e)
+        private void comboBoxId_SelectionChangeCommitted(object sender, EventArgs e)
         {
             sqlcon.Open();
             cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [nome_parque] = '" + comboBoxId.SelectedItem + "'", sqlcon);
@@ -73,17 +71,16 @@ namespace SadWork
             if (dr.Read())
             {
                 panelPark.Visible = true;
-                panel3.Visible = true;
                 learnMoreParkId = dr["id_parque"].ToString();
                 labelNomePark.Text = dr["nome_parque"].ToString();
+                int widthCentro = (711 - labelNomePark.Width) / 2;
+                labelNomePark.Location = new Point(widthCentro, 8);
                 labelParkArea.Text = dr["area"].ToString();
                 labelParkBriefDesc.Text = dr["descricao_parque_parcial"].ToString();
-                labelParkBriefDesc.MaximumSize = new Size(320, 126);
+                labelParkBriefDesc.MaximumSize = new Size(383, 182);
                 labelParkBriefDesc.AutoSize = true;
-                Console.Out.WriteLine("Label Height: " + labelParkBriefDesc.Height);
-                int heightCentro = (155 - labelParkBriefDesc.Height) / 2;
-                Console.Out.WriteLine("Int Height: " + heightCentro);
-                labelParkBriefDesc.Location = new Point(27, heightCentro + 30);
+                int heightCentro = (182 - labelParkBriefDesc.Height) / 2;
+                labelParkBriefDesc.Location = new Point(291, heightCentro + 41);
             }
             dr.Close();
 
@@ -98,7 +95,8 @@ namespace SadWork
                     if (img == null)
                     {
                         pictureBox1.Image = null;
-                    } else
+                    }
+                    else
                     {
                         MemoryStream ms = new MemoryStream(img);
                         pictureBox1.Image = Image.FromStream(ms);
