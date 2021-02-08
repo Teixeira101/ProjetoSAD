@@ -32,8 +32,8 @@ namespace SadWork
             randomCode = (rand.Next(999999)).ToString();
             to = (textBoxEmail.Text).ToString();
             MailMessage message = new MailMessage();
-            from = "teste@teste.com";
-            pass = "asdasdasd";
+            from = "sadworkdm@gmail.com";
+            pass = "grupo1sad";
             messageBody = "Your reset code is " + randomCode;
             message.To.Add(to);
             message.From = new MailAddress(from);
