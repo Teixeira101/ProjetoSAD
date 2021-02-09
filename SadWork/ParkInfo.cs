@@ -19,17 +19,16 @@ namespace SadWork
         public ParkInfo()
         {
             InitializeComponent();
+            DoubleBuffered = true;
 
             sqlcon.Open();
-            /*if (ShowSimulations.parkClick)
+            if (ShowSimulations.parkClick)
             {
                 cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [id_parque] = '" + ShowSimulations.parkId + "' AND [verificado_parque] = '" + true + "'", sqlcon);
             } else
             {
                 cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [id_parque] = '" + ScientificParks.learnMoreParkId + "' AND [verificado_parque] = '" + true + "'", sqlcon);
-            }*/
-
-            cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [id_parque] = '" + ScientificParks.learnMoreParkId + "' AND [verificado_parque] = '" + true + "'", sqlcon);
+            }
             dr = cmd.ExecuteReader();
 
             if (dr.Read())
@@ -55,13 +54,14 @@ namespace SadWork
 
                 labelParkWebsite.Text = dr["website"].ToString();
 
+                sqlcon.Close();
+                convertByteArrayToImage("foto_parque2", pictureBox1);
+                convertByteArrayToImage("foto_parque3", pictureBox2);
+
                 dr.Close();
             }
 
             sqlcon.Close();
-
-            convertByteArrayToImage("foto_parque2", pictureBox1);
-            convertByteArrayToImage("foto_parque3", pictureBox2);
         }
 
         private void OpenChildForm(Form childForm, Form currentChildForm)
@@ -96,37 +96,44 @@ namespace SadWork
             Process.Start(labelParkWebsite.Text);
         }
 
-        private void convertByteArrayToImage(string foto_parqueId, PictureBox pictureBox)
+        private void convertByteArrayToImage(string foto_parqueId, PictureBox pc)
         {
-            Console.Out.WriteLine("CONVERT TO IMAGE: " + ScientificParks.learnMoreParkId);
+            dr.Close();
             sqlcon.Open();
+            Console.Out.WriteLine("CONVERT TO IMAGE: " + ShowSimulations.parkId);
             if (ShowSimulations.parkClick)
             {
-                cmd = new SqlCommand("SELECT " + foto_parqueId + " FROM [dbo].[Parque] Where [nome_parque] = '" + ShowSimulations.parkId + "'", sqlcon);
+                cmd = new SqlCommand("SELECT " + foto_parqueId + " FROM [dbo].[Parque] Where [id_parque] = '" + ShowSimulations.parkId + "'", sqlcon);
+                Console.Out.WriteLine("ENTROU NO SHOW SIMULATIONS");
             }
             else
             {
                 cmd = new SqlCommand("SELECT " + foto_parqueId + " FROM [dbo].[Parque] Where [id_parque] = '" + ScientificParks.learnMoreParkId + "'", sqlcon);
             }
+
             dr = cmd.ExecuteReader();
             dr.Read();
             if (dr.HasRows)
             {
+                Console.Out.WriteLine("ENTROU NO DR.HASROWS");
                 try
                 {
                     byte[] img = (byte[])dr[0];
                     if (img == null)
                     {
-                        pictureBox.Image = null;
+                        pc.Image = null;
+                        Console.Out.WriteLine("ENTROU COM IMAGE NULL");
                     }
                     else
                     {
                         MemoryStream ms = new MemoryStream(img);
-                        pictureBox.Image = Image.FromStream(ms);
+                        pc.Image = Image.FromStream(ms);
+                        Console.Out.WriteLine("ENTROU COM IMAGEM");
                     }
                 }
                 catch (Exception) { }
             }
+            dr.Close();
             sqlcon.Close();
         }
     }

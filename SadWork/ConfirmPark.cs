@@ -19,6 +19,7 @@ namespace SadWork
         public ConfirmPark()
         {
             InitializeComponent();
+            DoubleBuffered = true;
             loadParks();
         }
 
@@ -27,10 +28,9 @@ namespace SadWork
             //Clear ComboBox
             comboBoxId.Items.Clear();
 
-            //Visible False - botões/panel
+            //Visible False - botões
             addMoreDetails_btn.Visible = false;
             delete_btn.Visible = false;
-            panelParkVal.Visible = false;
 
             //Ativar botões
             comboBoxId.Enabled = true;
@@ -51,7 +51,7 @@ namespace SadWork
             sqlcon.Close();
         }
 
-        private void website_btn_Click(object sender, System.EventArgs e)
+        private void website_btn_Click(object sender, EventArgs e)
         {
             addMoreDetails_btn.Enabled = true;
             addMoreDetails_btn.Visible = true;
@@ -68,11 +68,22 @@ namespace SadWork
                 comboBoxId.Items.Clear();
                 delete_btn.Visible = false;
                 addMoreDetails_btn.Visible = false;
-                panelParkVal.Visible = false;
+                confirm_btn.Visible = false;
+
+                labelImg2.Visible = false;
+                labelImg3.Visible = false;
+
+                comboBoxTf.Items.Clear();
+                comboBoxInv.Items.Clear();
+                comboBoxTf.Items.Clear();
+                comboBoxPn.Items.Clear();
+                textBoxCompleteDesc.Clear();
 
                 cmd.ExecuteNonQuery();
             }
             sqlcon.Close();
+            MessageBox.Show("Parque Removido!");
+            loadParks();
         }
 
         private void addMoreDetails_btn_Click(object sender, System.EventArgs e)
@@ -100,15 +111,29 @@ namespace SadWork
                 comboBoxId.Enabled = true;
                 delete_btn.Visible = false;
                 addMoreDetails_btn.Visible = false;
-                panelParkVal.Visible = false;
                 panelParkDetails.Visible = false;
                 confirm_btn.Visible = false;
+                labelImg2.Visible = false;
+                labelImg3.Visible = false;
+                labelParkName.Visible = false;
+                labelParkEmail.Visible = false;
+                labelParkLocation.Visible = false;
+                labelParkArea.Visible = false;
+
+                comboBoxTf.Items.Clear();
+                comboBoxInv.Items.Clear();
+                comboBoxTf.Items.Clear();
+                comboBoxPn.Items.Clear();
+                textBoxCompleteDesc.Clear();
 
                 cmd.Parameters.Add(new SqlParameter("@img1", img1));
                 cmd.Parameters.Add(new SqlParameter("@img2", img2));
                 cmd.ExecuteNonQuery();
             }
             sqlcon.Close();
+            MessageBox.Show("Parque Confirmado!");
+            loadParks();
+
         }
 
         OpenFileDialog ofd = new OpenFileDialog();
@@ -145,15 +170,18 @@ namespace SadWork
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    panelParkVal.Visible = true;
-
                     labelParkName.Text = dr["nome_parque"].ToString();
+                    labelParkName.Visible = true;
                     labelParkArea.Text = dr["area"].ToString();
+                    labelParkArea.Visible = true;
                     labelParkEmail.Text = dr["email_parque"].ToString();
+                    labelParkEmail.Visible = true;
                     labelParkLocation.Text = dr["localizacao_parque"].ToString();
                     labelParkLocation.MaximumSize = new Size(260, 32);
                     labelParkLocation.AutoSize = true;
+                    labelParkLocation.Visible = true;
                     website = dr["website"].ToString();
+                    website_btn.Visible = true;
 
                     dr.Close();
                 }

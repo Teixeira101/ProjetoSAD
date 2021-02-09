@@ -312,6 +312,7 @@ namespace SadWork
             this.panelBlack.Name = "panelBlack";
             this.panelBlack.Size = new System.Drawing.Size(1025, 576);
             this.panelBlack.TabIndex = 35;
+            this.panelBlack.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBlack_MouseDown);
             // 
             // LoginPage
             // 

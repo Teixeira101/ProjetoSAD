@@ -16,6 +16,8 @@ namespace SadWork
         public MainPage()
         {
             InitializeComponent();
+
+            DoubleBuffered = true;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 40);
             panel1.Controls.Add(leftBorderBtn);

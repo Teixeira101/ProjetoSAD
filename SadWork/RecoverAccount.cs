@@ -20,6 +20,7 @@ namespace SadWork
         public RecoverAccount()
         {
             InitializeComponent();
+            DoubleBuffered = true;
             SubmitButton.Hide();
             CodeLabel.Hide();
             textBoxCode.Hide();

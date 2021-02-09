@@ -8,6 +8,7 @@ namespace SadWork
         public SplashScreen()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

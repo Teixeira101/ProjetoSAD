@@ -52,8 +52,10 @@ namespace SadWork
             this.backLogin_btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxCompLocation = new System.Windows.Forms.TextBox();
+            this.btnMin = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,6 +70,7 @@ namespace SadWork
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(512, 576);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label9
             // 
@@ -323,11 +326,28 @@ namespace SadWork
             this.textBoxCompLocation.UseSystemPasswordChar = true;
             this.textBoxCompLocation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxLocation_KeyDown);
             // 
+            // btnMin
+            // 
+            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
+            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMin.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
+            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMin.IconSize = 17;
+            this.btnMin.Location = new System.Drawing.Point(972, 19);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(18, 17);
+            this.btnMin.TabIndex = 34;
+            this.btnMin.TabStop = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
             // SignUpPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 576);
+            this.Controls.Add(this.btnMin);
             this.Controls.Add(this.textBoxCompLocation);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.backLogin_btn);
@@ -351,9 +371,11 @@ namespace SadWork
             this.Name = "SignUpPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUpPage";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SignUpPage_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,5 +405,6 @@ namespace SadWork
         private System.Windows.Forms.Button backLogin_btn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxCompLocation;
+        private FontAwesome.Sharp.IconPictureBox btnMin;
     }
 }

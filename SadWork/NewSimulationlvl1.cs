@@ -19,7 +19,8 @@ namespace SadWork
         public NewSimulationlvl1()
         {
             InitializeComponent();
-
+            DoubleBuffered = true;
+            
             tb1.Orientation = Orientation.Vertical;
         }
 
@@ -605,80 +606,5 @@ namespace SadWork
             public int Pt { get; set; }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            a1.Visible = true;
-            a2.Visible = false;
-            a3.Visible = false;
-            a4.Visible = false;
-            impT.Visible = true;
-            t0.Visible = true;
-            t1.Visible = true;
-            t2.Visible = true;
-            t3.Visible = true;
-            t4.Visible = true;
-            t5.Visible = true;
-            tb1.Visible = true;
-            tb2.Visible = false;
-            tb3.Visible = false;
-            tb4.Visible = false;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            a1.Visible = false;
-            a2.Visible = true;
-            a3.Visible = false;
-            a4.Visible = false;
-            impT.Visible = true;
-            t0.Visible = true;
-            t1.Visible = true;
-            t2.Visible = true;
-            t3.Visible = true;
-            t4.Visible = true;
-            t5.Visible = true;
-            tb1.Visible = false;
-            tb2.Visible = true;
-            tb3.Visible = false;
-            tb4.Visible = false;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            a1.Visible = false;
-            a2.Visible = false;
-            a3.Visible = true;
-            a4.Visible = false;
-            impT.Visible = true;
-            t0.Visible = true;
-            t1.Visible = true;
-            t2.Visible = true;
-            t3.Visible = true;
-            t4.Visible = true;
-            t5.Visible = true;
-            tb1.Visible = false;
-            tb2.Visible = false;
-            tb3.Visible = true;
-            tb4.Visible = false;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            a1.Visible = false;
-            a2.Visible = false;
-            a3.Visible = false;
-            a4.Visible = true;
-            impT.Visible = true;
-            t0.Visible = true;
-            t1.Visible = true;
-            t2.Visible = true;
-            t3.Visible = true;
-            t4.Visible = true;
-            t5.Visible = true;
-            tb1.Visible = false;
-            tb2.Visible = false;
-            tb3.Visible = false;
-            tb4.Visible = true;
-        }
     }
 }

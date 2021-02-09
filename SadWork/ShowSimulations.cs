@@ -30,12 +30,13 @@ namespace SadWork
         public ShowSimulations()
         {
             InitializeComponent();
+            DoubleBuffered = true;
+            loadSimulations();
         }
 
-        private void loadData_btn_Click(object sender, EventArgs e)
+        private void loadSimulations()
         {
             comboBoxId.Items.Clear();
-            seeSimul_btn.Visible = true;
             sqlcon.Open();
 
             cmd = new SqlCommand("SELECT * FROM [dbo].[Resultado_Simulacao]", sqlcon);
@@ -52,7 +53,7 @@ namespace SadWork
             sqlcon.Close();
         }
 
-        private void labelPark1_Click(object sender, EventArgs e)
+        private void park1_btn_Click(object sender, EventArgs e)
         {
             parkClick = true;
             parkId = park1;
@@ -60,7 +61,7 @@ namespace SadWork
             OpenChildForm(new ParkInfo(), currentChildForm);
         }
 
-        private void labelPark2_Click(object sender, EventArgs e)
+        private void park2_btn_Click(object sender, EventArgs e)
         {
             parkClick = true;
             parkId = park2;
@@ -68,7 +69,7 @@ namespace SadWork
             OpenChildForm(new ParkInfo(), currentChildForm);
         }
 
-        private void labelPark3_Click(object sender, EventArgs e)
+        private void park3_btn_Click(object sender, EventArgs e)
         {
             parkClick = true;
             parkId = park3;
@@ -76,12 +77,7 @@ namespace SadWork
             OpenChildForm(new ParkInfo(), currentChildForm);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void seeSimul_btn_Click(object sender, EventArgs e)
+        private void comboBoxId_SelectionChangeCommitted(object sender, EventArgs e)
         {
             sqlcon.Open();
             cmd = new SqlCommand("SELECT * FROM [dbo].[Resultado_Simulacao] Where [data] = '" + comboBoxId.SelectedItem + "'", sqlcon);
@@ -96,7 +92,7 @@ namespace SadWork
 
             dr = cmd.ExecuteReader();
             if (dr.Read())
-            {                
+            {
                 park1 = dr["id_proposta1"].ToString();
                 park2 = dr["id_proposta2"].ToString();
                 park3 = dr["id_proposta3"].ToString();
@@ -108,7 +104,25 @@ namespace SadWork
                 showSimulationDetails(dbParque, campoIdParque, park3, labelPark3, campoNomeParque);
                 showSimulationDetails(dbResultSimul, campoIdResultSimul, idSimulacao, labelData, campoDataSimul);
 
-                setImage(park1);
+
+                setImage(park1, pictureBox1);
+                setImage(park2, pictureBox2);
+                setImage(park3, pictureBox3);
+
+                tituloDate.Visible = true;
+                titulopark1.Visible = true;
+                titulopark2.Visible = true;
+                titulopark3.Visible = true;
+                labelData.Visible = true;
+                labelPark1.Visible = true;
+                labelPark2.Visible = true;
+                labelPark3.Visible = true;
+                pictureBox1.Visible = true;
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = true;
+                park1_btn.Visible = true;
+                park2_btn.Visible = true;
+                park3_btn.Visible = true;
             }
             sqlcon.Close();
         }
@@ -121,14 +135,15 @@ namespace SadWork
             {
                 lb.Text = dr[campoLabel].ToString();
                 lb.Visible = true;
-                lb.MaximumSize = new Size(146, 40);
+                lb.MaximumSize = new Size(150, 40);
                 lb.AutoSize = true;
                 dr.Close();
             }
         }
 
-        private void setImage(String parkId)
+        private void setImage(String parkId, PictureBox pc)
         {
+            dr.Close();
             Console.Out.WriteLine(parkId);
             int a = Convert.ToInt32(parkId);
             cmd = new SqlCommand("SELECT foto_parque1 FROM [dbo].[Parque] Where [id_parque] = " + a + "", sqlcon);
@@ -141,17 +156,16 @@ namespace SadWork
                     byte[] img = (byte[]) dr[0];
                     if (img == null)
                     {
-                        pictureBox1.Image = null;
+                        pc.Image = null;
                     }
                     else
                     {
                         MemoryStream ms = new MemoryStream(img);
-                        pictureBox1.Image = Image.FromStream(ms);
+                        pc.Image = Image.FromStream(ms);
                     }
                 }
                 catch (Exception) { }
             }
-            sqlcon.Close();
         }
 
         private void OpenChildForm(Form childForm, Form currentChildForm)

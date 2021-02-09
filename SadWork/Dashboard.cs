@@ -15,6 +15,7 @@ namespace SadWork
         public Dashboard()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
 
         private void Dashboard_Load(object sender, EventArgs e)

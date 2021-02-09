@@ -17,6 +17,7 @@ namespace SadWork
         public ScientificParks()
         {
             InitializeComponent();
+            DoubleBuffered = true;
             loadParks();
         }
 

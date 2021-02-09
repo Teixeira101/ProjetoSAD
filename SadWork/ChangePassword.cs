@@ -14,7 +14,8 @@ namespace SadWork
         public ChangePassword()
         {
             InitializeComponent();
-            
+            DoubleBuffered = true;
+
         }
 
         private void submit_btn_Click(object sender, EventArgs e)

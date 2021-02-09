@@ -58,9 +58,9 @@ namespace SadWork
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(143, 278);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(317, 33);
+            this.label2.Size = new System.Drawing.Size(319, 33);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Sistemas de Apoio à decisão";
+            this.label2.Text = "Sistemas de Apoio à Decisão";
             // 
             // panel1
             // 

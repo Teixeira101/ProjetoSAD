@@ -24,6 +24,7 @@ namespace SadWork
         public LoginPage()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
@@ -254,6 +255,12 @@ namespace SadWork
                 e.SuppressKeyPress = true;
                 e.Handled = true;
             }
+        }
+
+        private void panelBlack_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -3,12 +3,8 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
-using Google.Apis.Auth.OAuth2;
 using System.IO;
-using System.Threading;
-using Google.Apis.Util.Store;
-using Google.Apis.Drive.v3;
-using Google.Apis.Services;
+using System.Runtime.InteropServices;
 
 namespace SadWork
 {
@@ -22,6 +18,7 @@ namespace SadWork
         public SignUpPage()
         {
             InitializeComponent();
+            DoubleBuffered = true;
 
             comboBoxCompArea.Items.Add("Ciências e Tecnologias");
             comboBoxCompArea.Items.Add("Tecnologia Alimentar");
@@ -205,6 +202,28 @@ namespace SadWork
                 e.SuppressKeyPress = true;
                 e.Handled = true;
             }
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void SignUpPage_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -32,6 +32,7 @@ namespace SadWork
         public NewSimulationResults()
         {
             InitializeComponent();
+            DoubleBuffered = true;
 
             if (cC != null)
             {

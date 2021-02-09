@@ -63,8 +63,11 @@ namespace SadWork
             this.img2_btn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.confirm_btn = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelParkVal.SuspendLayout();
             this.panelParkDetails.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -93,7 +96,7 @@ namespace SadWork
             // 
             // panelParkVal
             // 
-            this.panelParkVal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.panelParkVal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.panelParkVal.Controls.Add(this.label14);
             this.panelParkVal.Controls.Add(this.labelParkName);
             this.panelParkVal.Controls.Add(this.website_btn);
@@ -104,11 +107,10 @@ namespace SadWork
             this.panelParkVal.Controls.Add(this.label2);
             this.panelParkVal.Controls.Add(this.label5);
             this.panelParkVal.Controls.Add(this.labelParkLocation);
-            this.panelParkVal.Location = new System.Drawing.Point(55, 184);
+            this.panelParkVal.Location = new System.Drawing.Point(31, 18);
             this.panelParkVal.Name = "panelParkVal";
-            this.panelParkVal.Size = new System.Drawing.Size(289, 297);
+            this.panelParkVal.Size = new System.Drawing.Size(326, 297);
             this.panelParkVal.TabIndex = 32;
-            this.panelParkVal.Visible = false;
             // 
             // label14
             // 
@@ -133,6 +135,7 @@ namespace SadWork
             this.labelParkName.Size = new System.Drawing.Size(50, 16);
             this.labelParkName.TabIndex = 34;
             this.labelParkName.Text = "Park#1";
+            this.labelParkName.Visible = false;
             // 
             // website_btn
             // 
@@ -147,7 +150,7 @@ namespace SadWork
             this.website_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.website_btn.IconSize = 20;
             this.website_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.website_btn.Location = new System.Drawing.Point(174, 252);
+            this.website_btn.Location = new System.Drawing.Point(211, 252);
             this.website_btn.Name = "website_btn";
             this.website_btn.Size = new System.Drawing.Size(93, 33);
             this.website_btn.TabIndex = 33;
@@ -155,6 +158,7 @@ namespace SadWork
             this.website_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.website_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.website_btn.UseVisualStyleBackColor = false;
+            this.website_btn.Visible = false;
             this.website_btn.Click += new System.EventHandler(this.website_btn_Click);
             // 
             // label3
@@ -180,6 +184,7 @@ namespace SadWork
             this.labelParkArea.Size = new System.Drawing.Size(51, 16);
             this.labelParkArea.TabIndex = 35;
             this.labelParkArea.Text = "Area#1";
+            this.labelParkArea.Visible = false;
             // 
             // label4
             // 
@@ -204,6 +209,7 @@ namespace SadWork
             this.labelParkEmail.Size = new System.Drawing.Size(133, 16);
             this.labelParkEmail.TabIndex = 36;
             this.labelParkEmail.Text = "Email#1@Email.com";
+            this.labelParkEmail.Visible = false;
             // 
             // label2
             // 
@@ -241,6 +247,7 @@ namespace SadWork
             this.labelParkLocation.Size = new System.Drawing.Size(125, 16);
             this.labelParkLocation.TabIndex = 37;
             this.labelParkLocation.Text = "Location#1 Street#1";
+            this.labelParkLocation.Visible = false;
             // 
             // addMoreDetails_btn
             // 
@@ -290,7 +297,7 @@ namespace SadWork
             // 
             // panelParkDetails
             // 
-            this.panelParkDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.panelParkDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
             this.panelParkDetails.Controls.Add(this.label13);
             this.panelParkDetails.Controls.Add(this.comboBoxPn);
             this.panelParkDetails.Controls.Add(this.label12);
@@ -308,7 +315,7 @@ namespace SadWork
             this.panelParkDetails.Controls.Add(this.labelImg2);
             this.panelParkDetails.Controls.Add(this.img2_btn);
             this.panelParkDetails.Controls.Add(this.label6);
-            this.panelParkDetails.Location = new System.Drawing.Point(461, 184);
+            this.panelParkDetails.Location = new System.Drawing.Point(490, 18);
             this.panelParkDetails.Name = "panelParkDetails";
             this.panelParkDetails.Size = new System.Drawing.Size(289, 297);
             this.panelParkDetails.TabIndex = 46;
@@ -545,18 +552,36 @@ namespace SadWork
             this.confirm_btn.Visible = false;
             this.confirm_btn.Click += new System.EventHandler(this.confirm_btn_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(105)))));
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panelParkDetails);
+            this.panel1.Controls.Add(this.panelParkVal);
+            this.panel1.Location = new System.Drawing.Point(0, 183);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(804, 327);
+            this.panel1.TabIndex = 48;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(399, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(6, 297);
+            this.panel2.TabIndex = 47;
+            // 
             // ConfirmPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 510);
             this.Controls.Add(this.confirm_btn);
-            this.Controls.Add(this.panelParkDetails);
             this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.addMoreDetails_btn);
-            this.Controls.Add(this.panelParkVal);
             this.Controls.Add(this.comboBoxId);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConfirmPark";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -565,6 +590,7 @@ namespace SadWork
             this.panelParkVal.PerformLayout();
             this.panelParkDetails.ResumeLayout(false);
             this.panelParkDetails.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,5 +632,7 @@ namespace SadWork
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBoxInv;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

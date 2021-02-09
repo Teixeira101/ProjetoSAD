@@ -12,6 +12,7 @@ namespace SadWork
         public NewPark()
         {
             InitializeComponent();
+            DoubleBuffered = true;
 
             comboBoxArea.Items.Add("Ciências e Tecnologias");
             comboBoxArea.Items.Add("Tecnologia Alimentar");
@@ -40,13 +41,15 @@ namespace SadWork
 
         private void iconButtonAdd_Click(object sender, EventArgs e)
         {
-            FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fs);
-            byte[] img = br.ReadBytes((int)fs.Length);
+            byte[] img = null;
+            if (imgLoc != "")
+            {
+                FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
 
-
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Parque]
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+                SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Parque]
            ([nome_parque]
            ,[area]
            ,[email_parque]
@@ -65,13 +68,17 @@ namespace SadWork
            ,[productivity]
            ,[partners])
      VALUES
-           ('" + textBoxName.Text.Trim() + "', '" + comboBoxArea.SelectedItem.ToString() + "', '" + textBoxEmail.Text.Trim() + "', '" + textBoxLocation.Text.Trim() + "', @img, '" + null + "', '" + textBoxBriefDesc.Text.Trim() + "', '" + checkBoxColab.Checked + "', '0', '" + textBoxSlogan.Text.Trim() + "', '" + textBoxWebsite.Text.Trim() + "', '" + null + "', '" + null + "', '" + null + "', '" + null + "', '" + null + "', '" + null + "')",sqlcon);
-            sqlcon.Open();
-            cmd.Parameters.Add(new SqlParameter("@img", img));
-            cmd.ExecuteNonQuery();
-            sqlcon.Close();
+           ('" + textBoxName.Text.Trim() + "', '" + comboBoxArea.SelectedItem.ToString() + "', '" + textBoxEmail.Text.Trim() + "', '" + textBoxLocation.Text.Trim() + "', @img, '" + null + "', '" + textBoxBriefDesc.Text.Trim() + "', '" + checkBoxColab.Checked + "', '0', '" + textBoxSlogan.Text.Trim() + "', '" + textBoxWebsite.Text.Trim() + "', '" + null + "', '" + null + "', '" + null + "', '" + null + "', '" + null + "', '" + null + "')", sqlcon);
+                sqlcon.Open();
+                cmd.Parameters.Add(new SqlParameter("@img", img));
+                cmd.ExecuteNonQuery();
+                sqlcon.Close();
 
-            clearCamps();
+                clearCamps();
+            } else
+            {
+                MessageBox.Show("É necessária a inserção de uma imagem.");
+            }
         }
 
         private void clearCamps()
@@ -85,6 +92,11 @@ namespace SadWork
             textBoxSlogan.Clear();
             textBoxBriefDesc.Clear();
             checkBoxColab.Checked = false;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
