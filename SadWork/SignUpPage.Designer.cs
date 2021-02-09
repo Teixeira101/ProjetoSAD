@@ -290,6 +290,8 @@ namespace SadWork
             // 
             this.backLogin_btn.BackColor = System.Drawing.SystemColors.Control;
             this.backLogin_btn.FlatAppearance.BorderSize = 0;
+            this.backLogin_btn.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.backLogin_btn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.backLogin_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backLogin_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backLogin_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(187)))), ((int)(((byte)(200)))));
