@@ -167,6 +167,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContactDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactDetails.Designer.cs">
+      <DependentUpon>ContactDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ParkInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ContactDetails.resx">
+      <DependentUpon>ContactDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ParkInfo.resx">
       <DependentUpon>ParkInfo.cs</DependentUpon>
     </EmbeddedResource>

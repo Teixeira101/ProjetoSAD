@@ -39,6 +39,7 @@ namespace SadWork
             public static Color color6 = Color.FromArgb(118, 189, 202);
             public static Color color7 = Color.FromArgb(232, 222, 32);
             public static Color color8 = Color.FromArgb(146, 232, 32);
+            public static Color color9 = Color.FromArgb(86, 50, 168);
         }
 
         private void ActivateButton(object senderbtn, Color color)
@@ -134,6 +135,12 @@ namespace SadWork
         {
             ActivateButton(sender, RGBColors.color8);
             OpenChildForm(new VerifyCompany());
+        }
+
+        private void contacts_btn_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color9);
+            OpenChildForm(new ContactDetails());
         }
 
         private void login_btn_Click(object sender, EventArgs e)

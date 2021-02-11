@@ -31,6 +31,7 @@ namespace SadWork
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.contacts_btn = new FontAwesome.Sharp.IconButton();
             this.verifyCompany_btn = new FontAwesome.Sharp.IconButton();
             this.confirmPark_btn = new FontAwesome.Sharp.IconButton();
             this.showSimulation_btn = new FontAwesome.Sharp.IconButton();
@@ -63,6 +64,7 @@ namespace SadWork
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.panel1.Controls.Add(this.contacts_btn);
             this.panel1.Controls.Add(this.verifyCompany_btn);
             this.panel1.Controls.Add(this.confirmPark_btn);
             this.panel1.Controls.Add(this.showSimulation_btn);
@@ -77,6 +79,28 @@ namespace SadWork
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 576);
             this.panel1.TabIndex = 0;
+            // 
+            // contacts_btn
+            // 
+            this.contacts_btn.FlatAppearance.BorderSize = 0;
+            this.contacts_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contacts_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contacts_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.contacts_btn.IconChar = FontAwesome.Sharp.IconChar.IdCard;
+            this.contacts_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.contacts_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.contacts_btn.IconSize = 32;
+            this.contacts_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.contacts_btn.Location = new System.Drawing.Point(0, 533);
+            this.contacts_btn.Name = "contacts_btn";
+            this.contacts_btn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.contacts_btn.Size = new System.Drawing.Size(220, 40);
+            this.contacts_btn.TabIndex = 9;
+            this.contacts_btn.Text = "Contacts";
+            this.contacts_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.contacts_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.contacts_btn.UseVisualStyleBackColor = true;
+            this.contacts_btn.Click += new System.EventHandler(this.contacts_btn_Click);
             // 
             // verifyCompany_btn
             // 
@@ -453,5 +477,6 @@ namespace SadWork
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         public FontAwesome.Sharp.IconButton dashboard_btn;
+        private FontAwesome.Sharp.IconButton contacts_btn;
     }
 }
