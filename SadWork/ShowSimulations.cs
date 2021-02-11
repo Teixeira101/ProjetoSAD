@@ -38,8 +38,7 @@ namespace SadWork
         {
             comboBoxId.Items.Clear();
             sqlcon.Open();
-
-            cmd = new SqlCommand("SELECT * FROM [dbo].[Resultado_Simulacao]", sqlcon);
+            cmd = new SqlCommand("SELECT * FROM [dbo].[Resultado_Simulacao] Where [id_empresa] = '" + LoginPage.currentUserId + "'", sqlcon);
 
             using (dr = cmd.ExecuteReader())
             {
