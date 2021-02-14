@@ -173,6 +173,11 @@
     <Compile Include="ContactDetails.Designer.cs">
       <DependentUpon>ContactDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSetSAD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetSAD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ParkInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +328,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSetSAD.xsc">
+      <DependentUpon>DataSetSAD.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetSAD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetSAD.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetSAD.xss">
+      <DependentUpon>DataSetSAD.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -354,6 +370,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatabaseSAD.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DatabaseSAD_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DatabaseSAD.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

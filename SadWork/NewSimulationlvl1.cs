@@ -195,7 +195,7 @@ namespace SadWork
 
         private void GetValuesFromParks()
         {
-            SqlConnection myConnection = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+            SqlConnection myConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseSAD.mdf;Integrated Security=True");
             myConnection.Open();
             string oString = "SELECT COUNT(*) FROM [dbo].[Parque]";
             SqlCommand oCmd = new SqlCommand(oString, myConnection);

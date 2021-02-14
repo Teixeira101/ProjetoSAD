@@ -87,7 +87,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(560, 114);
+            this.pictureBox1.Location = new System.Drawing.Point(560, 124);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(212, 167);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,7 +106,7 @@
             this.back_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.back_btn.IconSize = 25;
             this.back_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.back_btn.Location = new System.Drawing.Point(12, 12);
+            this.back_btn.Location = new System.Drawing.Point(9, 9);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(96, 27);
             this.back_btn.TabIndex = 18;
@@ -121,7 +121,7 @@
             this.labelDescTotalPark.AutoSize = true;
             this.labelDescTotalPark.BackColor = System.Drawing.Color.Transparent;
             this.labelDescTotalPark.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescTotalPark.Location = new System.Drawing.Point(27, 115);
+            this.labelDescTotalPark.Location = new System.Drawing.Point(27, 125);
             this.labelDescTotalPark.Name = "labelDescTotalPark";
             this.labelDescTotalPark.Size = new System.Drawing.Size(500, 144);
             this.labelDescTotalPark.TabIndex = 17;
@@ -133,7 +133,7 @@
             this.labelParkSlogan.BackColor = System.Drawing.Color.Transparent;
             this.labelParkSlogan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelParkSlogan.ForeColor = System.Drawing.Color.Gray;
-            this.labelParkSlogan.Location = new System.Drawing.Point(345, 57);
+            this.labelParkSlogan.Location = new System.Drawing.Point(345, 78);
             this.labelParkSlogan.Name = "labelParkSlogan";
             this.labelParkSlogan.Size = new System.Drawing.Size(115, 18);
             this.labelParkSlogan.TabIndex = 16;
@@ -146,7 +146,7 @@
             this.labelParkArea.BackColor = System.Drawing.Color.Transparent;
             this.labelParkArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelParkArea.ForeColor = System.Drawing.Color.Gray;
-            this.labelParkArea.Location = new System.Drawing.Point(695, 12);
+            this.labelParkArea.Location = new System.Drawing.Point(693, 8);
             this.labelParkArea.Name = "labelParkArea";
             this.labelParkArea.Size = new System.Drawing.Size(95, 16);
             this.labelParkArea.TabIndex = 15;
@@ -158,7 +158,7 @@
             this.labelNomePark.BackColor = System.Drawing.Color.Transparent;
             this.labelNomePark.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNomePark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.labelNomePark.Location = new System.Drawing.Point(312, 19);
+            this.labelNomePark.Location = new System.Drawing.Point(312, 40);
             this.labelNomePark.Name = "labelNomePark";
             this.labelNomePark.Size = new System.Drawing.Size(181, 29);
             this.labelNomePark.TabIndex = 14;

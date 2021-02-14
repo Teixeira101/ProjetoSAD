@@ -14,7 +14,7 @@ namespace SadWork
         private Form currentChildForm;
         SqlCommand cmd;
         SqlDataReader dr;
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseSAD.mdf;Integrated Security=True");
 
         public ParkInfo()
         {
@@ -35,16 +35,16 @@ namespace SadWork
             {
                 labelNomePark.Text = dr["nome_parque"].ToString();
                 int widthCentro = (804 - labelNomePark.Width) / 2;
-                labelNomePark.Location = new Point(widthCentro, 19);
+                labelNomePark.Location = new Point(widthCentro, 40);
 
                 labelParkArea.Text = dr["area"].ToString();
                 labelParkArea.Location = new Point(804 - (labelParkArea.Width + 12), 19);
 
                 labelParkSlogan.Text = dr["slogan"].ToString();
-                labelParkSlogan.MaximumSize = new Size(320, 75);
+                labelParkSlogan.MaximumSize = new Size(320, 76);
                 labelParkSlogan.AutoSize = true;
                 int widthCentro2 = (804 - labelParkSlogan.Width) / 2;
-                labelParkSlogan.Location = new Point(widthCentro2, 57);
+                labelParkSlogan.Location = new Point(widthCentro2, 78);
 
                 labelDescTotalPark.Text = dr["descricao_parque_total"].ToString();
                 labelDescTotalPark.MaximumSize = new Size(500, 240);

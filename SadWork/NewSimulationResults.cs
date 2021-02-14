@@ -24,7 +24,7 @@ namespace SadWork
         double[] bestPark3 = new double[] { 0, 0 };
         public List<ParkCriteria> parksList = new List<ParkCriteria>();
 
-        SqlConnection myConnection = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+        SqlConnection myConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseSAD.mdf;Integrated Security=True");
         SqlCommand tempCmd;
         SqlDataReader reader;
 
@@ -45,8 +45,8 @@ namespace SadWork
 
         private void AddSimulationdb()
         {
-            SqlConnection myConnection = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
-            myConnection.Open();
+            SqlConnection myConnection2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseSAD.mdf;Integrated Security=True");
+            myConnection2.Open();
 
             SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Resultado_Simulacao]
                ([id_proposta1]
@@ -55,9 +55,11 @@ namespace SadWork
                ,[id_empresa]
                ,[data])
          VALUES
-               ('" + bestPark[0] + "', '" + bestPark2[0] + "', '" + bestPark3[0] + "', '" + LoginPage.currentUserId + "', '" + DateTime.Now.ToString() +  "')", myConnection);
+               ('" + bestPark[0] + "', '" + bestPark2[0] + "', '" + bestPark3[0] + "', '" + LoginPage.currentUserId + "', '" + DateTime.Now.ToString() +  "')", myConnection2);
 
             cmd.ExecuteNonQuery();
+
+            myConnection2.Close();
 
         }
 

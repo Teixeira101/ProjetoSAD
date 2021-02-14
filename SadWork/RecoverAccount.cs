@@ -12,7 +12,7 @@ namespace SadWork
         bool existEmail = false;
         SqlCommand cmd;
         SqlDataReader dr;
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseSAD.mdf;Integrated Security=True");
         public static string resetEmail;
         string randomCode;
         public static string to;
