@@ -12,7 +12,7 @@ namespace SadWork
     {
         SqlCommand cmd;
         SqlDataReader dr;
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseSAD.mdf;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=46.101.41.99;Initial Catalog=dbSAD;User ID=SA;Password=Grupo1sad");
 
         string filename;
         public SignUpPage()

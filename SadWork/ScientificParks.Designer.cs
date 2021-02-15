@@ -194,9 +194,10 @@ namespace SadWork
             this.ClientSize = new System.Drawing.Size(804, 510);
             this.Controls.Add(this.scientificPark_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ScientificParks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ScientificParks";
+            this.Text = "Scientific Parks";
             this.scientificPark_panel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

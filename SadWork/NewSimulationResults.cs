@@ -24,7 +24,7 @@ namespace SadWork
         double[] bestPark3 = new double[] { 0, 0 };
         public List<ParkCriteria> parksList = new List<ParkCriteria>();
 
-        SqlConnection myConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseSAD.mdf;Integrated Security=True");
+        SqlConnection myConnection = new SqlConnection(@"Data Source=46.101.41.99;Initial Catalog=dbSAD;User ID=SA;Password=Grupo1sad");
         SqlCommand tempCmd;
         SqlDataReader reader;
 

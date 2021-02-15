@@ -185,9 +185,10 @@
             this.ClientSize = new System.Drawing.Size(804, 510);
             this.Controls.Add(this.parkInfo_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ParkInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ParkInfo";
+            this.Text = "Park Info";
             this.parkInfo_panel.ResumeLayout(false);
             this.parkInfo_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

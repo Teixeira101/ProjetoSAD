@@ -29,7 +29,12 @@ namespace SadWork
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPark));
             this.panelNewPark = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.textBoxWebsite = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxSlogan = new System.Windows.Forms.TextBox();
@@ -51,12 +56,8 @@ namespace SadWork
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxArea = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelNewPark.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +72,73 @@ namespace SadWork
             this.panelNewPark.Name = "panelNewPark";
             this.panelNewPark.Size = new System.Drawing.Size(804, 510);
             this.panelNewPark.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.textBoxWebsite);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.textBoxSlogan);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.checkBoxColab);
+            this.panel1.Controls.Add(this.textBoxLocation);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.labelPDF);
+            this.panel1.Controls.Add(this.openFile);
+            this.panel1.Controls.Add(this.iconButtonReset);
+            this.panel1.Controls.Add(this.textBoxEmail);
+            this.panel1.Controls.Add(this.textBoxName);
+            this.panel1.Controls.Add(this.iconButtonAdd);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.textBoxBriefDesc);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.comboBoxArea);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(0, 74);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(803, 435);
+            this.panel1.TabIndex = 33;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.label12.Location = new System.Drawing.Point(553, 355);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 18);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Options";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.panel3.Location = new System.Drawing.Point(485, 351);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 1);
+            this.panel3.TabIndex = 32;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.label11.Location = new System.Drawing.Point(25, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(130, 25);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Park Details";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxWebsite
             // 
@@ -315,6 +383,16 @@ namespace SadWork
             this.label2.Text = "Park\'s Area";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(195, 49);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(415, 17);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Below it can be inserted all the data to add a new park to our system";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -328,83 +406,6 @@ namespace SadWork
             this.label1.Text = "ADD PARK";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(195, 49);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(415, 17);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Below it can be inserted all the data to add a new park to our system";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.textBoxWebsite);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBoxSlogan);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.checkBoxColab);
-            this.panel1.Controls.Add(this.textBoxLocation);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.labelPDF);
-            this.panel1.Controls.Add(this.openFile);
-            this.panel1.Controls.Add(this.iconButtonReset);
-            this.panel1.Controls.Add(this.textBoxEmail);
-            this.panel1.Controls.Add(this.textBoxName);
-            this.panel1.Controls.Add(this.iconButtonAdd);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.textBoxBriefDesc);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.comboBoxArea);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 74);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(803, 435);
-            this.panel1.TabIndex = 33;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label11.Location = new System.Drawing.Point(25, 10);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(130, 25);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Park Details";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.panel3.Location = new System.Drawing.Point(485, 351);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 1);
-            this.panel3.TabIndex = 32;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            this.label12.Location = new System.Drawing.Point(553, 355);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 18);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Options";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // NewPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,9 +413,10 @@ namespace SadWork
             this.ClientSize = new System.Drawing.Size(804, 510);
             this.Controls.Add(this.panelNewPark);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewPark";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NewPark";
+            this.Text = "New Park";
             this.panelNewPark.ResumeLayout(false);
             this.panelNewPark.PerformLayout();
             this.panel1.ResumeLayout(false);

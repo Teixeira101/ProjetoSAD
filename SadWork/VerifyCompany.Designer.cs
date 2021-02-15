@@ -29,10 +29,14 @@ namespace SadWork
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerifyCompany));
             this.label1 = new System.Windows.Forms.Label();
             this.verCompany_btn = new FontAwesome.Sharp.IconButton();
             this.openFile = new FontAwesome.Sharp.IconButton();
             this.panelCompVal = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.delete_btn = new FontAwesome.Sharp.IconButton();
             this.labelCompName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,9 +47,6 @@ namespace SadWork
             this.label5 = new System.Windows.Forms.Label();
             this.labelCompLocation = new System.Windows.Forms.Label();
             this.comboBoxId = new System.Windows.Forms.ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panelCompVal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,6 +132,40 @@ namespace SadWork
             this.panelCompVal.Name = "panelCompVal";
             this.panelCompVal.Size = new System.Drawing.Size(806, 337);
             this.panelCompVal.TabIndex = 33;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.label7.Location = new System.Drawing.Point(422, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(127, 25);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "Operations";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
+            this.label6.Location = new System.Drawing.Point(13, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(190, 25);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Company Details";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(400, 18);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(6, 297);
+            this.panel2.TabIndex = 43;
             // 
             // delete_btn
             // 
@@ -268,40 +303,6 @@ namespace SadWork
             this.comboBoxId.TabIndex = 34;
             this.comboBoxId.SelectionChangeCommitted += new System.EventHandler(this.comboBoxId_SelectionChangeCommitted);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(400, 18);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(6, 297);
-            this.panel2.TabIndex = 43;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.label6.Location = new System.Drawing.Point(13, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(190, 25);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "Company Details";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(189)))), ((int)(((byte)(202)))));
-            this.label7.Location = new System.Drawing.Point(422, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 25);
-            this.label7.TabIndex = 45;
-            this.label7.Text = "Operations";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // VerifyCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,9 +312,10 @@ namespace SadWork
             this.Controls.Add(this.panelCompVal);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VerifyCompany";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VerifyCompany";
+            this.Text = "Verify Company";
             this.panelCompVal.ResumeLayout(false);
             this.panelCompVal.PerformLayout();
             this.ResumeLayout(false);

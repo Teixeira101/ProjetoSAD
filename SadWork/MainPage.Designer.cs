@@ -323,12 +323,11 @@ namespace SadWork
             // 
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(30)))), ((int)(((byte)(48)))));
-            this.btnMin.ForeColor = System.Drawing.Color.DimGray;
             this.btnMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMin.IconColor = System.Drawing.Color.DimGray;
+            this.btnMin.IconColor = System.Drawing.Color.White;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMin.IconSize = 16;
-            this.btnMin.Location = new System.Drawing.Point(763, 0);
+            this.btnMin.Location = new System.Drawing.Point(762, 5);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(16, 19);
             this.btnMin.TabIndex = 3;
@@ -339,12 +338,11 @@ namespace SadWork
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(30)))), ((int)(((byte)(48)))));
-            this.btnExit.ForeColor = System.Drawing.Color.DimGray;
             this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.btnExit.IconColor = System.Drawing.Color.DimGray;
+            this.btnExit.IconColor = System.Drawing.Color.White;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 16;
-            this.btnExit.Location = new System.Drawing.Point(785, 2);
+            this.btnExit.Location = new System.Drawing.Point(784, 7);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(16, 19);
             this.btnExit.TabIndex = 2;
@@ -437,9 +435,10 @@ namespace SadWork
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainPage";
+            this.Text = "Main Page";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

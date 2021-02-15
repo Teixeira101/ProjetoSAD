@@ -29,6 +29,7 @@ namespace SadWork
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewSimulationlvl1));
             this.panelSimulationlvl1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -315,9 +316,10 @@ namespace SadWork
             this.ClientSize = new System.Drawing.Size(804, 510);
             this.Controls.Add(this.panelSimulationlvl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewSimulationlvl1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NewSimulation";
+            this.Text = "New Simulation";
             this.panelSimulationlvl1.ResumeLayout(false);
             this.panelSimulationlvl1.PerformLayout();
             this.panel1.ResumeLayout(false);

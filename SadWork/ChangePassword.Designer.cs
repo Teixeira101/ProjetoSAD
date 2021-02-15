@@ -29,6 +29,7 @@ namespace SadWork
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePassword));
             this.label1 = new System.Windows.Forms.Label();
             this.NewPasswordLabel = new System.Windows.Forms.Label();
             this.textBoxPwd = new System.Windows.Forms.TextBox();
@@ -139,9 +140,10 @@ namespace SadWork
             this.Controls.Add(this.NewPasswordLabel);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RecoverAccount";
+            this.Text = "Recover Account";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -48,8 +48,7 @@ namespace SadWork
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
 
-                //SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-CHRF1L4J\SQLEXPRESS;Initial Catalog=dbSAD;Integrated Security=True");
-                SqlConnection sqlcon = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\anfis\source\repos\SadWork\SadWork\DatabaseSAD.mdf; Integrated Security = True");
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=46.101.41.99;Initial Catalog=dbSAD;User ID=SA;Password=Grupo1sad");
                 SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Parque]
            ([nome_parque]
            ,[area]

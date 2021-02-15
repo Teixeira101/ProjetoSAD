@@ -371,9 +371,10 @@ namespace SadWork
             this.ClientSize = new System.Drawing.Size(804, 510);
             this.Controls.Add(this.panelShowSimul);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShowSimulations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ShowSimulations";
+            this.Text = "Show Simulations";
             this.panelShowSimul.ResumeLayout(false);
             this.panelShowSimul.PerformLayout();
             this.panel2.ResumeLayout(false);
