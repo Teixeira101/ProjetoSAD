@@ -14,7 +14,7 @@ namespace SadWork
         string imgLoc2 = "";
         SqlCommand cmd;
         SqlDataReader dr;
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseSAD.mdf;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=46.101.41.99;Initial Catalog=dbSAD;User ID=SA;Password=Grupo1sad");
 
         public ConfirmPark()
         {
@@ -86,14 +86,14 @@ namespace SadWork
             loadParks();
         }
 
-        private void addMoreDetails_btn_Click(object sender, System.EventArgs e)
+        private void addMoreDetails_btn_Click(object sender, EventArgs e)
         {
             addMoreDetails_btn.Enabled = false;
             confirm_btn.Visible = true;
             panelParkDetails.Visible = true;
         }
 
-        private void confirm_btn_Click(object sender, System.EventArgs e)
+        private void confirm_btn_Click(object sender, EventArgs e)
         {
             FileStream fs1 = new FileStream(imgLoc1, FileMode.Open, FileAccess.Read);
             FileStream fs2 = new FileStream(imgLoc2, FileMode.Open, FileAccess.Read);
@@ -133,11 +133,10 @@ namespace SadWork
             sqlcon.Close();
             MessageBox.Show("Parque Confirmado!");
             loadParks();
-
         }
 
         OpenFileDialog ofd = new OpenFileDialog();
-        private void img2_btn_Click(object sender, System.EventArgs e)
+        private void img2_btn_Click(object sender, EventArgs e)
         {
             ofd.Filter = "JPG|*.jpg";
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -149,7 +148,7 @@ namespace SadWork
         }
 
         OpenFileDialog ofd2 = new OpenFileDialog();
-        private void img3_btn_Click(object sender, System.EventArgs e)
+        private void img3_btn_Click(object sender, EventArgs e)
         {
             ofd2.Filter = "JPG|*.jpg";
             if (ofd2.ShowDialog() == DialogResult.OK)

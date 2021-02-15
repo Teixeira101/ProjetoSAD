@@ -45,7 +45,7 @@ namespace SadWork
 
         private void AddSimulationdb()
         {
-            SqlConnection myConnection2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabaseSAD.mdf;Integrated Security=True");
+            SqlConnection myConnection2 = new SqlConnection(@"Data Source=46.101.41.99;Initial Catalog=dbSAD;User ID=SA;Password=Grupo1sad");
             myConnection2.Open();
 
             SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[Resultado_Simulacao]
