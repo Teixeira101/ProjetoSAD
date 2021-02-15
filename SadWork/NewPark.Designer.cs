@@ -186,9 +186,9 @@ namespace SadWork
             this.checkBoxColab.AutoSize = true;
             this.checkBoxColab.Location = new System.Drawing.Point(485, 321);
             this.checkBoxColab.Name = "checkBoxColab";
-            this.checkBoxColab.Size = new System.Drawing.Size(128, 17);
+            this.checkBoxColab.Size = new System.Drawing.Size(65, 17);
             this.checkBoxColab.TabIndex = 9;
-            this.checkBoxColab.Text = "Colleges Colaboration";
+            this.checkBoxColab.Text = "Partners";
             this.checkBoxColab.UseVisualStyleBackColor = true;
             // 
             // textBoxLocation
