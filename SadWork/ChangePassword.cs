@@ -31,9 +31,10 @@ namespace SadWork
 
                 MessageBox.Show("Password Changed Successfully!");
 
-                LoginPage LP = new LoginPage();
-                this.Hide();
-                LP.Show();
+                this.Close();
+                LoginPage lp = new LoginPage();
+                lp.Show();
+                lp.BringToFront();
             }
         }
 

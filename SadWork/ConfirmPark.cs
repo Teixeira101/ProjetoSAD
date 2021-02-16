@@ -59,7 +59,7 @@ namespace SadWork
             Process.Start(website);
         }
 
-        private void delete_btn_Click(object sender, System.EventArgs e)
+        private void delete_btn_Click(object sender, EventArgs e)
         {
             comboBoxId.Enabled = true;
             cmd.ExecuteNonQuery();

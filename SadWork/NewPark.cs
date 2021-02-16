@@ -93,10 +93,5 @@ namespace SadWork
             textBoxBriefDesc.Clear();
             checkBoxColab.Checked = false;
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
