@@ -195,6 +195,7 @@ namespace SadWork
 
         private void GetValuesFromParks()
         {
+            bool verificado_parque = true;
             SqlConnection myConnection = new SqlConnection(@"Data Source=46.101.41.99;Initial Catalog=dbSAD;User ID=SA;Password=Grupo1sad");
             myConnection.Open();
             string oString = "SELECT COUNT(*) FROM [dbo].[Parque]";
@@ -202,7 +203,7 @@ namespace SadWork
 
             count = Convert.ToInt32(oCmd.ExecuteScalar());
 
-            SqlCommand tempCmd = new SqlCommand("SELECT id_parque, trained_staff, investments, productivity, partners FROM [dbo].[Parque]", myConnection);
+            SqlCommand tempCmd = new SqlCommand("SELECT id_parque, trained_staff, investments, productivity, partners FROM [dbo].[Parque] Where [verificado_parque] = '" + verificado_parque + "'", myConnection);
 
             SqlDataReader reader = tempCmd.ExecuteReader();
 
