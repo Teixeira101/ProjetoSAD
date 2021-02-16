@@ -168,10 +168,10 @@ namespace SadWork
 
         private void buttonForgotPwd_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
+            this.Close();
             RecoverAccount objRecoverAccount = new RecoverAccount();
             objRecoverAccount.Show();
-            objRecoverAccount.TopMost = true;
+            objRecoverAccount.BringToFront();
         }
 
         private bool nullCamps()

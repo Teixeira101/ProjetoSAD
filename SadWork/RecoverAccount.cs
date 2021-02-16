@@ -120,5 +120,13 @@ namespace SadWork
             }
             return false;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginPage lp = new LoginPage();
+            lp.Show();
+            lp.BringToFront();
+        }
     }
 }

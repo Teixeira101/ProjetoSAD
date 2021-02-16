@@ -42,5 +42,13 @@ namespace SadWork
             if(textBoxPwd.Text == textBoxRptPwd.Text) { return true; } else { MessageBox.Show("Password Doesn't Match"); }
             return false;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginPage lp = new LoginPage();
+            lp.Show();
+            lp.BringToFront();
+        }
     }
 }
