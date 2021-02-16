@@ -37,6 +37,7 @@ namespace SadWork
         private void learnMore_btn_Click(object sender, EventArgs e)
         {
             ShowSimulations.parkClick = false;
+            NewSimulationResults.simulationResults = false;
             currentChildForm = new ScientificParks();
             OpenChildForm(new ParkInfo(), currentChildForm);
         }

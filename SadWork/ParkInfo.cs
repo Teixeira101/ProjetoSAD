@@ -25,6 +25,9 @@ namespace SadWork
             if (ShowSimulations.parkClick)
             {
                 cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [id_parque] = '" + ShowSimulations.parkId + "' AND [verificado_parque] = '" + true + "'", sqlcon);
+            } else if(NewSimulationResults.simulationResults)
+            {
+                cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [id_parque] = '" + NewSimulationResults.simulationResultsId + "' AND [verificado_parque] = '" + true + "'", sqlcon);
             } else
             {
                 cmd = new SqlCommand("SELECT * FROM [dbo].[Parque] Where [id_parque] = '" + ScientificParks.learnMoreParkId + "' AND [verificado_parque] = '" + true + "'", sqlcon);
@@ -67,7 +70,7 @@ namespace SadWork
         private void OpenChildForm(Form childForm, Form currentChildForm)
         {
             Console.Out.WriteLine("OPEN CHILD FORM: " + ShowSimulations.parkClick);
-            if (!ShowSimulations.parkClick)
+            if (!ShowSimulations.parkClick && !NewSimulationResults.simulationResults)
             {
                 currentChildForm.Close();
                 currentChildForm = childForm;
@@ -104,7 +107,10 @@ namespace SadWork
             if (ShowSimulations.parkClick)
             {
                 cmd = new SqlCommand("SELECT " + foto_parqueId + " FROM [dbo].[Parque] Where [id_parque] = '" + ShowSimulations.parkId + "'", sqlcon);
-                Console.Out.WriteLine("ENTROU NO SHOW SIMULATIONS");
+            }
+            else if(NewSimulationResults.simulationResults)
+            {
+                cmd = new SqlCommand("SELECT " + foto_parqueId + " FROM [dbo].[Parque] Where [id_parque] = '" + NewSimulationResults.simulationResultsId + "'", sqlcon);
             }
             else
             {

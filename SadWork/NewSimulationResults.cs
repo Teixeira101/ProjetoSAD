@@ -23,6 +23,8 @@ namespace SadWork
         double[] bestPark2 = new double[] { 0, 0 };
         double[] bestPark3 = new double[] { 0, 0 };
         public List<ParkCriteria> parksList = new List<ParkCriteria>();
+        public static bool simulationResults = false;
+        public static int simulationResultsId;
 
         SqlConnection myConnection = new SqlConnection(@"Data Source=46.101.41.99;Initial Catalog=dbSAD;User ID=SA;Password=Grupo1sad");
         SqlCommand tempCmd;
@@ -242,31 +244,40 @@ namespace SadWork
 
         private void OpenChildForm(Form childForm, Form currentChildForm)
         {
-            currentChildForm.Close();
-            currentChildForm = childForm;
+            if (!simulationResults)
+            {
+                currentChildForm.Close();
+            }
+            ShowSimulations.parkClick = false;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelNewSimulResults.Controls.Add(childForm);
-            panelNewSimulResults.Tag = childForm;
+            panel1.Controls.Add(childForm);
+            panel1.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
 
         private void iconButtonLearnMore1_Click(object sender, EventArgs e)
         {
+            simulationResultsId = Convert.ToInt32(bestPark[0]);
+            simulationResults = true;
             currentChildForm = new NewSimulationResults();
             OpenChildForm(new ParkInfo(), currentChildForm);
         }
 
         private void iconButtonLearnMore2_Click(object sender, EventArgs e)
         {
+            simulationResultsId = Convert.ToInt32(bestPark2[0]);
+            simulationResults = true;
             currentChildForm = new NewSimulationResults();
             OpenChildForm(new ParkInfo(), currentChildForm);
         }
 
         private void iconButtonLearnMore3_Click(object sender, EventArgs e)
         {
+            simulationResultsId = Convert.ToInt32(bestPark3[0]);
+            simulationResults = true;
             currentChildForm = new NewSimulationResults();
             OpenChildForm(new ParkInfo(), currentChildForm);
         }

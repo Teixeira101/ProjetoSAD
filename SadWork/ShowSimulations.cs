@@ -173,6 +173,7 @@ namespace SadWork
             {
                 currentChildForm.Close();
             }
+            NewSimulationResults.simulationResults = false;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
