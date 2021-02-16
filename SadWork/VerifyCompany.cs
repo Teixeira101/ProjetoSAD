@@ -78,7 +78,14 @@ namespace SadWork
             {
                 comboBoxId.Items.Clear();
                 comboBoxId.Enabled = true;
-                panelCompVal.Visible = false;
+                labelCompName.Visible = false;
+                labelCompEmail.Visible = false;
+                labelCompLocation.Visible = false;
+                labelCompArea.Visible = false;
+
+                openFile.Visible = false;
+                verCompany_btn.Visible = false;
+                delete_btn.Visible = false;
 
                 cmd.ExecuteNonQuery();
             }
